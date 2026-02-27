@@ -1825,5 +1825,306 @@
     "seismos_relevance_reason": "YPF's earnings calls focus on drilling speed, stage count, and lifting cost metrics but do not mention CLF, acoustic/seismic frac monitoring, or real-time frac diagnostics. Vaca Muerta completions are high volume but discussed in aggregate efficiency terms without specific diagnostic technology callouts.",
     "notable_quote": "CEO Horacio Marin: 'You have to expect 2026 a very clean year of the results.' YPF also stated it 'nearly tripled oil export revenues' and is confident in achieving 180,000 bbl/d target by Q4 2026.",
     "data_quality": "Search summary"
+  },
+  {
+    "ticker": "TOU.TO",
+    "company_name": "Tourmaline Oil Corp",
+    "segment": "Operator",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Canada's largest natural gas producer targeting 690,000-710,000 BOE/d in 2026 and 850,000 BOE/d by 2031. Focused on Montney and Deep Basin with a $2.60-$2.85B annual EP capital budget. 2026 cash flow guidance of ~$4B with ~$0.9B free cash flow and optionality to defer $200-250M capex if prices weaken.",
+    "capex_guidance": "$2.60-$2.85B full-year EP capital budget (2025, unchanged); 2026 guidance not yet released as of Feb 27 2026 (Q4 results due March 4, 2026)",
+    "production_guidance": "690,000-710,000 BOE/d average for 2026; exit 2025 at 680,000-700,000 BOE/d",
+    "basin_focus": [
+      "Montney",
+      "Deep Basin"
+    ],
+    "technology_mentions": [],
+    "completions_strategy": "No specific completions technology discussion available from Q3 2025 data; completion design assumed to follow standard Montney multi-stage frac program. Q4 2025 results not yet released.",
+    "service_provider_mentions": [],
+    "efficiency_metrics": "Q3 2025 corporate OpEx of $4.80/BOE, down $0.34/BOE (~7% improvement) vs first half 2025",
+    "seismos_relevance": "Medium",
+    "seismos_relevance_reason": "Canada's largest gas producer with a massive Montney frac program makes them a significant potential end-user. No specific completions technology or real-time monitoring discussion found, but scale of operations is highly relevant.",
+    "notable_quote": "Q4 2025 results scheduled for March 4, 2026; no earnings call quotes available yet",
+    "data_quality": "Search summary - Q3 2025 data only; Q4 2025 results not yet released as of Feb 27 2026"
+  },
+  {
+    "ticker": "ARX.TO",
+    "company_name": "ARC Resources Ltd",
+    "segment": "Operator",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Record Q4 production of 408,382 BOE/d driven by Kakwa acquisition; however, Upper Montney wells at Attachie underperformed expectations with variable results and casing deformation, prompting a strategic pause and removal of Attachie-level guidance. Capital being reallocated to Kakwa while Attachie completion design variability is investigated.",
+    "capex_guidance": "CAD $1.8-1.9B for 2026",
+    "production_guidance": "405,000-420,000 BOE/d average for 2026 (61% natural gas, 39% oil/liquids)",
+    "basin_focus": [
+      "Montney",
+      "Kakwa",
+      "Attachie"
+    ],
+    "technology_mentions": [
+      "LNG Canada offtake (Shell agreement)",
+      "Cedar LNG Project"
+    ],
+    "completions_strategy": "Actively investigating completion design variability at Attachie Upper Montney after mixed well results - CEO confirmed no intentional changes were made to completion design. Company pausing to gather more production data before committing additional frac capital to Attachie. Lower Montney trial pad just coming online. Strong results continuing at Kakwa.",
+    "service_provider_mentions": [],
+    "efficiency_metrics": "Q4 2025 funds from operations $874M ($1.52/share), 11% above analyst expectations; free cash flow CAD $415M in Q4, up 47% from Q3",
+    "seismos_relevance": "High",
+    "seismos_relevance_reason": "ARC is actively wrestling with completion design variability and well performance inconsistency at Attachie Upper Montney - exactly the problem that real-time frac diagnostics and acoustic sensing (Seismos CLF) addresses. The casing deformation issues and unexplained variability create a direct opening for diagnostic services.",
+    "notable_quote": "CEO Terry Anderson on Attachie: 'trying to figure out the completion design or how to effectively stimulate the formation - we have had some great wells and some that are not so great'",
+    "data_quality": "High - Full Q4 2025 earnings call transcript data available (reported Feb 5, 2026)"
+  },
+  {
+    "ticker": "BTE.TO",
+    "company_name": "Baytex Energy Corp",
+    "segment": "Operator",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Transformative year as Baytex divested all U.S. Eagle Ford assets to Flywheel Energy for $2.14B (closed Dec 2025), becoming a pure-play Canadian producer. Post-divestiture focus on Pembina Duvernay, heavy oil (Peavine, Peace River, Lloydminster), and Viking light oil. Targeting 3-5% annual Canadian production growth at $60-65 WTI.",
+    "capex_guidance": "2026 Canadian capex $550-625M; corporate sustaining break-even improved to US$52/bbl",
+    "production_guidance": "~67 Mboe/d gross post-divestiture; Pembina Duvernay targeting 20,000-25,000 BOE/d by 2029-2030",
+    "basin_focus": [
+      "Pembina Duvernay",
+      "Peace River",
+      "Lloydminster",
+      "Viking"
+    ],
+    "technology_mentions": [],
+    "completions_strategy": "Q4 2025 results not yet released (due March 4-5, 2026). Q3 2025 showed record Pembina Duvernay production at 10,000+ BOE/d. Post-Eagle Ford exit, completions focus shifts entirely to Canadian assets with 18-20 Duvernay wells/year on a one-rig program. No specific frac technology discussion found.",
+    "service_provider_mentions": [
+      "Flywheel Energy (Eagle Ford buyer)"
+    ],
+    "efficiency_metrics": "Q3 2025: $143M free cash flow at $65 WTI; $270M E&D capex; $422M adjusted funds flow",
+    "seismos_relevance": "Medium",
+    "seismos_relevance_reason": "Pembina Duvernay is an emerging Canadian completions play with significant drilling inventory. As a newly focused Canadian operator with capital discipline pressure, efficiency-enhancing completion technology like CLF could be relevant. Scale is smaller than Tourmaline/ARC.",
+    "notable_quote": "CEO Eric Greager: 'This Transaction positions Baytex as a focused, high-return Canadian energy producer'",
+    "data_quality": "Search summary - Q4 2025 results not yet released as of Feb 27 2026; divestiture and strategy data from Nov-Dec 2025 announcements"
+  },
+  {
+    "ticker": "CFW.TO",
+    "company_name": "Calfrac Well Services Ltd",
+    "segment": "OFS-Pumper",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Canadian pumper undergoing fleet modernization to Tier IV Dynamic Gas Blending (DGB) technology, operating equivalent of 5 Tier IV DGB fleets in North America by end of Q1 2025. New CEO Tyler Dahlseide appointed February 2026 following Pat Powell's resignation. Completed $35M rights offering in Q3 2025 to reduce long-term debt. Strong Argentina operations partially offset North American softness.",
+    "capex_guidance": "Not yet available; Q4 2025 results expected ~March 12, 2026",
+    "production_guidance": "N/A (OFS company); expects North American fracturing and coiled tubing activity to increase slightly in 2025 vs prior year",
+    "basin_focus": [
+      "North America (Canada + US Appalachian)",
+      "Argentina (Vaca Muerta)"
+    ],
+    "technology_mentions": [
+      "Tier IV Dynamic Gas Blending (DGB)",
+      "Tier IV fleet modernization"
+    ],
+    "completions_strategy": "Fleet modernization program nearing completion with 66 Tier IV DGB pumps deployed (equivalent to 5 fleets). Recommenced Appalachian basin operations Jan 2025. Evaluating tariff impact on Canadian sand, chemical, and component imports from the US. No digital/automation or real-time monitoring technology mentioned in available disclosures.",
+    "service_provider_mentions": [],
+    "efficiency_metrics": "Q3 2025 adjusted EBITDA $48.5M; net income $4.3M; full year 2024 revenue $1.57B (down 15.9% YoY); Q4 2025 results pending",
+    "seismos_relevance": "High",
+    "seismos_relevance_reason": "Calfrac is a direct channel partner target as a major Canadian pumper with active North American frac fleets. Tier IV DGB modernization shows willingness to invest in advanced completion technology. New CEO (Feb 2026) creates a business development window. Pumping-company-agnostic Seismos CLF integrates with any pumper fleet, making Calfrac a natural partner for Canadian Montney/Duvernay operators.",
+    "notable_quote": "From Q4 2024 release: company 'exited Q1 2025 with the equivalent of five Tier IV DGB fleets operating in the field' through its equipment modernization program",
+    "data_quality": "Search summary - Q4 2025 results not yet released; Q3 2025 and Q4 2024 data available. Q4 2025 results expected ~March 12, 2026"
+  },
+  {
+    "ticker": "GRNT",
+    "company_name": "Granite Ridge Resources Inc",
+    "segment": "Operator",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Non-operated US E&P with assets across six unconventional basins. Q3 2025 production grew 27% YoY to 31,925 BOE/d (51% oil). Issued $350M senior notes in Q4 2025 to strengthen liquidity. Q4 2025 results due March 5, 2026 with analyst consensus of $0.10 EPS and $120.76M revenue.",
+    "capex_guidance": "2026 capex guidance not yet available; FY2025 development capex pacing at ~$64M/quarter plus acquisitions; may reduce to $225M if WTI falls below $55",
+    "production_guidance": "Q4 2025 guidance 32-33 Mboe/d; full 2026 guidance pending Q4 earnings release",
+    "basin_focus": [
+      "Permian Basin",
+      "Eagle Ford",
+      "Williston Basin",
+      "DJ Basin",
+      "Appalachian",
+      "Haynesville"
+    ],
+    "technology_mentions": [],
+    "completions_strategy": "Non-operated model - relies entirely on operators' completion decisions. No direct completions technology discussion. Company evaluates operators by track record and basin quality rather than specific frac technology. 108 gross wells in process as of Sept 30, 2025 across multiple operators and basins.",
+    "service_provider_mentions": [],
+    "efficiency_metrics": "Q3 2025: 31,925 BOE/d production (+27% YoY); $78.6M Adjusted EBITDAX; LOE of $8.03/BOE (elevated due to Permian saltwater disposal); leverage 0.9x",
+    "seismos_relevance": "Low",
+    "seismos_relevance_reason": "Non-operated model means Granite Ridge does not control completion decisions or service provider selection. No completions technology discussion. Seismos relevance is indirect at best through the operators they partner with.",
+    "notable_quote": "Management comfortable with 3-5 years of inventory 'manageable and controllable through operative partnerships'",
+    "data_quality": "Search summary - Q4 2025 results not yet released as of Feb 27 2026 (due March 5, 2026); Q3 2025 data available"
+  },
+  {
+    "ticker": "REPX",
+    "company_name": "Riley Exploration Permian Inc",
+    "segment": "Operator",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Small Permian Basin operator reporting Q4 2025 results March 4, 2026. Q3 2025 production averaged 32.3 MBoe/d with $107M revenue. Closed $120M Silverback acquisition in 2025 and raised quarterly dividend 5% to $0.40/share. Analysts expect Q4 EPS of $0.83, down 13% YoY. Launched $100M share repurchase program.",
+    "capex_guidance": "Q4 2025 capex guidance $50-71M; 2026 full-year guidance not yet available",
+    "production_guidance": "Q4 2025 target 32.9-33.9 MBoe/d; 2026 guidance pending Q4 results release March 4, 2026",
+    "basin_focus": [
+      "Permian Basin"
+    ],
+    "technology_mentions": [],
+    "completions_strategy": "No specific completions technology discussion found in available disclosures. Small operator focused on capital discipline in Permian with pad drilling. Q4 2025 results not yet released.",
+    "service_provider_mentions": [],
+    "efficiency_metrics": "Q3 2025: $64M operating cash flow; $25M total free cash flow; $107M revenue; net income $16M ($0.77 diluted EPS vs $0.97 expected)",
+    "seismos_relevance": "Low",
+    "seismos_relevance_reason": "Small Permian operator with no completions technology discussion. Limited scale (~33 MBoe/d) reduces near-term opportunity, though Permian focus keeps them in relevant geography. No CLF, digital, or frac diagnostics mentions.",
+    "notable_quote": "Company raised quarterly dividend 5% to $0.40/share and launched $100M buyback program following Silverback acquisition integration",
+    "data_quality": "Search summary - Q4 2025 results not yet released as of Feb 27 2026 (due March 4, 2026); Q3 2025 data available"
+  },
+  {
+    "ticker": "FTK",
+    "company_name": "Flotek Industries Inc",
+    "segment": "OFS-Chemical",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Completions chemistry and data analytics company transforming from commodity chemistry supplier into data-driven technology enterprise. Q3 2025 showed 95% gross profit growth and 232% data analytics revenue surge. Data Analytics now 16% of total revenue (up from 5% YoY) with 71% gross margins. ProFrac is both largest customer and strategic partner, though consistently misses minimum purchase commitments. Q4 2025 results due March 11-12, 2026.",
+    "capex_guidance": "Minimal capex business; 2026 guidance pending Q4 results",
+    "production_guidance": "N/A (OFS company); full-year 2025 revenue guidance raised to ~$221M; Adjusted EBITDA guidance $35-40M; management expects PWRtek to drive 70% revenue growth in 2026",
+    "basin_focus": [
+      "North America (all major basins)",
+      "Middle East (international expansion)"
+    ],
+    "technology_mentions": [
+      "Complex nano-Fluid chemistry (CnF)",
+      "Data Analytics segment",
+      "PWRtek (PowerTech) mobile gas conditioning",
+      "XSPCT optical spectrometer (GPA 2172 compliant)",
+      "ROYA directional drilling platform"
+    ],
+    "completions_strategy": "Specialty completion chemistry targeting reservoir performance enhancement. External chemistry revenue grew 43% in Q3 2025 even as North American frac fleet count declined 25% YoY (238 to 179 fleets), demonstrating market share gains. International chemistry sales up 122%. ProFrac partnership provides embedded fleet access but creates revenue dependency risk. Seventh consecutive quarter of gross profit growth.",
+    "service_provider_mentions": [
+      "ProFrac (strategic partner and largest customer)"
+    ],
+    "efficiency_metrics": "Q3 2025: Revenue $56M (+13% YoY); gross margin 32% (vs 18% YoY); Data Analytics gross margin 71%; Adjusted EBITDA up 142% YoY; 12 consecutive quarters of profitability improvement",
+    "seismos_relevance": "Medium",
+    "seismos_relevance_reason": "Flotek is a completions chemistry OFS company with ProFrac as anchor customer - same ProFrac that co-developed Machina with Seismos. Flotek's data analytics push and reservoir performance focus creates potential competitive or partnership dynamics. Their international Middle East expansion parallels NESR/Jafurah activity where Seismos has growing relevance.",
+    "notable_quote": "CEO Ryan Ezell on Data Analytics: segment now at '71% gross margin reflecting the patented nature of the technology and the recurring service model'",
+    "data_quality": "Search summary - Q4 2025 results not yet released as of Feb 27 2026 (due March 11, 2026); strong Q3 2025 data available"
+  },
+  {
+    "ticker": "KEGX",
+    "company_name": "Key Energy Services Inc",
+    "segment": "OFS-Pumper",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Small OTC-traded workover and well services company (~$23M market cap) providing rig-based completions, workover, coiled tubing, fluid management, and fishing/rental services in the US. Very limited public earnings disclosure due to OTC trading status. No Q4 2025 earnings data found.",
+    "capex_guidance": "Not available",
+    "production_guidance": "N/A (OFS company)",
+    "basin_focus": [
+      "United States onshore (multiple basins)"
+    ],
+    "technology_mentions": [],
+    "completions_strategy": "Coiled tubing services for wellbore clean-outs, nitrogen jet lifts, through-tubing fishing, and pre/post-hydraulic fracturing well preparation. Frac stack equipment rentals to support hydraulic fracturing operations. No digital or real-time monitoring technology discussion found.",
+    "service_provider_mentions": [],
+    "efficiency_metrics": "Not available for 2025; company has 2,456 total employees; market cap ~$23M (OTC)",
+    "seismos_relevance": "Low",
+    "seismos_relevance_reason": "Key Energy is primarily a workover/well maintenance company rather than a fracturing pumper. Very small market cap and OTC status limits information access and suggests limited capital for technology adoption. No completions technology mentions.",
+    "notable_quote": "No recent earnings quotes available; company trades OTC as KEGX with minimal analyst coverage",
+    "data_quality": "Limited data - OTC company with minimal public reporting; no Q4 2025 earnings data found"
+  },
+  {
+    "ticker": "NESR",
+    "company_name": "National Energy Services Reunited Corp",
+    "segment": "OFS-Pumper",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Record Q4 2025 results driven by mobilization of landmark Jafurah unconventional frac contract (began Nov 1, 2025) - described as the largest unconventional frac program in sector history. Revenue of $398.3M, up 34.9% sequentially and 15.9% YoY. Full-year 2025 revenue $1.324B. Targeting $2B annualized revenue run rate exit from 2026. Barclays raised PT from $25 to $34.",
+    "capex_guidance": "$165M for 2026 (down as % of revenue YoY)",
+    "production_guidance": "N/A (OFS company); targets $2B annualized revenue run rate by end of 2026; FCF conversion 35-40% of adjusted EBITDA",
+    "basin_focus": [
+      "Saudi Arabia (Jafurah)",
+      "Kuwait",
+      "Iraq",
+      "Egypt",
+      "Libya",
+      "Algeria",
+      "Abu Dhabi"
+    ],
+    "technology_mentions": [
+      "ROYA directional drilling platform",
+      "NEDA decarbonization portfolio",
+      "digital capabilities (mentioned broadly)"
+    ],
+    "completions_strategy": "Executing Aramco's 5-year multi-billion dollar unconventional completion contract at Jafurah gas field - largest unconventional frac program in sector history. CEO noted potential for 20% efficiency gains through increasing stages per day. Jafurah program quadrupling footprint with steady state expected Q2 2026, potential additional fleet in Q3/Q4. $2-3B in additional tenders submitted with awards expected throughout 2026.",
+    "service_provider_mentions": [
+      "Saudi Aramco (primary customer, Jafurah contract)"
+    ],
+    "efficiency_metrics": "Q4 2025: Revenue $398.3M (+34.9% sequential, +15.9% YoY); Adjusted EBITDA $84.4M (+32% sequential); Adjusted net income $31.9M (+106.6% sequential); Full-year FCF $120.8M; Net debt/EBITDA 0.66x",
+    "seismos_relevance": "High",
+    "seismos_relevance_reason": "NESR is executing the largest unconventional frac program in Middle East history at Jafurah. Their explicit focus on efficiency (more stages per day, digital capabilities) and the scale of unconventional completions in Saudi Arabia, Kuwait, and North Africa represents a direct opportunity for Seismos CLF and real-time frac monitoring technology. CEO's comment on 20% efficiency potential through stage optimization is exactly the value proposition Seismos targets.",
+    "notable_quote": "CEO Sherif Foda: 'We believe that we can do more stages per day... If we do that, that means that you can get another 20% efficiency, which will definitely have an impact on our margins'",
+    "data_quality": "High - Full Q4 2025 earnings call data available (reported Feb 17-19, 2026)"
+  },
+  {
+    "ticker": "TBN",
+    "company_name": "Tamboran Resources Corporation",
+    "segment": "Operator",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Pre-revenue Australian unconventional gas company developing the Beetaloo Basin in the Northern Territory. Reached FID for Shenandoah South Pilot Project; first gas sales targeted Q3 2026. Record Beetaloo Basin IP90 flow rate of 6.7 MMcf/d from Shenandoah South 2H ST1 well. Going concern warning issued due to recurring losses and $182M accumulated deficit. $91M cash at year-end supported by equity raises and new debt.",
+    "capex_guidance": "A$179.8M (~US$118M) financing facility secured for Sturt Plateau Compression Facility (SPCF); construction ~78-80% complete",
+    "production_guidance": "First gas sales Q3 2026; no production revenue currently",
+    "basin_focus": [
+      "Beetaloo Basin (Northern Territory, Australia)"
+    ],
+    "technology_mentions": [
+      "Sturt Plateau Compression Facility (SPCF)",
+      "58-stage stimulation program (SS-6H well)"
+    ],
+    "completions_strategy": "Executing multi-stage hydraulic fracturing in the Beetaloo Shale. SS-6H well completed 58-stage stimulation across 10,009-ft lateral; identified potential impediment at ~8,600 ft (~14% of section) under evaluation. Shenandoah South 2H ST1 achieved record IP90 of 6.7 MMcf/d. Sturt Plateau Pipeline installed and tested. FID reached for pilot project.",
+    "service_provider_mentions": [
+      "DWE (acreage sale partner)",
+      "Falcon (international interests acquisition)"
+    ],
+    "efficiency_metrics": "Q4 FY2025 (Dec 31, 2025): Revenue $0.05M; net loss $7.6M; total assets $600.6M; unproved gas properties $415.6M; cash $98.4M",
+    "seismos_relevance": "Medium",
+    "seismos_relevance_reason": "Tamboran is executing complex multi-stage frac programs in a frontier Australian shale basin with well performance variability (SS-6H impediment identified). Real-time frac diagnostics could be valuable as they de-risk Beetaloo completions. However, pre-revenue status and going concern risk limit near-term commercial opportunity. Longer-term if Beetaloo commercializes, it could be a new market for Seismos.",
+    "notable_quote": "Company flagged 'substantial doubt about the Group's ability to continue as a going concern' while reporting record Beetaloo IP90 flow rate of 6.7 MMcf/d",
+    "data_quality": "Search summary - Q4 FY2025 (quarter ended Dec 31, 2025) data available; Tamboran fiscal year ends June 30, so Q4 FY25 = Oct-Dec 2024 quarter in some filings; clarified as calendar Q4 2025 data from Feb 2026 disclosures"
+  },
+  {
+    "ticker": "STO.AX",
+    "company_name": "Santos Limited",
+    "segment": "Major",
+    "quarter": "Q4 2025",
+    "strategy_summary": "Australian LNG and gas major delivering strong FY2025 results with $898M underlying NPAT and $1.8B free cash flow despite soft commodity prices. Landmark milestone: Barossa LNG commenced production with first cargo loading for Japan delivery - delivered within 6 months of original schedule and within original budget. Pikka Phase 1 (Alaska) targeting first oil late Q1 2026. Production guidance 101-111 mmboe for 2026, up ~15-25% from FY2025's 87.7 mmboe.",
+    "capex_guidance": "$1.95-2.15B for 2026",
+    "production_guidance": "101-111 mmboe for 2026 (up from 87.7 mmboe in FY2025); Barossa + Pikka expected to lift production 25-30% by 2027 vs 2024",
+    "basin_focus": [
+      "Barossa (Australia, Timor Sea)",
+      "Darwin LNG",
+      "PNG LNG",
+      "Cooper Basin",
+      "Pikka (Alaska)",
+      "Moomba (CCS)"
+    ],
+    "technology_mentions": [
+      "Moomba Carbon Capture and Storage (CCS)",
+      "LNG marketing and trading"
+    ],
+    "completions_strategy": "Santos is primarily a conventional LNG and gas producer; not a significant hydraulic fracturing operator in its core business. Cooper Basin has some stimulation activity. No specific frac or completions technology discussion in FY2025 results. Barossa is an offshore gas development.",
+    "service_provider_mentions": [],
+    "efficiency_metrics": "FY2025: Production 87.7 mmboe; sales volumes 93.5 mmboe; underlying NPAT $898M; free cash flow $1.8B; final dividend US10.3 cents/share; total 2025 dividends US23.7 cents/share (43% of FCF)",
+    "seismos_relevance": "Low",
+    "seismos_relevance_reason": "Santos is primarily an LNG and conventional offshore gas producer. Minimal hydraulic fracturing operations in core portfolio. No completions technology or frac diagnostics discussion. Cooper Basin has some unconventional potential but is not a current completions technology focus.",
+    "notable_quote": "CEO Kevin Gallagher: 'Barossa and Darwin LNG have been delivered within six months of the original schedule and within the original budget, without drawing on any additional contingency'",
+    "data_quality": "High - Full FY2025 results available (released Jan 22, 2026)"
+  },
+  {
+    "ticker": "2222.SR",
+    "company_name": "Saudi Arabian Oil Company (Saudi Aramco)",
+    "segment": "Major",
+    "quarter": "Q4 2025",
+    "strategy_summary": "World's largest oil company with Q3 2025 adjusted net income of $28B (up 14% QoQ and YoY). Q4 2025 full-year results due March 10, 2026. Key development: Jafurah unconventional gas Phase 1 targeted Q4 2025 commencement adding 1.3 Bcf/d sales gas capacity. Marjan and Berri projects adding 550,000 bbl/d crude capacity by year-end 2025. Revised 2030 gas capacity growth target upward to ~80% above 2021 levels (from 60%).",
+    "capex_guidance": "$52-55B guided for 2025; 2026 capex not yet released",
+    "production_guidance": "Maximum Sustained Capacity (MSC) expansion ongoing; 2030 gas target ~80% above 2021 levels; record oil demand forecast 106 Mbbl/d in 2025",
+    "basin_focus": [
+      "Saudi Arabia (Ghawar, Marjan, Berri, Jafurah)",
+      "Jafurah Unconventional Gas"
+    ],
+    "technology_mentions": [
+      "Jafurah unconventional gas development",
+      "Gas processing expansion (Tanajib, Fadhili, Ras Tanajib)"
+    ],
+    "completions_strategy": "Jafurah is the centerpiece unconventional program - Aramco awarded NESR a multi-billion dollar 5-year completion services contract for Jafurah and other unconventional plays, representing the largest unconventional frac program in MENA history. Phase 1 targeting Q4 2025 start with 1.3 Bcf/d capacity addition. Program will quadruple in scale per NESR disclosures. $11.1B Jafurah midstream deal completed demonstrating commitment.",
+    "service_provider_mentions": [
+      "NESR (Jafurah completion services contract, multi-billion 5-year)"
+    ],
+    "efficiency_metrics": "Q3 2025: Adjusted net income $28B (+14% QoQ/YoY); FCF $23.6B (+55% QoQ, +7% YoY); Q4 2025 profit forecast ~$24.5B; net profit margin TTM 21.70%",
+    "seismos_relevance": "High",
+    "seismos_relevance_reason": "Aramco's Jafurah unconventional program is the largest unconventional frac operation in Middle East history and is scaling rapidly. NESR (their completion contractor) has explicitly identified efficiency gains as a key margin lever. Seismos CLF and real-time frac monitoring technology applied at Jafurah would represent a landmark international deployment. The scale and NOC's focus on technology-driven efficiency makes this a high-priority market development opportunity.",
+    "notable_quote": "Q4 2025 full results not yet released; from Q3 2025: Jafurah Phase 1 'on track for completion by year-end 2025' adding 1.3 Bcf/d combined with Tanajib Gas Plant; 2030 gas target upgraded to ~80% above 2021 levels",
+    "data_quality": "Search summary - Q4 2025/FY2025 results not yet released as of Feb 27 2026 (due March 10, 2026); Q3 2025 data available plus analyst forecasts"
   }
 ]

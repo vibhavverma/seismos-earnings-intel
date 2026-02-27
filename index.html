@@ -80,6 +80,31 @@ tr:hover td { background: var(--surface2); }
 .search-box::placeholder { color: var(--text-muted); }
 .footer { border-top: 1px solid var(--border); padding-top: 24px; margin-top: 48px; color: var(--text-muted); font-size: 13px; text-align: center; }
 .footer a { color: var(--accent); }
+/* Tabs */
+.tabs { display: flex; gap: 0; margin-bottom: 32px; border-bottom: 2px solid var(--border); }
+.tab { padding: 12px 24px; font-size: 14px; font-weight: 600; color: var(--text-muted); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -2px; transition: all 0.2s; }
+.tab:hover { color: var(--text); }
+.tab.active { color: var(--accent); border-bottom-color: var(--accent); }
+.tab-content { display: none; }
+.tab-content.active { display: block; }
+/* Scoring */
+.score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 32px; }
+.score-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px; }
+.score-card h3 { font-size: 16px; margin-bottom: 12px; display: flex; align-items: center; gap: 8px; }
+.score-card ul { list-style: none; padding: 0; }
+.score-card li { font-size: 13px; color: var(--text-muted); padding: 6px 0; border-bottom: 1px solid var(--border); }
+.score-card li:last-child { border-bottom: none; }
+.criteria-tag { display: inline-block; font-size: 11px; padding: 1px 6px; border-radius: 4px; margin-right: 6px; }
+.criteria-high { background: rgba(255,77,106,0.15); color: var(--high); }
+.criteria-med { background: rgba(255,184,77,0.15); color: var(--medium); }
+.criteria-low { background: rgba(77,255,145,0.15); color: var(--low); }
+/* Coverage */
+.coverage-table td.status-covered { color: var(--low); }
+.coverage-table td.status-missing { color: var(--high); }
+.coverage-table td.status-partial { color: var(--medium); }
+.progress-bar { height: 8px; background: var(--surface2); border-radius: 4px; overflow: hidden; margin-top: 8px; }
+.progress-fill { height: 100%; border-radius: 4px; background: linear-gradient(90deg, var(--high), var(--medium), var(--low)); }
+@media (max-width: 900px) { .score-grid { grid-template-columns: 1fr; } .company-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -89,24 +114,117 @@ tr:hover td { background: var(--surface2); }
     <div class="header-meta"><div>Q4 2025 Report</div><div>Generated Feb 27, 2026</div></div>
   </div>
   <div class="stats" id="stats"></div>
-  <div class="exec-summary"><h2>Executive Summary</h2><div id="findings"></div></div>
-  <div class="section"><div class="section-header">Competitive Threat Assessment</div><table id="threat-table"></table></div>
-  <div class="section"><div class="section-header">High Relevance <span class="badge badge-high" id="high-count"></span></div><div class="company-grid" id="high-grid"></div></div>
-  <div class="section">
-    <div class="section-header">Medium Relevance <span class="badge badge-medium" id="med-count"></span></div>
-    <div class="filters">
-      <input type="text" class="search-box" placeholder="Search companies..." id="search-med">
-      <button class="filter-btn active" data-seg="all">All</button>
-      <button class="filter-btn" data-seg="Operator">Operators</button>
-      <button class="filter-btn" data-seg="OFS">OFS</button>
-      <button class="filter-btn" data-seg="Major">Majors</button>
-    </div>
-    <table id="med-table"></table>
+
+  <div class="tabs">
+    <div class="tab active" data-tab="report">Report</div>
+    <div class="tab" data-tab="scoring">Scoring Model</div>
+    <div class="tab" data-tab="coverage">Coverage &amp; Gaps</div>
   </div>
-  <div class="section"><div class="section-header">Low Relevance <span class="badge badge-low" id="low-count"></span></div><table id="low-table"></table></div>
-  <div class="section"><div class="section-header">Market Themes</div><div id="themes"></div></div>
-  <div class="section"><div class="section-header">Recommended Actions</div><table id="actions"></table></div>
-  <div class="footer">Seismos Earnings Intelligence &mdash; Sources: Yahoo Finance, Insider Monkey, Motley Fool, Seeking Alpha<br><a href="data/earnings-intel-Q4-2025.csv">Download CSV</a> &bull; <a href="data/earnings-intel-Q4-2025.json">Download JSON</a></div>
+
+  <!-- TAB: Report -->
+  <div class="tab-content active" id="tab-report">
+    <div class="exec-summary"><h2>Executive Summary</h2><div id="findings"></div></div>
+    <div class="section"><div class="section-header">Competitive Threat Assessment</div><table id="threat-table"></table></div>
+    <div class="section"><div class="section-header">High Relevance <span class="badge badge-high" id="high-count"></span></div><div class="company-grid" id="high-grid"></div></div>
+    <div class="section">
+      <div class="section-header">Medium Relevance <span class="badge badge-medium" id="med-count"></span></div>
+      <div class="filters">
+        <input type="text" class="search-box" placeholder="Search companies..." id="search-med">
+        <button class="filter-btn active" data-seg="all">All</button>
+        <button class="filter-btn" data-seg="Operator">Operators</button>
+        <button class="filter-btn" data-seg="OFS">OFS</button>
+        <button class="filter-btn" data-seg="Major">Majors</button>
+      </div>
+      <table id="med-table"></table>
+    </div>
+    <div class="section"><div class="section-header">Low Relevance <span class="badge badge-low" id="low-count"></span></div><table id="low-table"></table></div>
+    <div class="section"><div class="section-header">Market Themes</div><div id="themes"></div></div>
+    <div class="section"><div class="section-header">Recommended Actions</div><table id="actions"></table></div>
+  </div>
+
+  <!-- TAB: Scoring Model -->
+  <div class="tab-content" id="tab-scoring">
+    <div class="exec-summary" style="margin-bottom:32px">
+      <h2>Seismos Relevance Scoring Model</h2>
+      <p style="color:var(--text-muted);font-size:14px;margin-top:8px">Each company is scored based on how relevant their Q4 2025 earnings call content is to Seismos' closed-loop fracturing (CLF) technology and Machina platform. Scoring is based on explicit mentions and signals in earnings call transcripts.</p>
+    </div>
+    <div class="score-grid">
+      <div class="score-card" style="border-color:rgba(255,77,106,0.3)">
+        <h3><span class="badge badge-high">HIGH</span> Direct Relevance</h3>
+        <ul>
+          <li><span class="criteria-tag criteria-high">Must have</span> At least one of these signals:</li>
+          <li>Mentions CLF, closed-loop fracturing, or acoustic sensing</li>
+          <li>Names Seismos, SAFA, or Machina directly</li>
+          <li>Discusses real-time frac monitoring or diagnostics during pumping</li>
+          <li>References perf efficiency optimization or stage-level quality control</li>
+          <li>Mentions competitor tech: Zeus IQ (HAL), Atlas IQ (LBRT)</li>
+          <li>Describes in-house real-time frac optimization algorithms</li>
+          <li>Running proprietary completions intelligence platforms</li>
+        </ul>
+      </div>
+      <div class="score-card" style="border-color:rgba(255,184,77,0.3)">
+        <h3><span class="badge badge-medium">MEDIUM</span> Indirect Relevance</h3>
+        <ul>
+          <li><span class="criteria-tag criteria-med">Indicates</span> Active completions technology engagement:</li>
+          <li>Discusses simul-frac, zipper frac, or continuous pumping adoption</li>
+          <li>Mentions e-frac / electric frac fleet transition</li>
+          <li>References digital completions or data-driven frac design</li>
+          <li>Reports frac efficiency improvements (stages/day, cost/ft)</li>
+          <li>Major completions capex spender (&gt;$500M D&amp;C budget)</li>
+          <li>Active completions technology trials (surfactants, diverters)</li>
+          <li>Discusses completions service provider selection or changes</li>
+        </ul>
+      </div>
+      <div class="score-card" style="border-color:rgba(77,255,145,0.3)">
+        <h3><span class="badge badge-low">LOW</span> Minimal Relevance</h3>
+        <ul>
+          <li><span class="criteria-tag criteria-low">Indicates</span> No meaningful completions tech signal:</li>
+          <li>No completions technology discussion in earnings call</li>
+          <li>Drilling-only contractor (no frac services)</li>
+          <li>Offshore/subsea focus with no onshore completions</li>
+          <li>Oil sands / SAGD producer (no hydraulic fracturing)</li>
+          <li>Non-operator with no control over completions decisions</li>
+          <li>Corporate-level earnings that don't cover field operations</li>
+          <li>International company with no unconventional shale exposure</li>
+        </ul>
+      </div>
+    </div>
+    <div class="section">
+      <div class="section-header">Score Distribution</div>
+      <div id="score-distribution"></div>
+    </div>
+    <div class="section">
+      <div class="section-header">All Companies by Score</div>
+      <div class="filters">
+        <input type="text" class="search-box" placeholder="Search all companies..." id="search-all">
+      </div>
+      <table id="all-table"></table>
+    </div>
+  </div>
+
+  <!-- TAB: Coverage & Gaps -->
+  <div class="tab-content" id="tab-coverage">
+    <div class="exec-summary" style="margin-bottom:32px">
+      <h2>Coverage Analysis</h2>
+      <p style="color:var(--text-muted);font-size:14px;margin-top:8px">Tracking coverage across the 80-company watchlist. Companies are flagged as covered (in report), partial (limited data), or missing (not yet analyzed).</p>
+      <div style="display:flex;gap:24px;margin-top:16px">
+        <div><span style="font-size:28px;font-weight:700;color:var(--low)" id="cov-covered">0</span><span style="color:var(--text-muted);font-size:13px;margin-left:8px">Covered</span></div>
+        <div><span style="font-size:28px;font-weight:700;color:var(--medium)" id="cov-partial">0</span><span style="color:var(--text-muted);font-size:13px;margin-left:8px">Partial</span></div>
+        <div><span style="font-size:28px;font-weight:700;color:var(--high)" id="cov-missing">0</span><span style="color:var(--text-muted);font-size:13px;margin-left:8px">Missing</span></div>
+      </div>
+      <div class="progress-bar" style="margin-top:16px;width:100%"><div class="progress-fill" id="cov-bar" style="width:0%"></div></div>
+    </div>
+    <div class="section">
+      <div class="section-header">Missing Companies</div>
+      <table id="missing-table" class="coverage-table"></table>
+    </div>
+    <div class="section">
+      <div class="section-header">Data Quality Breakdown</div>
+      <table id="quality-table"></table>
+    </div>
+  </div>
+
+  <div class="footer">Seismos Earnings Intelligence &mdash; Prepared by Vibhav Verma &mdash; Sources: Yahoo Finance, Insider Monkey, Motley Fool, Seeking Alpha<br><a href="data/earnings-intel-Q4-2025.csv">Download CSV</a> &bull; <a href="data/earnings-intel-Q4-2025.json">Download JSON</a></div>
 </div>
 <script>
 /* All data rendered from our own pre-generated JSON — no untrusted external input */
@@ -327,6 +445,154 @@ async function init() {
       filterMedium();
     });
   });
+
+  // Tab switching
+  document.querySelectorAll('.tab').forEach(tab => {
+    tab.addEventListener('click', function() {
+      document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+      document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+      this.classList.add('active');
+      document.getElementById('tab-' + this.dataset.tab).classList.add('active');
+    });
+  });
+
+  // Build scoring tab
+  buildScoreDistribution(high, med, low);
+  buildAllTable(DATA);
+  document.getElementById('search-all').addEventListener('input', function() {
+    const q = this.value.toLowerCase();
+    const filtered = q ? DATA.filter(d => (d.ticker+' '+d.company+' '+(d.seismos_relevance_reason||'')).toLowerCase().includes(q)) : DATA;
+    buildAllTable(filtered);
+  });
+
+  // Build coverage tab
+  buildCoverage();
+}
+
+function buildScoreDistribution(high, med, low) {
+  const container = document.getElementById('score-distribution');
+  container.replaceChildren();
+  const total = DATA.length;
+  const segments = [
+    {label:'Operators',h:high.filter(d=>(d.segment||'').includes('Operator')).length,m:med.filter(d=>(d.segment||'').includes('Operator')).length,l:low.filter(d=>(d.segment||'').includes('Operator')).length},
+    {label:'OFS',h:high.filter(d=>(d.segment||'').includes('OFS')||d.segment==='Pumper / Completion Services').length,m:med.filter(d=>(d.segment||'').includes('OFS')||d.segment==='Pumper / Completion Services').length,l:low.filter(d=>(d.segment||'').includes('OFS')||d.segment==='Pumper / Completion Services').length},
+    {label:'Majors',h:high.filter(d=>(d.segment||'').includes('Major')).length,m:med.filter(d=>(d.segment||'').includes('Major')).length,l:low.filter(d=>(d.segment||'').includes('Major')).length},
+    {label:'International',h:high.filter(d=>(d.segment||'').includes('International')).length,m:med.filter(d=>(d.segment||'').includes('International')).length,l:low.filter(d=>(d.segment||'').includes('International')).length},
+  ];
+  const table = el('table');
+  const thead = el('thead'); const hrow = el('tr');
+  ['Segment','High','Medium','Low','Total'].forEach(h => hrow.appendChild(el('th',{text:h})));
+  thead.appendChild(hrow); table.appendChild(thead);
+  const tbody = el('tbody');
+  segments.forEach(s => {
+    const row = el('tr');
+    row.appendChild(el('td',{text:s.label}));
+    const hc = el('td',{text:String(s.h)}); hc.style.color='var(--high)'; hc.style.fontWeight='700'; row.appendChild(hc);
+    const mc = el('td',{text:String(s.m)}); mc.style.color='var(--medium)'; mc.style.fontWeight='700'; row.appendChild(mc);
+    const lc = el('td',{text:String(s.l)}); lc.style.color='var(--low)'; lc.style.fontWeight='700'; row.appendChild(lc);
+    row.appendChild(el('td',{text:String(s.h+s.m+s.l)}));
+    tbody.appendChild(row);
+  });
+  const totRow = el('tr');
+  totRow.appendChild(el('td',{text:'TOTAL'}));
+  const th = el('td',{text:String(high.length)}); th.style.color='var(--high)'; th.style.fontWeight='700'; totRow.appendChild(th);
+  const tm = el('td',{text:String(med.length)}); tm.style.color='var(--medium)'; tm.style.fontWeight='700'; totRow.appendChild(tm);
+  const tl = el('td',{text:String(low.length)}); tl.style.color='var(--low)'; tl.style.fontWeight='700'; totRow.appendChild(tl);
+  const tt = el('td',{text:String(total)}); tt.style.fontWeight='700'; totRow.appendChild(tt);
+  tbody.appendChild(totRow);
+  table.appendChild(tbody);
+  container.appendChild(table);
+}
+
+function buildAllTable(list) {
+  const table = document.getElementById('all-table');
+  table.replaceChildren();
+  const thead = el('thead'); const hrow = el('tr');
+  ['Ticker','Company','Segment','Score','Reason','Data Quality'].forEach(h => hrow.appendChild(el('th',{text:h})));
+  thead.appendChild(hrow); table.appendChild(thead);
+  const tbody = el('tbody');
+  list.forEach(c => {
+    const row = el('tr');
+    row.appendChild(el('td',{class:'ticker',text:c.ticker}));
+    row.appendChild(el('td',{text:c.company}));
+    row.appendChild(el('td',{text:c.segment||''}));
+    const sc = el('td'); const badge = el('span',{class:'badge badge-'+(c.seismos_relevance||'low').toLowerCase(), text:c.seismos_relevance||''}); sc.appendChild(badge); row.appendChild(sc);
+    row.appendChild(el('td',{text:trunc(c.seismos_relevance_reason,100)}));
+    row.appendChild(el('td',{text:c.data_quality||''}));
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+}
+
+function buildCoverage() {
+  const WATCHLIST = [
+    'COP','EOG','FANG','OXY','DVN','CTRA','EQT','PR','CHRD','SM','MTDR','CRGY','MGY','AR',
+    'RRC','EXE','CNX','CRK','GPOR','OVV','APA','REPX','GRNT','CPG','HAL','SLB','BKR','LBRT',
+    'ACDC','PTEN','PUMP','WTTR','RES','NINE','NOV','CHX','HP','WFRD','FTI','CLB','NBR','KEI',
+    'XOM','CVX','SHEL','BP','TTE','EQNR','YPF','VIST','CNQ','CVE','TOU.TO','ARX.TO','WCP.TO',
+    'POU.TO','BTE.TO','CFW.TO','TCW.TO','PD.TO','TBN','BPT.AX','2222.SR','601857.SS','600028.SS',
+    'SEI','REI','NOG','PROP','BKV','KLXE','WHD','AESI','FTK','XPRO','NESR','STO.AX','EC',
+    '601808.SS','PAM','KEGX'
+  ];
+  const covered = new Set(DATA.map(d => d.ticker));
+  const partial = DATA.filter(d => d.data_quality === 'Limited data').map(d => d.ticker);
+  const missing = WATCHLIST.filter(t => !covered.has(t));
+
+  document.getElementById('cov-covered').textContent = covered.size - partial.length;
+  document.getElementById('cov-partial').textContent = partial.length;
+  document.getElementById('cov-missing').textContent = missing.length;
+  document.getElementById('cov-bar').style.width = Math.round(covered.size / WATCHLIST.length * 100) + '%';
+
+  // Missing table
+  const mt = document.getElementById('missing-table');
+  mt.replaceChildren();
+  const mhead = el('thead'); const mhrow = el('tr');
+  ['Ticker','Reason Missing','Priority'].forEach(h => mhrow.appendChild(el('th',{text:h})));
+  mhead.appendChild(mhrow); mt.appendChild(mhead);
+  const mtbody = el('tbody');
+  const reasons = {
+    '600028.SS':'Sinopec \u2014 Chinese-only earnings, no English transcript available',
+    '601808.SS':'COSL \u2014 Chinese-only earnings, no English transcript available',
+    '601857.SS':'PetroChina \u2014 Chinese-only earnings, no English transcript available',
+    'BPT.AX':'Beach Energy \u2014 Australian, no US-accessible transcript source',
+    'PD.TO':'Precision Drilling \u2014 covered under PD (US ticker)',
+    'POU.TO':'Paramount Resources \u2014 Canadian, Q4 2025 not yet released',
+    'PROP':'Prairie Operating \u2014 micro-cap, no earnings call transcript available',
+    'KEI':'Key Energy Services \u2014 covered under KEGX',
+    'TCW.TO':'Trican Well Service \u2014 covered under TCW (US ticker)',
+    'WCP.TO':'Whitecap Resources \u2014 covered under WCP (US ticker)'
+  };
+  const priorities = {'POU.TO':'Medium','PROP':'Low','BPT.AX':'Low','600028.SS':'Low','601808.SS':'Low','601857.SS':'Low','PD.TO':'Duplicate','TCW.TO':'Duplicate','WCP.TO':'Duplicate','KEI':'Duplicate'};
+  missing.forEach(t => {
+    const row = el('tr');
+    row.appendChild(el('td',{class:'ticker',text:t}));
+    row.appendChild(el('td',{text:reasons[t]||'Not yet analyzed'}));
+    const pri = priorities[t]||'Medium';
+    const pc = el('td');
+    const priClass = pri==='High'?'badge-high':pri==='Duplicate'?'badge-partner':pri==='Medium'?'badge-medium':'badge-low';
+    pc.appendChild(el('span',{class:'badge '+priClass,text:pri}));
+    row.appendChild(pc);
+    mtbody.appendChild(row);
+  });
+  mt.appendChild(mtbody);
+
+  // Data quality table
+  const qt = document.getElementById('quality-table');
+  qt.replaceChildren();
+  const qhead = el('thead'); const qhrow = el('tr');
+  ['Data Quality','Count','Companies'].forEach(h => qhrow.appendChild(el('th',{text:h})));
+  qhead.appendChild(qhrow); qt.appendChild(qhead);
+  const qtbody = el('tbody');
+  const quals = {};
+  DATA.forEach(d => { const q = d.data_quality||'Unknown'; if (!quals[q]) quals[q]=[]; quals[q].push(d.ticker); });
+  Object.entries(quals).sort((a,b) => b[1].length - a[1].length).forEach(([q, tickers]) => {
+    const row = el('tr');
+    row.appendChild(el('td',{text:q}));
+    row.appendChild(el('td',{text:String(tickers.length)}));
+    row.appendChild(el('td',{text:tickers.join(', ')}));
+    qtbody.appendChild(row);
+  });
+  qt.appendChild(qtbody);
 }
 
 init();
