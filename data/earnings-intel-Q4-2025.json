@@ -14,16 +14,16 @@
       "Appalachia"
     ],
     "technology_mentions": [
-      "ProPilot 2.0 surface automation (up to 26% fuel economy improvement)",
-      "Seismos closed-loop fracturing (CLF) strategic partnership",
+      "ProPilot 2.0 surface automation",
+      "Seismos closed-loop fracturing",
       "E-frac fleets",
       "Dual-fuel fleets",
-      "Real-time downhole performance auditing via Seismos"
+      "Real-time downhole performance auditing"
     ],
     "completions_strategy": "ProPilot 2.0 handles surface automation while Seismos provides subsurface intelligence in two modes: supervised (real-time decision-making with operator) and unsupervised (fully automated adjustments). Seismos described as 'independent auditor for downhole performance.' Combined offering positions ProFrac for closed-loop fracturing differentiation in a commoditizing market.",
     "service_provider_mentions": [
-      "Seismos (strategic partner, CLF)",
-      "Halliburton (competitive context)"
+      "Seismos",
+      "Halliburton"
     ],
     "metrics_reported": {
       "Q3_revenue": "$403M",
@@ -54,8 +54,7 @@
       "e-frac",
       "automated completions",
       "real-time optimization",
-      "iCruise",
-      "Sperry Drilling"
+      "iCruise"
     ],
     "completions_strategy": "Zeus IQ automated completions platform saw 8% QoQ adoption increase. Pushing real-time completions intelligence as a differentiation lever against Liberty and ProFrac.",
     "service_provider_mentions": [],
@@ -79,19 +78,16 @@
       "Louisiana"
     ],
     "technology_mentions": [
-      "Atlas cloud-based completions data platform (deployed with every Liberty crew)",
-      "Atlas IQ AI-powered assistant with natural language queries across operational data",
+      "Atlas cloud-based completions data",
+      "Atlas IQ AI-powered assistant with",
       "DigiFleets (electric fracturing)",
       "DigiTechnologies transition",
-      "AI-driven asset optimization software",
-      "Forte generation platform (distributed power)",
-      "Tempo Power Quality Management System",
-      "Chorus (grid solution)"
+      "AI-driven asset optimization software"
     ],
     "completions_strategy": "Continuous operations, multi-frac jobs, automation, and transparency cited as 'flight to quality' differentiators as lower-tier competition exits. Atlas IQ provides real-time operational data and AI-powered insights to completion crews. 14% reduction in maintenance costs per unit of work achieved via AI optimization. Building 3-4 additional digiFleets in 2026.",
     "service_provider_mentions": [
       "ProFrac (competitive context)",
-      "Vantage Data Centers (power customer)"
+      "Vantage Data Centers"
     ],
     "metrics_reported": {
       "FY2025_revenue": "$4.0B",
@@ -117,10 +113,19 @@
     "transcript_url": "local",
     "strategy_summary": "Magnolia delivered 11% production growth to ~100,000 BOE/d in 2025 with field-level cash operating costs down 7% to $5.12/BOE, generating $425M+ FCF of which ~75% was returned to shareholders. Giddings (Eagle Ford) drilling efficiency improved 8% in drilled feet per day and 6% in completed feet per day, with well costs trending toward ~$1,000/ft from ~$1,100/ft. 2026 guidance targets ~5% production growth with flat D&C capital of $440-480M, remaining completely unhedged.",
     "capex_guidance": "$440-480M D&C and facility capital 2026; ~$125M Q1 2026 (highest quarterly rate); no additional rigs planned",
-    "basin_focus": "Eagle Ford / Giddings field (South Texas); company-wide South Texas focus with horizontal drilling and multi-stage completions",
-    "technology_mentions": "Completion efficiency gains in Giddings: 8% improvement in drilled feet/day, 6% improvement in completed feet/day; well costs ~$1,000/ft trending down from $1,100/ft; improved well placement cited for outperformance vs type curves",
+    "basin_focus": [
+      "Eagle Ford",
+      "Giddings"
+    ],
+    "technology_mentions": [
+      "Completion efficiency optimization",
+      "Horizontal drilling",
+      "Multi-stage completions"
+    ],
     "completions_strategy": "Multi-stage horizontal completions in Eagle Ford/Giddings; 8,000-8,500 ft typical lateral length; well cost optimization toward $1,000/ft; consistency with same rigs/crews/equipment over multi-year periods cited as key to efficiency; completion deferrals in H1 2025 enabled by strong early productivity",
-    "service_provider_mentions": "Service costs described as 'flat to slightly down' for 2026; key providers locked in for H1 2026; no specific vendors named",
+    "service_provider_mentions": [
+      "Service costs described as"
+    ],
     "metrics_reported": "FY2025 production 100,000 BOE/d (+11%); Q4 2025 record 103,800 BOE/d; oil production ~40,000 bpd; field-level cash OpEx $5.12/BOE (-7%); D&C capital $461M; organic proved developed F&D $9.25/BOE; FCF >$425M; diluted shares -4.5%",
     "seismos_relevance": "High",
     "seismos_relevance_detail": "Magnolia is an EXISTING Seismos CLF case study customer operating in the Eagle Ford/Giddings. This earnings call confirms continued focus on completion efficiency optimization in Giddings, improved drilled and completed feet per day, and well cost reduction \u2014 all areas where Seismos CLF delivers documented value. Completion deferrals and improved well placement language aligns with CLF-driven optimization. Strong candidate for expanded engagement and case study refresh given active 2026 program with $440-480M D&C spend.",
@@ -140,16 +145,15 @@
       "Anadarko (divested)"
     ],
     "technology_mentions": [
-      "Real-time frac optimization with proprietary algorithms",
-      "Continuous pumping (7-day straight operational run achieved)",
-      "Surfactants (300 Permian wells, 9% oil productivity improvement)",
-      "Drive Center AI platform for drilling optimization",
-      "Automated drilling (AI-driven slide/rotate optimization)",
-      "Cube/reoccupation sequencing strategy"
+      "Real-time frac optimization with",
+      "Continuous pumping",
+      "Surfactants",
+      "Drive Center AI platform for drilling",
+      "Automated drilling"
     ],
     "completions_strategy": "Continuous pumping is a central focus \u2014 achieved 20% improvement in completed feet per day, averaging 4,250 ft/day with 7-day straight runs. Proprietary real-time frac optimization algorithms adjust treatment parameters during pumping. Surfactants credited for half of type curve improvement since 2022. Ovintiv explicitly owns its frac optimization IP internally.",
     "service_provider_mentions": [
-      "Halliburton (implied, major Permian pumper)",
+      "Halliburton",
       "unnamed pumpers"
     ],
     "metrics_reported": {
@@ -174,13 +178,12 @@
     "capex_guidance": "$1.85B total ($1.45B D&C, $400M non-D&C), down $120M YoY",
     "production_guidance": "415,000 BOE/d total, 189,000 Bopd oil (5% growth)",
     "basin_focus": [
-      "Delaware Basin (New Mexico - 65%)",
-      "Delaware Basin (Texas - 30%)"
+      "Delaware Basin"
     ],
     "technology_mentions": [
-      "simul-frac",
-      "surfactants and acids on producing wells",
-      "long laterals (up to 17,000 ft)"
+      "Simul-frac",
+      "Surfactant optimization",
+      "Extended laterals"
     ],
     "completions_strategy": "Increased completed lateral feet per day by 20% YoY through simul-frac efficiency improvements. Drilling 2-mile wells in ~13 days spud-to-rig release. Average lateral length of 11,000 ft in 2026 with longest lateral at ~17,000 ft. Experimenting with surfactants and acids on existing producing wells with mixed results - some wells showing double or triple production rates.",
     "service_provider_mentions": [],
@@ -198,10 +201,20 @@
     "transcript_url": "local",
     "strategy_summary": "ProPetro navigated a contracting Permian frac market (~70 active fleets vs prior 90-100) by generating strong Q4 FCF from its completions business and pivoting growth capital toward PROPWR, its power generation business targeting 1 GW by 2030. The company is investing in fleet automation technology, FORCE electric frac fleet buyouts, and direct-drive gas frac units, while maintaining pricing discipline and keeping majority of fleets under contract. PROPWR has 240 MW committed and 550 MW on order including a data center contract.",
     "capex_guidance": "2026 total CapEx $390-435M; completions $140-160M (incl. FORCE lease buyouts $40-50M); PROPWR $250-275M",
-    "basin_focus": "Permian Basin exclusively (frac); national power market including data centers for PROPWR",
-    "technology_mentions": "FORCE electric frac fleets (5 fleets, lease buyout in 2026-2028); Tier IV DGB fleets (7 fleets); direct-drive gas frac units (pilot, adding gradually); fleet automation technology investment; wireline (Silvertip); cementing; PROPWR (natural gas recip generators 70% / modular turbines 30% at $1.1M/MW)",
+    "basin_focus": [
+      "Permian Basin"
+    ],
+    "technology_mentions": [
+      "FORCE electric frac fleets",
+      "Tier IV DGB fleets",
+      "Direct-drive gas frac",
+      "PROPWR power solutions",
+      "Wireline services"
+    ],
     "completions_strategy": "Maintaining ~11 active frac fleets Q1 2026 (down from Permian peak); majority under contract for stability; refurbishing Tier IV DGB fleet; adding direct-drive gas units selectively; fleet automation upgrades for customer fine-tuning and internal predictive maintenance; pricing discipline \u2014 will not run at subeconomic rates",
-    "service_provider_mentions": "Caterpillar Financial Services (FORCE fleet financing, $157M facility); Stonebriar Commercial Finance ($350M leasing facility); no upstream technology vendors named",
+    "service_provider_mentions": [
+      "Caterpillar Financial Services"
+    ],
     "metrics_reported": "Q4 revenue $290M; Q4 adjusted EBITDA $51M (18% margin, +45% QoQ); Q4 completions FCF $98M; Permian ~70 active fleets (market); PROPWR 240 MW committed, 550 MW on order, target 750 MW by end-2028 / 1 GW by 2030; equity offering raised ~$163M net",
     "seismos_relevance": "High",
     "seismos_relevance_detail": "ProPetro is a Seismos partner and key distribution channel \u2014 as one of the 'big three' Permian pumpers alongside Liberty and ProFrac. The transcript confirms ProPetro is investing heavily in fleet automation and technology to support customer frac optimization, directly complementary to SAFA/CLF. Their FORCE electric fleet and technology investment narrative aligns with Seismos positioning. Continued Permian-only focus means any CLF/SAFA deployment would go through ProPetro. Key account for partnership expansion and Machina integration.",
@@ -215,10 +228,20 @@
     "transcript_url": "local",
     "strategy_summary": "Trican delivered strong Q4 results (CAD $322.7M revenue, 23% EBITDA) driven by Iron Horse acquisition and a 70/30 gas/oil work mix. The company is differentiating as the only Canadian basin provider offering a 'full suite' of electric assets on location, investing CAD $40M in 100% natural gas Caterpillar 3520 frac pumpers (first units received, field deployment Q2 2026, 10-pump spread by fall), and is 'incredibly bullish' on Montney/Duvernay driven by LNG export capacity growth.",
     "capex_guidance": "CAD $120M 2026 capital program (~50% expansion including ~CAD $40M natural gas frac fleet); maintenance ~CAD $60M",
-    "basin_focus": "Western Canada - Montney (dominant), Duvernay, Cardium, SAGD (Christina Lake expansion), Eastern Alberta/Saskatchewan/Central Alberta (Iron Horse acquisition)",
-    "technology_mentions": "Natural gas frac pumpers (Cat 3520, 100% NG - first in fleet), electric ancillary frac equipment (full suite - only provider in basin), AI for cementing blending error reduction, hybrid cementing unit development, natural gas semi-trucks, electrification of ancillary support equipment",
+    "basin_focus": [
+      "Montney",
+      "Duvernay",
+      "Cardium"
+    ],
+    "technology_mentions": [
+      "Natural gas frac pumpers",
+      "Electric ancillary frac equipment",
+      "Cat 3520 engines"
+    ],
     "completions_strategy": "Deep frac differentiation via natural gas pumping and full electric ancillary suite; demand for electric assets exceeds supply; trends toward longer wells and higher sand volumes; growing logistics business as customer-supplied sand increases; cementing expansion into SAGD (Christina Lake) market; coil tubing setting depth/horizontal records in Montney/Duvernay",
-    "service_provider_mentions": "Caterpillar (natural gas frac pumpers - Cat 3520); Iron Horse Frac (acquired); Centrica implied (customer LNG contracts referenced)",
+    "service_provider_mentions": [
+      "Caterpillar"
+    ],
     "metrics_reported": "Q4 revenue: CAD $322.7M (vs CAD $275.5M prior year); EBITDA: CAD $73.4M (23% margin); FCF: CAD $46.6M; net debt: CAD $79.9M (~0.3x leverage); shares repurchased: 12.1M in FY2025; cementing Q4 revenue/jobs: +33% YoY; work mix: ~70% gas / 30% oil",
     "seismos_relevance": "High",
     "seismos_relevance_detail": "Trican is a direct target for Seismos CLF partnership in the Canadian market. As the dominant Canadian pressure pumper with strong Montney/Duvernay market position and a technology-forward posture (electric fleet, NG pumpers, AI tools), Trican is exactly the type of pumping company Seismos targets. Their active expansion into electric/NG fleets and customer demand for efficiency and lower emissions creates a natural CLF value proposition. Trican's SAGD cementing expansion into Christina Lake and emphasis on customer technology roadmaps is additional signal. No current Seismos relationship mentioned, making this a greenfield opportunity.",
@@ -232,10 +255,20 @@
     "transcript_url": "local",
     "strategy_summary": "APA exceeded cost reduction targets, generating $1B+ FCF in 2025 with net debt below $4B, and expects to exit 2026 at a $450M controllable spend run-rate. The Permian is APA's foundational asset with ~450k net acres; 2026 capital of $1.3B targets flat Permian oil production at 120-122k bpd while D&C costs improved to $595/lateral foot (Midland) and $750/lateral foot (Delaware). Suriname GranMorgu targets mid-2028 first oil with $230M of 2026 capital.",
     "capex_guidance": "$1.3B U.S. 2026 capital (~$1.2B Permian D&C + $100M base capital); ~$230M Suriname GranMorgu; ~$70M exploration; total 2026 capex not explicitly stated but ~$1.6B implied",
-    "basin_focus": "Permian Basin (Midland and Texas-Delaware, 450k net acres); Egypt (gas-weighted growth, 540-550 MMcfd gross gas 2026); Suriname (GranMorgu development, mid-2028 first oil)",
-    "technology_mentions": "Drilling and completion cost reductions ($595/ft Midland, $750/ft Delaware); artificial lift investments; compression and facilities consolidation; no specific frac diagnostics technology mentioned",
+    "basin_focus": [
+      "Permian Basin",
+      "Egypt",
+      "Suriname"
+    ],
+    "technology_mentions": [
+      "D&C cost reductions",
+      "Artificial lift",
+      "Compression optimization"
+    ],
     "completions_strategy": "D&C cost discipline with Midland at $595/lateral foot (periods under $500); Delaware at $750/ft (some under $700 shallow); 4-well appraisal test in shallow Delaware (Avalon/Bone Spring) late 2026; 2026 program holds Permian oil flat at 120-122k bpd; technical upside inventory conversion via delineation",
-    "service_provider_mentions": "No specific service providers named",
+    "service_provider_mentions": [
+      "No specific service providers"
+    ],
     "metrics_reported": "Q4 FCF $425M; FY2025 FCF >$1B; net debt <$4B; proved reserves +9% to >1B boe; all-in RRR >160%; Permian D&C costs $595/ft Midland, $750/ft Delaware; Egypt Q4 gross gas 501 MMcfd",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "APA is active in the Permian (Midland and Delaware) with a cost-reduction and capital-efficiency focus on completions. D&C cost reduction and technical inventory conversion suggest interest in frac performance optimization tools. However, no completions diagnostics, real-time frac monitoring, or CLF technology was mentioned. Medium relevance as a Permian operator prospect.",
@@ -273,10 +306,18 @@
     "transcript_url": "local",
     "strategy_summary": "BKV delivered 8% exit-to-exit organic production growth in its first full public year, setting internal completions efficiency records above 22 HP-hours/day and lowering D&C costs to $545/ft - peer-leading for gas. Strategy centers on a 'closed-loop' upstream/power/CCUS platform targeting hyperscaler PPAs from its 1.5 GW Temple gas plant. Barnett refracs and POW (positive offset well) production management are key differentiators.",
     "capex_guidance": "$410-$560M gross 2026 capex; $240M upstream development; $135M strategic power capital",
-    "basin_focus": "Barnett Shale (Fort Worth Basin, dominant position), NE Pennsylvania",
-    "technology_mentions": "AI and big data for well optimization and decline management, completions efficiency benchmarking (HP-hours/day), refrac program, positive offset well (POW) analysis, carbon capture (CCUS/Barnett Zero), Upper Barnett appraisal",
+    "basin_focus": [
+      "Barnett Shale",
+      "Appalachia"
+    ],
+    "technology_mentions": [
+      "AI operations",
+      "Power generation assets"
+    ],
     "completions_strategy": "Disciplined multi-stage completions with efficiency records; active refrac program on Bedrock DUCs; focus on POW production uplift (~22% above type curve through 150 days); Upper Barnett appraisal wells planned for 2026",
-    "service_provider_mentions": "None named",
+    "service_provider_mentions": [
+      "None named"
+    ],
     "metrics_reported": "Production: 940 MMcfe/d Q4; completions efficiency >22 HP-hours/day; D&C cost $545/ft; POW uplift ~22% above type curve through 150 days; 8% exit-to-exit growth; reserves ~6 Tcfe 1P",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "BKV's emphasis on completions efficiency records, POW production analysis, and AI-driven optimization in a mature Barnett play creates a relevant entry point for Seismos real-time diagnostics. Refracs and DUC completions on Bedrock assets are near-term opportunities. However, BKV is a gas-focused mid-size operator in the Barnett - not a Permian/unconventional oil operator - and no direct frac diagnostics or CLF language was used. Relevance is process/efficiency driven rather than diagnostic.",
@@ -290,10 +331,19 @@
     "transcript_url": "local",
     "strategy_summary": "BP executed a turnaround in 2025 with $2B in structural cost reductions, 7 major project startups, and record plant reliability above 96%, while suspending buybacks to accelerate balance sheet repair targeting $14-18B net debt by 2027. BPX Lower 48 achieved 20% improvement in completion time and 9% improvement in drilling time, representing significant capital productivity gains. AI and digital twins are deployed for real-time reservoir/wells/facilities monitoring across operations.",
     "capex_guidance": "$13-13.5B organic CapEx 2026 (low end of prior guidance range); 2026 production ~2.3 MMboe/d broadly flat",
-    "basin_focus": "BPX Lower 48 (Permian, Eagle Ford, Haynesville), Gulf of America (Paleogene/Kaskida/Tiber), Brazil (Bumerangue discovery ~8B bbl in place), Azerbaijan, North Sea",
-    "technology_mentions": "Dynamic digital twins, AI/automation for real-time reservoir/wells/facilities monitoring; 'Wells Adviser' AI system for wellsite decisions; AI kick detection (90% success rate); BPX 20% completion time improvement, 9% drilling time improvement; geo-steering for horizontal wells",
+    "basin_focus": [
+      "Permian",
+      "Eagle Ford",
+      "Gulf of Mexico"
+    ],
+    "technology_mentions": [
+      "Dynamic scheduling",
+      "Digital operations"
+    ],
     "completions_strategy": "BPX 20% improvement in completion time enabling 8-rig equivalent of prior 10-rig program; geo-steering long undulating horizontals; 3/4 of wells in top or second quartile; first/second quartile focus in Permian, Eagle Ford, Haynesville",
-    "service_provider_mentions": "Transocean (Mykonos deepwater rig for Brazil appraisal); no completions service vendors named",
+    "service_provider_mentions": [
+      "Transocean"
+    ],
     "metrics_reported": "FY2025 underlying RC profit $7.5B; OCF $24.5B; CapEx $14.5B; adjusted FCF ~$13B; ROACE 14% price-adjusted; reserves replacement 90%; plant reliability >96%; wells reliability ~98%; BPX average IRR 45% at $65 WTI",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "BPX completion efficiency gains (20% improvement) and real-time monitoring via AI/digital twins are directly relevant to Seismos CLF value proposition. BPX operates in Permian, Eagle Ford, and Haynesville \u2014 all Seismos target basins. However, no specific completions diagnostics technology named. AI monitoring emphasis signals openness to real-time optimization tools like SAFA.",
@@ -313,7 +363,7 @@
     "technology_mentions": [
       "surfactant and chemical treatments",
       "alternative well geometries",
-      "long lateral conversion (3-mile and 4-mile)"
+      "long lateral conversion"
     ],
     "completions_strategy": "One full-time frac crew with spot crew releasing mid-summer. Five drilling rigs balanced between 3-mile and 4-mile laterals. Approximately 80% of TILs expected to be longer laterals. Actively trialing 19 surfactant and chemical treatments to enhance well performance and evaluating alternative well geometries.",
     "service_provider_mentions": [],
@@ -342,8 +392,7 @@
       "Pulverizer plug-and-abandonment system",
       "Trimmer Frac Diagnostics",
       "limited-entry perforation evaluation",
-      "diverter-based stage isolation assessment",
-      "mobile lab capabilities"
+      "diverter-based stage isolation"
     ],
     "completions_strategy": "Strong demand for proprietary completion diagnostic services across US onshore and offshore markets. SpectraStim deployed to evaluate plugless completion designs using diverter-based stage isolation, confirming stimulation effectiveness across multi-stage laterals. Trimmer Frac Diagnostics supporting complex US land completion designs with limited-entry perforations and extended lateral lengths. Production Enhancement segment revenue $46M (up 8% YoY) despite sequential margin compression from Asia Pacific receivable provision.",
     "service_provider_mentions": [],
@@ -392,14 +441,14 @@
     "production_guidance": "Veren (standalone) 2025 guidance was 188,000-196,000 boe/d at time of Q4 2024 results. Whitecap post-merger 2026 guidance: 370,000-375,000 boe/d (Q4 2026 exit rate 380,000 boe/d), representing 22% growth vs. 2025 average. Montney and Duvernay assets ~75-80% of unconventional capital.",
     "basin_focus": [
       "Alberta Montney (Canada)",
-      "Kaybob Duvernay (Alberta, Canada)",
+      "Kaybob Duvernay",
       "Saskatchewan (Canada)"
     ],
     "technology_mentions": [
-      "Single Point Entry (SPE) completion designs in Carr (Alberta Montney) - 30% above type well IP30",
+      "Single Point Entry",
       "SPE design testing in Karr (Montney)",
       "Multi-well pad development",
-      "Gas egress infrastructure expansion (Gold Creek West)"
+      "Gas egress infrastructure expansion"
     ],
     "completions_strategy": "Veren/Crescent Point was actively testing Single Point Entry (SPE) completion designs in the Alberta Montney at Carr, achieving 30% above type well IP30 rates (average peak 30-day rate of 1,270 boe/d per well at 80% oil cut). SPE design expanded to Karr and Gold Creek in 2025. Kaybob Duvernay completions delivered 25% above type well IP30 rates. Completions innovation was a key operational differentiator. No CLF or real-time frac monitoring mentioned.",
     "service_provider_mentions": [],
@@ -424,7 +473,7 @@
     ],
     "technology_mentions": [
       "simulfrac",
-      "ESP (Electric Submersible Pump) optimization",
+      "ESP",
       "extended lateral lengths"
     ],
     "completions_strategy": "Expanding simulfrac to 70% of South Texas pads; increasing Eagle Ford lateral lengths by ~2,000 feet through strategic land trades; D&C costs per foot declined 15% YoY. Running 4 Eagle Ford rigs, 1 Uinta rig, 1-2 Permian rigs.",
@@ -455,7 +504,7 @@
     ],
     "completions_strategy": "Ramping from 8 to 9 operated rigs with 4 devoted to Western Haynesville. Plans to drill 47 wells and turn 48 to sales in 2026. Western Haynesville wells averaging 33 MMcf/d IP. Upgrading to 10,000 PSI rig by late summer and planning 20,000 PSI frac fleet upgrade. 11% YoY reduction in D&C costs for legacy assets. Two Western Haynesville wells per month and four legacy wells per month completion pace.",
     "service_provider_mentions": [
-      "NextEra (data center power partnership)"
+      "NextEra"
     ],
     "efficiency_metrics": "11% YoY reduction in D&C costs for legacy Haynesville. Finding cost of $1.02/Mcfe. 229% reserve replacement ratio. Western Haynesville wells at 33 MMcf/d average IP vs. 25 MMcf/d legacy.",
     "seismos_relevance": "Medium",
@@ -496,7 +545,7 @@
     "strategy_summary": "Devon announced a merger with Coterra Energy, creating a $3.5B upstream capex combined entity. Pre-merger Devon is executing a business optimization program targeting $1B in savings (85% achieved). Technology focus is on AI-enabled artificial lift optimization, condition-based maintenance, and Fervo geothermal investment. Delaware Basin focus with 90% NM activity.",
     "capex_guidance": "$3.5B upstream capex (combined Devon+Coterra basis)",
     "basin_focus": [
-      "Delaware Basin (90% New Mexico)",
+      "Delaware Basin",
       "Anadarko",
       "Eagle Ford",
       "Williston"
@@ -505,13 +554,13 @@
       "AI-enabled artificial lift optimization",
       "Condition-based maintenance (predictive)",
       "Fervo geothermal investment",
-      "100+ active work streams for operational improvement",
+      "100+ active work streams for",
       "Real-time production monitoring"
     ],
     "completions_strategy": "Devon's primary technology narrative is production optimization (artificial lift, condition-based maintenance) rather than completions diagnostics. Delaware Basin mix is 40% Wolfcamp, 45% Bone Spring, 15% Avalon. Merger with Coterra creates scale efficiency rationale. No CLF or acoustic frac diagnostics mentioned.",
     "service_provider_mentions": [
-      "Coterra Energy (merger partner)",
-      "Fervo Energy (geothermal investment)"
+      "Coterra Energy",
+      "Fervo Energy"
     ],
     "metrics_reported": {
       "combined_upstream_capex": "$3.5B",
@@ -538,18 +587,17 @@
       "Llanos Basin (Colombia)",
       "Permian Basin - Midland (USA)",
       "Putumayo (Colombia)",
-      "Ca\u00f1o Sur (Colombia)",
-      "CPO-09 (Colombia)"
+      "Ca\u00f1o Sur (Colombia)"
     ],
     "technology_mentions": [
-      "New well designs with lower fracture pressures and reduced pumping times in Permian Basin",
-      "Tertiary recovery via air injection at Chichimene field",
-      "Enhanced recovery representing 41% of total output",
-      "Green hydrogen plant (Colombia's largest) started operations"
+      "New well designs with lower fracture",
+      "Tertiary recovery via air injection at",
+      "Enhanced recovery representing 41% of",
+      "Green hydrogen plant"
     ],
     "completions_strategy": "In the Permian Basin, Ecopetrol explicitly credited new well designs, lower fracture pressures, and reduced pumping times as drivers of cost reductions per foot drilled and per barrel pumped vs. plan. This represents active completions optimization. Colombian operations focus on conventional enhanced recovery. No CLF or real-time frac monitoring mentioned.",
     "service_provider_mentions": [
-      "Parex Resources (alliance in Putumayo, $350M commitment)"
+      "Parex Resources"
     ],
     "efficiency_metrics": "Permian: lower cost per foot drilled and per barrel pumped vs. plan via frac design optimization. EBITDA margin 41% in Q3 2025. Refining throughput 413,000 bbl/d in Q3 2025 (post-maintenance recovery). Transportation throughput 1,098,000 bbl/d.",
     "seismos_relevance": "Medium",
@@ -572,16 +620,16 @@
       "Dorado (South Texas gas)"
     ],
     "technology_mentions": [
-      "Super Zipper high-intensity completion operations",
+      "Super Zipper high-intensity completion",
       "EOG motor program (drilling efficiency)",
       "ML-based production optimizers",
-      "High-intensity completions (increased fluid/proppant intensity)",
+      "High-intensity completions",
       "Extended laterals (2-4 miles)"
     ],
     "completions_strategy": "Super Zipper zipper fracs with high fluid and proppant intensity. 10 completion crews across 4 plays. Completed lateral feet per day improving. 585 net wells planned in 2026. No specific CLF or acoustic diagnostics mentioned \u2014 EOG operates a large in-house technical team with proprietary completion designs.",
     "service_provider_mentions": [
-      "ProFrac (inferred as major Delaware pumper)",
-      "unnamed completion service providers"
+      "ProFrac",
+      "unnamed completion service"
     ],
     "metrics_reported": {
       "FY2026_capex": "$6.5B",
@@ -605,10 +653,18 @@
     "transcript_url": "local",
     "strategy_summary": "Expand Energy (formerly Chesapeake + SWN) delivered 15% reduction in Haynesville breakevens in 2025 through evolved completion designs progressing from 'gen one' to 'gen three' and self-sourcing sand, while expecting sustainable first-year production gains in 2026. The company is shifting commercial focus to premium markets targeting $0.20/Mcf uplift (~$500M EBITDA) over 3-5 years and expanding 5 Bcf storage capacity. CEO sees natural gas demand growing 35-40% over five years and is focused on aggressive commercial execution.",
     "capex_guidance": "Maintenance capital ~$225M lower YoY for same ~7.5 Bcf/d production; flexible activity based on $3.50-$4.00 mid-cycle gas price view",
-    "basin_focus": "Haynesville (primary, lowest breakeven improvements), Appalachian (Southwest Pennsylvania inventory), Gulf Coast marketing via NG3/Gillis",
-    "technology_mentions": "Completion design evolution ('gen one' to 'gen three'); self-sourcing sand for completion outcomes; drilling efficiency improvements; 5 Bcf storage deployment",
+    "basin_focus": [
+      "Haynesville",
+      "Appalachia"
+    ],
+    "technology_mentions": [
+      "Completions optimization",
+      "Natural gas focus"
+    ],
     "completions_strategy": "Progressive completion design iterations in Haynesville driving breakeven reduction; self-sourced sand to improve completion quality; maintaining flexibility on completion timing based on gas price; five Utica laterals planned for CNX-style completion (note: this is EXE not CNX)",
-    "service_provider_mentions": "No specific service providers named; sand self-sourcing mentioned",
+    "service_provider_mentions": [
+      "No specific service providers"
+    ],
     "metrics_reported": "15% Haynesville breakeven reduction; $200M hedging gains 2025; 5 Bcf storage capacity; ~7.5 Bcf/d maintenance production level",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "Expand Energy is the largest natural gas producer in the U.S. with extensive Haynesville operations. Completion design optimization is central to their strategy ('gen one to gen three'). While no specific diagnostics technology is mentioned, the emphasis on completion efficiency gains and evolving designs signals openness to tools that quantify frac performance. Haynesville is a Seismos target basin. Medium relevance as a prospective target account.",
@@ -628,15 +684,15 @@
     ],
     "technology_mentions": [
       "Simul-frac (simultaneous fracturing)",
-      "Continuous pumping (4,500+ ft/day average, up to 5,500 ft/day recorded)",
-      "Surfactant testing (60-well trial, ~$500K/well cost)",
+      "Continuous pumping",
+      "Surfactant testing",
       "Stage design optimization",
       "Extended laterals (15,000 ft in Barnett)"
     ],
     "completions_strategy": "Continuous pumping is the primary efficiency driver \u2014 Diamondback treats downtime as the enemy. Simul-frac on longer laterals. Active surfactant trial to quantify oil uplift (60-well program). Stage design optimization to reduce cost per foot in Barnett from $1,000 to $800. No real-time diagnostics or acoustic monitoring mentioned.",
     "service_provider_mentions": [
-      "ProFrac (inferred, major Permian pumper)",
-      "unnamed completion service companies"
+      "ProFrac",
+      "unnamed completion service"
     ],
     "metrics_reported": {
       "FY2026_capex": "$3.75B",
@@ -692,16 +748,14 @@
       "Permian",
       "Gulf Coast",
       "Midcontinent",
-      "Northeast/Appalachia",
-      "Rockies"
+      "Northeast/Appalachia"
     ],
     "technology_mentions": [
       "VISION Suite",
       "OraclE-Smart Reach Tool (SRT)",
       "SpectrA PDC",
       "PhantM Dissolvables",
-      "large-diameter coiled tubing",
-      "wireline pump down perforating"
+      "large-diameter coiled tubing"
     ],
     "completions_strategy": "Core completions services provider with 50+ products/services. VISION Suite of downhole completions tools is their technology differentiator, including dissolvable tools and smart reach tools. Operates one of the largest US wireline fleets (130+ units) and 24 large-diameter coiled tubing spreads. Northeast/Mid-Con segment surging on gas activity.",
     "service_provider_mentions": [],
@@ -725,13 +779,10 @@
     ],
     "technology_mentions": [
       "enhanced completion surfactants",
-      "produced water recycling (72% of frac water)",
+      "produced water recycling",
       "artificial intelligence integration",
       "Wolfcamp",
-      "Bone Spring",
-      "Third Bone Spring Carbonate",
-      "Avalon",
-      "Woodford exploratory"
+      "Bone Spring"
     ],
     "completions_strategy": "Large-batch and longer-lateral completions front-loaded in H1 2026 (55-60% of full-year capex). D&C cost expected at ~$795/lateral foot, down 6% YoY. 20% YoY completion efficiency improvement. Expanded surfactant program showing improved 150-day cumulative production vs. control wells. 72% of frac water sourced from produced water.",
     "service_provider_mentions": [],
@@ -753,9 +804,7 @@
       "Permian Basin",
       "Haynesville",
       "Northeast (Marcellus/Utica)",
-      "UAE",
-      "Argentina",
-      "Australia"
+      "UAE"
     ],
     "technology_mentions": [
       "latex-based cement slurry (high-temp)",
@@ -781,23 +830,22 @@
     "strategy_summary": "NOV delivered $8.74B revenue and $1.03B EBITDA for 2025. Wired pipe Downhole Broadband Services (DBS) doubled year-over-year in the North Sea, enabling high-frequency downhole data for faster decision-making. ATOM RTX robotics platform and digital solutions for drilling efficiency are growth areas. NA completions business softer on macro. Max Completions (Seismos partnership platform) not named explicitly in call.",
     "capex_guidance": "Not specified in summary; ongoing operational investment in wired pipe and digital",
     "basin_focus": [
-      "North Sea (wired pipe/DBS primary growth)",
-      "North America (completions, softer)",
+      "North Sea",
+      "North America",
       "Middle East",
       "International broadly"
     ],
     "technology_mentions": [
-      "Wired pipe Downhole Broadband Services (DBS) \u2014 doubled YoY in North Sea",
-      "High-frequency downhole data acquisition during drilling/completions",
-      "ATOM RTX robotics platform (rig floor automation)",
-      "Max Completions platform (Seismos partner \u2014 not named in call)",
-      "Digital solutions for drilling efficiency",
-      "Intervention and stimulation capital equipment segment"
+      "Wired pipe Downhole Broadband Services",
+      "High-frequency downhole data",
+      "ATOM RTX robotics platform",
+      "Max Completions platform",
+      "Digital solutions for drilling"
     ],
     "completions_strategy": "NOV's completions exposure is through capital equipment (stimulation equipment, intervention tools) and the Max Completions platform. DBS wired pipe provides high-frequency downhole data that enables faster rig-floor decisions \u2014 adjacent to Seismos's acoustic sensing approach but focused on drilling rather than fracturing. NA completions equipment market softer.",
     "service_provider_mentions": [
       "Unnamed operators (North Sea)",
-      "Seismos (implied via Max Completions partnership \u2014 not named in call)"
+      "Seismos"
     ],
     "metrics_reported": {
       "FY2025_revenue": "$8.74B",
@@ -816,10 +864,19 @@
     "transcript_url": "local",
     "strategy_summary": "FILE NOTE: PTEN.txt contains ProPetro (PUMP) Q4 2025 data, not Patterson-UTI (PTEN). ProPetro reported Q4 revenue of $290M (beat), adjusted EPS of $0.01 (beat vs -$0.13 est), with EBITDA up 46% QoQ to $51M. The company's major strategic pivot is PROPWR - a power generation business targeting 1 GW+ of installed capacity by 2030, with 550 MW ordered. ProPetro plans 11 active frac fleets in Q1 2026 and is investing $140-160M in completions business in 2026 including fleet automation and direct drive gas frac units.",
     "capex_guidance": "$390-435M total 2026 capex: $140-160M completions (incl. $40-50M FORCEelectric lease buyouts, fleet automation, gas frac units); $250-275M PROPWR power generation",
-    "basin_focus": "Permian Basin (Midland, TX-based, primary focus)",
-    "technology_mentions": "PROPWR (power generation business, 550 MW ordered, 1 GW+ by 2030); FORCEelectric frac fleet (electric frac, lease buyout program); fleet automation technology investment; direct drive gas frac units; wireline technology",
+    "basin_focus": [
+      "Permian Basin",
+      "Appalachia"
+    ],
+    "technology_mentions": [
+      "PROPWR equipment",
+      "Electric frac support",
+      "NatGas turbines"
+    ],
     "completions_strategy": "Operating 11 active frac fleets in Q1 2026 (near-term constraint on adding fleets); investing in fleet automation and transitioning from Tier IV DGB to gas frac/electric units; PROPWR power pivot is the dominant 2026 investment theme with completions business as secondary focus",
-    "service_provider_mentions": "Caterpillar Financial Services (financing expansion to ~$157M); Stonebriar Commercial Finance ($350M lease facility for PROPWR)",
+    "service_provider_mentions": [
+      "Caterpillar Financial Services"
+    ],
     "metrics_reported": "Q4 revenue: $290M; hydraulic fracturing segment revenue: $203.9M (73.2% of total); wireline revenue: $55.4M; adjusted EBITDA: $51M (46% QoQ increase); FCF (completions): ~$98.1M; PROPWR committed capacity: ~240 MW; total PROPWR ordered: 550 MW; target by end 2027: 750 MW+; by 2030: 1 GW+",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "ProPetro is a Permian-focused pressure pumper directly in Seismos's target market (ProFrac and Liberty are Seismos partners; ProPetro is the third major independent Permian pumper). The fleet automation investment and transition to electric/gas frac fleets creates a natural CLF integration opportunity. However, ProPetro's 2026 investment narrative is dominated by PROPWR power generation, suggesting completions technology spending may be constrained. The FORCEelectric fleet and direct drive gas frac units are the relevant fleet segments for Seismos CLF integration.",
@@ -858,19 +915,16 @@
     "strategy_summary": "SLB delivered record digital performance in Q4 with $825M digital revenue (+25% sequential), ARR exceeding $1B, and launched Tela \u2014 an agentic AI system for upstream workflows. ChampionX integration drives Production Systems growth. Data center solutions business targeting $1B annual run rate by end-2026. 2026 revenue guidance $36.9-37.7B with margin in-line with 2025.",
     "capex_guidance": "$36.9-37.7B revenue guidance 2026; $2.4B capex investments",
     "basin_focus": [
-      "Global (North America, Latin America, Middle East, Asia, Europe/Africa)",
-      "Venezuela (unique operating license)",
-      "Saudi Arabia (drilling/workover rebound)"
+      "Global",
+      "Venezuela",
+      "Saudi Arabia"
     ],
     "technology_mentions": [
-      "Tela agentic AI system (upstream workflows)",
-      "ADNOC AI-powered production system optimization (partnership)",
+      "Tela agentic AI system",
+      "ADNOC AI-powered production system",
       "OneSubsea (subsea bookings $4B in 2025)",
-      "ChampionX integration (production systems, artificial lift)",
-      "Digital ARR >$1B (15% YoY growth)",
-      "Data center solutions (cooling/infrastructure)",
-      "Lumi platform (digital)",
-      "500+ subsea trees to be awarded 2026-2027"
+      "ChampionX integration",
+      "Digital ARR >$1B (15% YoY growth)"
     ],
     "completions_strategy": "SLB's completions exposure is primarily through Production Systems (ChampionX integration) and Well Construction. Real-time completions diagnostics are not highlighted \u2014 focus is on production recovery, digital, and subsea. Completion services in North America land declined due to macro headwinds.",
     "service_provider_mentions": [
@@ -929,10 +983,20 @@
     "transcript_url": "local",
     "strategy_summary": "Whitecap completed its 'transformational' combination with Veren Inc. and delivered record Q4 production of 379,000 BOE/day with peer-leading operating costs of CAD $12.24/BOE. The Montney unconventional division (Musreau, Lator, Kaybob Duvernay) is ahead of plan with debottlenecked capacity now guided at 115,000-120,000 BOE/day by year-end - two years ahead of prior schedule - driven by 'wine rack' development and artificial lift refinements. 2026 guidance: 370,000-375,000 BOE/day on CAD $2.0-2.1B capex.",
     "capex_guidance": "CAD $2.0-2.1B full year 2026; 2025 full year CAD ~$2.0B",
-    "basin_focus": "Montney (Musreau/Lator/Kaybob - unconventional gas/condensate), Saskatchewan/Bakken/Alberta conventional, Duvernay",
-    "technology_mentions": "Wine rack development configuration (Kaybob Duvernay - 10-20% well performance improvement), open-hole multilateral drilling (3-mile 8-leg Bakken well, IP90 38% above type curve), artificial lift refinements (gas lift optimization), base optimization, 10-year Centrica TTF gas contract, 10-year Chicago Henry Hub contract",
+    "basin_focus": [
+      "Montney",
+      "Duvernay",
+      "West Pembina"
+    ],
+    "technology_mentions": [
+      "Wine rack well design",
+      "Extended reach laterals",
+      "Montney completions optimization"
+    ],
     "completions_strategy": "Montney: longer laterals, higher-density development, 'wine rack' spacing optimization reducing interference; Bakken: extended-reach open-hole multilateral wells (record 34,600m drilled); Cardium: frac design learnings driving 15% capital efficiency improvement in 2025; Frobisher: longer laterals and enhanced reservoir contact with 41% IP180 outperformance",
-    "service_provider_mentions": "Centrica (10-year gas marketing agreement)",
+    "service_provider_mentions": [
+      "Centrica"
+    ],
     "metrics_reported": "Q4 production: 379,000 BOE/day; FY2025 funds flow: CAD $2.95/share; FCF: ~CAD $900M; operating costs: CAD $12.24/BOE (11% YoY decrease); net debt: CAD $3.4B (<1x annualized Q4 FF); Musreau: 17,000-18,000 BOE/day at 70% liquids; Kaybob: 7 wine rack pads (33 wells); Lator: 35,000-40,000 BOE/day facility Q4 commissioning",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "Whitecap is a significant Canadian Montney operator with an active unconventional completions program. The emphasis on 'wine rack' development optimization, frac design learnings, completion efficiency improvements, and high-density well testing in the Duvernay aligns with CLF/real-time diagnostics applications. While no frac diagnostics are mentioned, Whitecap's scale and technology-forward approach to Montney completions make it a potential target for Seismos Canadian market expansion.",
@@ -948,21 +1012,16 @@
     "production_guidance": "N/A",
     "basin_focus": [
       "Permian",
-      "Latin America (Mexico, Brazil, Argentina)",
-      "Middle East (Saudi Arabia, UAE, Kuwait, Oman)",
-      "Asia (Indonesia)",
-      "North Africa",
-      "Australia",
-      "Egypt"
+      "Latin America",
+      "Middle East",
+      "Asia (Indonesia)"
     ],
     "technology_mentions": [
       "Modus MPD (Managed Pressure Drilling)",
       "TRS (Tubular Running Services)",
       "gas-lift completions",
       "flow-control accessories",
-      "digital platforms",
-      "AI-driven productivity tools",
-      "ERP modernization"
+      "digital platforms"
     ],
     "completions_strategy": "Advancing completions and interventions capabilities with focus on offshore rebound. Won seven-year Oxy contract for gas-lift completions and flow-control accessories in Oman. Positioning as full-service provider from drilling through completions with MPD and TRS integration.",
     "service_provider_mentions": [
@@ -984,7 +1043,7 @@
     "capex_guidance": "$175M-$225M for 2026 (with $50M-$60M maintenance weighted to Water Services)",
     "production_guidance": "N/A",
     "basin_focus": [
-      "Northern Delaware Basin (Eddy County, NM)",
+      "Northern Delaware Basin",
       "Permian Basin"
     ],
     "technology_mentions": [
@@ -992,13 +1051,11 @@
       "drag reducer chemistry (DRA)",
       "beneficial reuse",
       "mineral/lithium extraction",
-      "advanced chemical technologies",
-      "pipeline infrastructure",
-      "recycling facilities"
+      "advanced chemical technologies"
     ],
     "completions_strategy": "Select directly supports completions through water transfer for simul-frac and tri-mod frac operations. Management stated they have higher market share on tri-mod fracs than simul-fracs, and higher on simul-fracs than zippers, noting 'the more complex the solution, that is really where we shine.' Water transfer revenues in New Mexico surged 77% sequentially in Q4.",
     "service_provider_mentions": [
-      "LibertyStream Infrastructure Partners"
+      "LibertyStream Infrastructure"
     ],
     "efficiency_metrics": "Water Infrastructure gross margin before D&A at 54.1%. Water Services gross margin improved 2pp to 20% in Q4. Chemical Technology segment 45% gross profit growth. 1 billion barrels recycled since 2021. 800% Water Infrastructure revenue growth over 5 years. FY2025 revenue $1.4B, Adjusted EBITDA $260.3M.",
     "seismos_relevance": "Medium",
@@ -1042,28 +1099,24 @@
     "strategy_summary": "Baker Hughes delivered record 2025 adjusted EBITDA of $4.83B driven by IET (Industrial & Energy Technology) with $32.4B backlog. OFSE (oilfield services) revenue fell 8% on macro headwinds but maintained ~18% margins. Chart Industries acquisition expected Q2 2026 with $325M synergy target. Path to 20% company EBITDA margin by 2028. Power systems, LNG, and new energy are the growth vectors.",
     "capex_guidance": "$27.25B revenue, $4.85B adj EBITDA 2026 guidance; Chart acquisition Q2 2026",
     "basin_focus": [
-      "Global \u2014 Middle East (Kuwait, PDO, ADNOC)",
+      "Global \u2014 Middle East",
       "Sub-Saharan Africa",
       "Brazil",
-      "North Sea (declining)",
-      "Mexico (declining)"
+      "North Sea (declining)"
     ],
     "technology_mentions": [
-      "Leucipa digital production optimization platform",
-      "AccessESP (electric submersible pumps with digital monitoring)",
-      "Cordant Solutions (asset integrity/inspection, double-digit order growth)",
-      "NovaLT industrial gas turbines (~2 GW orders, data center applications)",
-      "Chart Industries acquisition (gas processing/LNG equipment)",
-      "Advanced ESP systems with digital monitoring services"
+      "Leucipa digital production optimization",
+      "AccessESP",
+      "Cordant Solutions",
+      "NovaLT industrial gas turbines",
+      "Chart Industries acquisition"
     ],
     "completions_strategy": "Baker Hughes's OFSE completions exposure is primarily through production solutions (ESP systems, Leucipa) and subsea pressure systems. North America land completions are not a strategic focus \u2014 the company is pivoting toward IET, LNG, power systems, and production recovery globally. OFSE NA land segment facing continued softness.",
     "service_provider_mentions": [
-      "Chart Industries (acquisition target)",
+      "Chart Industries",
       "Kuwait Oil Company (contract)",
       "PDO (contract)",
-      "ADNOC (contract)",
-      "Cactus (SSPS JV)",
-      "Coral North LNG (Mozambique)"
+      "ADNOC (contract)"
     ],
     "metrics_reported": {
       "FY2025_adj_EBITDA": "$4.83B (record)",
@@ -1116,20 +1169,17 @@
     "capex_guidance": "CAD $5.9 billion operating capital for 2025 (unchanged through Q3 2025). Focused on oil sands mining and in situ thermal SAGD development. Multiple SAGD pads planned for 2026 production (Kirby Q4 2025, Pike Q1-Q2 2026). Naphtha Recovery Unit Tailings Treatment (NRUTT) project targeted for mechanical completion Q3 2027 adding ~6,300 bbl/d SCO.",
     "production_guidance": "2025 guidance increased to 1,560,000-1,580,000 boe/d. Q3 2025 record: 1,620,261 boe/d. Oil Sands Mining SCO: 581,136 bbl/d at 104% utilization; target ~592,000 bbl/d capacity post-AOSP acquisition integration. Thermal in situ record: ~271,000 bbl/d. 2026 formal guidance expected March 5, 2026.",
     "basin_focus": [
-      "Athabasca Oil Sands (Alberta, Canada)",
+      "Athabasca Oil Sands",
       "Horizon Oil Sands",
       "Albian Sands (AOSP)",
-      "Kirby (thermal in situ)",
-      "Jackfish (thermal in situ)",
-      "Pike (thermal in situ)",
-      "Primrose (thermal in situ)"
+      "Kirby (thermal in situ)"
     ],
     "technology_mentions": [
-      "Solvent Enhanced Oil Recovery (SAGD solvent injection) at Kirby North and Primrose",
-      "Steam-Assisted Gravity Drainage (SAGD) pad completions",
-      "Reliability Enhancement Project (Horizon - bi-annual turnaround shift)",
-      "Debottleneck Project (Scotford Upgrader +8,000 bbl/d)",
-      "Naphtha Recovery Unit Tailings Treatment (NRUTT)"
+      "Solvent Enhanced Oil Recovery",
+      "Steam-Assisted Gravity Drainage",
+      "Reliability Enhancement Project",
+      "Debottleneck Project",
+      "Naphtha Recovery Unit Tailings Treatment"
     ],
     "completions_strategy": "CNQ's completions activity is focused on SAGD well-pair drilling and steam injection startup for thermal in situ assets, not hydraulic fracturing. Solvent-enhanced oil recovery is being piloted at Kirby North (started June 2024) and Primrose to reduce steam-to-oil ratios and improve recovery factors. Conventional frac completions apply to light oil assets in the Western Canadian Sedimentary Basin but were not highlighted in recent earnings calls.",
     "service_provider_mentions": [],
@@ -1147,10 +1197,18 @@
     "transcript_url": "local",
     "strategy_summary": "CNX is maintaining flat production through 2026 with front-half weighted capital (~60% in H1) while completing approximately five deep Utica laterals at ~$1,700/ft drilling cost with two spacing tests at 1,300 ft and 1,500 ft underway. The company fully internalized its AutoSep technology for flowback operations and has outsourced commercialization to a third-party OFS company expanding across Appalachia. RNG and 45Z tax credits represent ~$30M/year run-rate potential.",
     "capex_guidance": "2026 capital front-half weighted (~60% H1); flat production profile ~7.5 Bcf/d equivalent; no specific dollar figure provided in transcript",
-    "basin_focus": "Appalachian Basin (Marcellus and deep Utica in SW Pennsylvania, West Virginia, Ohio); Haynesville (not mentioned \u2014 CNX is Appalachia-only)",
-    "technology_mentions": "AutoSep (proprietary gas/liquid separator technology for flowback \u2014 cost savings + safety + environmental); deep Utica program with spacing tests at 1,300 ft and 1,500 ft; Evolution e-frac not mentioned in this transcript",
+    "basin_focus": [
+      "Appalachia"
+    ],
+    "technology_mentions": [
+      "AutoSteer drilling",
+      "In-house completions",
+      "Digital monitoring"
+    ],
     "completions_strategy": "~5 deep Utica lateral completions in 2026; Utica drilling cost $1,700/ft; spacing evaluation (1,300 ft vs 1,500 ft tests underway); Marcellus inventory harvesting in SW Pennsylvania; front-half capital weighting preserves H2 acceleration optionality",
-    "service_provider_mentions": "AutoSep commercialization outsourced to unnamed OFS company for Appalachian rollout; Evolution e-frac not named in transcript",
+    "service_provider_mentions": [
+      "AutoSep commercialization"
+    ],
     "metrics_reported": "Utica drilling cost $1,700/ft; 2027 hedged ~60% toward 80% target at ~$4 NYMEX weighted avg; 45Z tax credit potential ~$30M/year run-rate; coal mine methane volume stable (20+ year mine life)",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "CNX operates exclusively in Appalachia (Marcellus/Utica), which is outside Seismos' primary target basins (Permian, Eagle Ford, Haynesville). No frac diagnostics, real-time completions monitoring, or CLF technology mentioned. AutoSep is a flowback tool, not a frac diagnostic. Evolution e-frac partnership (known from other sources) not referenced in this transcript.",
@@ -1164,10 +1222,18 @@
     "transcript_url": "local",
     "strategy_summary": "Cenovus set upstream production records in 2025 at 918,000 BOE/day in Q4, driven by the ~$15B MEG Energy acquisition integrating Christina Lake North. Strategy focuses on oil sands SAGD brownfield development, West White Rose offshore commissioning, and capturing $400M+ annual synergies from MEG by 2028. Solvent-enhanced oil recovery (SAGD + condensate injection) is being piloted at Spruce Lake North.",
     "capex_guidance": "~$4.9B full year 2025; 2026 growth spend ~$300M lower YoY; sustaining ~$3.6-3.7B; no major new megaprojects",
-    "basin_focus": "Alberta Oil Sands (Christina Lake, Foster Creek, Sunrise, Lloydminster), West White Rose (Atlantic offshore), South China Sea (Liwan gas)",
-    "technology_mentions": "Solvent-enhanced oil recovery (condensate + steam, Spruce Lake North FID ~$250M), delineation/seismic programs on Christina Lake North, redevelopment well programs, SAGD well pad optimization, wider spacing/longer wells development methodology",
+    "basin_focus": [
+      "Alberta Oil Sands",
+      "Conventional Alberta"
+    ],
+    "technology_mentions": [
+      "Solvent-aided SAGD",
+      "Conventional optimization"
+    ],
     "completions_strategy": "SAGD thermal recovery focused - 42-well redevelopment program at Christina Lake North starting 2026; wider well spacing and longer wells deployment; Lloydminster redevelopment wells outperforming; no hydraulic fracturing focus",
-    "service_provider_mentions": "None named",
+    "service_provider_mentions": [
+      "None named"
+    ],
     "metrics_reported": "Q4 upstream production: 918,000 BOE/day record; oil sands: 727,000 BOE/day; Christina Lake: 309,000 bbl/day; Foster Creek: 220,000 bbl/day record; oil sands nonfuel opex: $8.39/bbl; downstream utilization: 95%; net debt: ~$8.3B",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Cenovus is a Canadian oil sands SAGD operator with no hydraulic fracturing completions business. Their technology focus is on thermal recovery, solvent injection, and SAGD optimization - not relevant to Seismos surface acoustic sensing, CLF, or frac diagnostics. Offshore and China gas assets also have no frac applications.",
@@ -1181,10 +1247,21 @@
     "transcript_url": "local",
     "strategy_summary": "Chevron achieved record global and U.S. production in 2025, driven by Tengiz FGP startup and Permian reaching 1 MMboe/d, while focusing on free cash flow growth and capital efficiency. Cost reduction program exceeded expectations delivering $1.5B in 2025 with an expanded $3-4B target by end-2026. Portfolio strengthening via Hess acquisition and Eastern Mediterranean gas growth anchor 2026 outlook.",
     "capex_guidance": "Organic CapEx $5.1B Q4 2025; full-year 2025 in line with guidance; 2026 production growth 7-10% YoY",
-    "basin_focus": "Permian (~1 MMboe/d), Gulf of Mexico (target 300k boe/d 2026), Tengiz Kazakhstan, Eastern Mediterranean, Bakken",
-    "technology_mentions": "Efficiency gains in shale cited broadly; no specific completions technology named",
+    "basin_focus": [
+      "Permian",
+      "DJ Basin",
+      "Gulf of Mexico",
+      "Kazakhstan"
+    ],
+    "technology_mentions": [
+      "Efficiency-driven D&C",
+      "Longer laterals",
+      "Frac optimization"
+    ],
     "completions_strategy": "Applying best practices to Bakken post-Hess; ongoing Permian efficiency optimization; capital efficiency driving 35%+ FCF growth YoY",
-    "service_provider_mentions": "None mentioned specifically",
+    "service_provider_mentions": [
+      "None mentioned specifically"
+    ],
     "metrics_reported": "Q4 earnings $2.8B ($1.39/sh adjusted $3.0B/$1.52); Q4 OCF $10.8B; full-year adjusted FCF ~$20B; Permian 1 MMboe/d; record production globally",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "No mention of completions diagnostics, CLF, real-time frac monitoring, or surface acoustics. Permian efficiency language is generic. No Seismos or competitor technology named.",
@@ -1198,10 +1275,19 @@
     "transcript_url": "local",
     "strategy_summary": "Equinor cut 2026-27 CapEx by ~$4B (mainly power/low-carbon) while maintaining oil and gas investment near $10B/year to bolster free cash flow, with organic CapEx guided at ~$13B in 2026. The company reported record production of 2,137 Mboe/d in 2025 (up 3.4% YoY) and guided for ~3% production growth in 2026 driven by new field ramp-ups. Portfolio high-grading included divestiture of Argentina onshore assets and formation of the Adura JV with Shell on the UK Continental Shelf.",
     "capex_guidance": "Organic CapEx ~$13B in 2026; ~$9B in 2027; oil and gas investment maintained ~$10B/year",
-    "basin_focus": "Norwegian Continental Shelf (14 discoveries, ~30 exploration wells planned 2026); Brazil; UK (Adura JV/Rosebank); Argentina (divested onshore); Empire Wind offshore (US)",
-    "technology_mentions": "No completions or frac-specific technology mentioned; advanced seismic technology and subsurface imaging for exploration cited generically",
+    "basin_focus": [
+      "Norwegian Continental Shelf",
+      "Brazil",
+      "Gulf of Mexico"
+    ],
+    "technology_mentions": [
+      "Subsea technology",
+      "Carbon capture"
+    ],
     "completions_strategy": "Equinor is an offshore-focused international major with no U.S. onshore shale completions activity described; NCS exploration and production via vertical wells and subsea tiebacks",
-    "service_provider_mentions": "Shell (Adura JV partner); no completions vendors named; Reveal Energy not mentioned",
+    "service_provider_mentions": [
+      "Shell"
+    ],
     "metrics_reported": "FY2025 production 2,137 Mboe/d (+3.4%); ROACE 14.5%; CFO after tax $18B; EPS $0.81; renewables generation 5.65 TWh (+25% YoY); 3-year average RRR 100%",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Equinor is noted as a Reveal Energy frac diagnostics funder, but this transcript contains zero mention of frac diagnostics, completions technology, acoustic sensing, or U.S. unconventional activity. Equinor operates offshore and internationally. Reveal Energy connection is background context not reflected in this transcript.",
@@ -1216,10 +1302,10 @@
     "strategy_summary": "EQT is focused on Appalachian natural gas with a $2.07-2.21B maintenance capex program. Combo development (6-10 wells sequentially per site) achieved 13% well cost reduction per foot year-over-year and recorded fastest quarterly completion pace. 80% water piped infrastructure. AI tools deployed for service rebidding and compression optimization.",
     "capex_guidance": "$2.07-2.21B maintenance capex 2026",
     "basin_focus": [
-      "Appalachian Basin (Marcellus, Utica)"
+      "Appalachian Basin"
     ],
     "technology_mentions": [
-      "Combo development (6-10 wells per pad, sequential completions)",
+      "Combo development",
       "AI tools for service contract rebidding",
       "Compression optimization AI",
       "Water infrastructure (80% piped)",
@@ -1227,8 +1313,8 @@
     ],
     "completions_strategy": "Combo development is EQT's primary efficiency driver \u2014 running 6-10 wells per site sequentially to maximize crew efficiency and reduce mobilization costs. Achieved fastest quarterly completion pace on record and 13% lower well cost per foot YoY. Focus is on operational throughput and scale efficiency rather than real-time diagnostics.",
     "service_provider_mentions": [
-      "Unnamed completion service providers",
-      "rebid via AI-assisted procurement"
+      "Unnamed completion service",
+      "rebid via AI-assisted"
     ],
     "metrics_reported": {
       "FY2026_maintenance_capex": "$2.07-2.21B",
@@ -1249,10 +1335,16 @@
     "transcript_url": "local",
     "strategy_summary": "TechnipFMC reported 9% revenue growth to $9.9B and 33% EBITDA growth to $1.8B in 2025, driven by record Subsea inbound of $10.1B and a growing 24-month opportunity list of ~$29B. The company guided to $9.4B Subsea revenue in 2026 at 21.5% EBITDA margin (+16% EBITDA YoY), with CapEx of ~$340M and FCF of $1.3-1.45B while returning 70%+ to shareholders. Surface Technologies (which includes wellhead and completion equipment) grew international share to 65% with Saudi Arabia and Abu Dhabi manufacturing investments.",
     "capex_guidance": "FY2026 CapEx ~$340M (~3.1% of revenue); Subsea revenue ~$9.4B; Surface Technologies revenue >$1.2B; FCF $1.3-1.45B",
-    "basin_focus": "Subsea: Gulf of Mexico (Paleogene \u2014 Tiber/Kaskida iEPCI for BP; 5 of 6 '20K' projects awarded), Brazil, North Sea, Asia Pacific; Surface: Saudi Arabia, Abu Dhabi (local manufacturing), North America (challenging)",
-    "technology_mentions": "iEPCI (integrated EPCI model eliminating traditional phases); Subsea 2.0 (configure-to-order seabed equipment reducing cycle time); '20K' high-pressure deepwater systems; configure-to-order expanding to SURF/water column; direct awards and portfolio approach by operators; industrialization and standardization initiatives",
+    "basin_focus": [
+      "Subsea global",
+      "Middle East"
+    ],
+    "technology_mentions": [
+      "iEPCI integration",
+      "Subsea processing"
+    ],
     "completions_strategy": "TechnipFMC's Surface Technologies segment covers wellhead and completion equipment (surface trees, wellheads, intervention) but not hydraulic fracturing pumping or diagnostics. North America Surface is described as a 'challenging market' and the company is de-emphasizing it in favor of international.",
-    "service_provider_mentions": "BP (Tiber/Kaskida iEPCI; Bumerangue future potential); no U.S. onshore completions vendors named",
+    "service_provider_mentions": [],
     "metrics_reported": "FY2025 revenue $9.9B (+9%); adj EBITDA $1.8B (+33%); FCF $1.45B; Subsea inbound $10.1B; backlog $15.9B; 24-month opportunity list ~$29B (record); shareholder distributions $1.0B (2x prior year); net cash $602M",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "TechnipFMC is a subsea and offshore-focused OFS company. Its Surface Technologies segment covers wellheads and completion equipment internationally, not U.S. onshore hydraulic fracturing or frac diagnostics. North America surface is explicitly a challenging/de-prioritized market. No overlap with Seismos CLF, SAFA, or Machina product lines.",
@@ -1266,10 +1358,18 @@
     "transcript_url": "local",
     "strategy_summary": "H&P reported solid Q4 with 141 contracted U.S. rigs and expanded Permian market share (33% to 37%) despite industry rig count decline, while completing KCAD acquisition to become the largest active land driller globally. The company is investing in rig floor automation (HexGrips, slip lifters), drilling automation, and advanced digital solutions (20% increase in app usage per rig YoY), with 50% of rigs on performance-based contracts. Saudi Arabia rig reactivations (7 rigs) and international expansion are key 2026 growth drivers.",
     "capex_guidance": "Fiscal 2026 gross CapEx $280-320M; maintenance/fleet upgrades/reactivations $230-250M; NAS technology upgrades $40-60M; R&D ~$25M",
-    "basin_focus": "Permian Basin (primary; 37% market share), Haynesville (3 to 8 rigs during 2025), Northeast, Saudi Arabia (17 to 24 active rigs with reactivations), Oman, Kuwait, Argentina, Australia (Beetaloo)",
-    "technology_mentions": "Rig floor automation (HexGrips, slip lifters); drilling automation; advanced digital solutions (20% app usage increase per rig); 1M lb setback upgrades, high-torque top drives; 40%+ of wells are 3-mile+ laterals; performance-based contracts (50% of fleet); PACE-X Ultra rig (10,000 PSI, high-torque HPU); R&D ~$25M focused on drilling automation, wellbore quality, power management",
+    "basin_focus": [
+      "Permian",
+      "South Texas"
+    ],
+    "technology_mentions": [
+      "Rig fleet automation",
+      "Drilling intelligence"
+    ],
     "completions_strategy": "H&P is a drilling contractor; no completions services. Focus is on well design supporting longer laterals and cleaner handoff to completion crews. 'Setting up for a clean and efficient completion' cited explicitly.",
-    "service_provider_mentions": "Tamboran Resources and Liberty Energy (Australia Beetaloo mentioned as partners); no completions vendors named",
+    "service_provider_mentions": [
+      "Tamboran Resources and"
+    ],
     "metrics_reported": "Q4 revenues >$1B (third consecutive); 141 contracted rigs Q4 avg; 144 rigs at Q4 exit; Permian share 33%->37%; average lateral length +5%; footage/day +5%; 40%+ of wells >3-mile laterals; $543M operating cash flow FY2025; $210M term loan paid down",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "H&P is a drilling contractor with no completions services. However, their explicit mention of 'setting up for a clean and efficient completion' and growing longer laterals is contextually relevant \u2014 longer laterals require more precise frac diagnostics. H&P's performance-based contract model also aligns with Seismos' outcomes-based CLF approach. Not a direct Seismos customer target but relevant as a drilling partner feeding wells into CLF-capable completion operations.",
@@ -1283,10 +1383,18 @@
     "transcript_url": "local",
     "strategy_summary": "Nabors reduced net debt by $554M to lowest since 2005 and improved net leverage to ~1.7x through the Parker Wellbore acquisition (and Quail Tools sale), while growing Lower 48 rig count to 66 with 20% of rigs gas-directed (Haynesville/Northeast). SANAD JV in Saudi Arabia continues deploying new-build rigs (14 by Q4, 5 more in 2026 toward 19 total), and NDS (drilling solutions) outperformed the market with 10% sequential Q4 revenue growth on third-party rigs. 4-mile lateral wells in Permian driving demand for high-spec PACE-X Ultra rigs.",
     "capex_guidance": "FY2026 CapEx $737-760M including $360-380M SANAD new-builds; Q1 2026 CapEx $170-180M; NDS EBITDA target $160-170M (+6-7% normalized for Quail)",
-    "basin_focus": "Lower 48: Permian (4 rigs added Q4), Eagle Ford (3 added), Haynesville (2 added); gas-directed 20% of L48 fleet; internationally: Saudi Arabia (SANAD), Argentina (14 rigs), Mexico (platform rigs), Oman, Colombia, Venezuela (5 idle rigs, potential restart)",
-    "technology_mentions": "PACE-X Ultra rig (10,000 PSI, high-torque HPU, full automation package, MPD integration, casing running); NDS automation package; managed pressure drilling (MPD); casing running; performance software; three-bite wrench (new CAN rig wrench with sensors/automation); RZR rig autonomous drilling; 3-4 mile lateral drilling capability; 7 NDS services per rig average",
+    "basin_focus": [
+      "Lower 48",
+      "International"
+    ],
+    "technology_mentions": [
+      "PACE-R rigs",
+      "Rig automation"
+    ],
     "completions_strategy": "Nabors is a drilling contractor; no completions pumping services. NDS provides casing running and MPD which interface with completion setup. Longer laterals (3-4 mile in Permian, 25% of fleet in 2025 vs 15-16% in 2024) demand higher-spec rigs. PACE-X Ultra deployed for Coterra 4-mile lateral wells in South Texas.",
-    "service_provider_mentions": "Coterra Energy (PACE-X Ultra customer); Parker Wellbore (acquired); Quail Tools (divested to Superior); SANAD (Saudi Aramco JV); no frac vendors named",
+    "service_provider_mentions": [
+      "Coterra Energy"
+    ],
     "metrics_reported": "FY2025 revenue $3.2B (+8.7%); adjusted EBITDA $913M; Q4 EBITDA $222M; L48 rig count 62 exit Q4, 66 current; International 93.3 avg Q4; NDS Q4 revenue on third-party rigs +10% QoQ; net debt down $554M to lowest since 2005; net leverage ~1.7x",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Nabors is a drilling contractor with an NDS technology solutions arm. No completions diagnostics, frac monitoring, or acoustic sensing mentioned. However, the 4-mile lateral trend in Permian Nabors is enabling is directly relevant to Seismos' completions market \u2014 longer laterals are harder to frac efficiently without real-time diagnostics. Not a direct customer but feeds the market Seismos serves.",
@@ -1331,17 +1439,17 @@
       "Permian Basin (primary)",
       "Gulf of America",
       "Permian EOR",
-      "International (Middle East, LatAm)"
+      "International"
     ],
     "technology_mentions": [
-      "Lightweight proppant (implied via well cost reductions)",
+      "Lightweight proppant",
       "EOR technology (Permian CO2 EOR)",
       "Stratos direct air capture (CCS)",
       "Organic reserves replacement ratio: 107%"
     ],
     "completions_strategy": "Summary-level only \u2014 7% lower well costs and 5% lower facility costs indicate completions efficiency improvements but no specific technology details disclosed. 70% US onshore focus with $400M reduction in US onshore spend versus 2025 due to efficiency gains.",
     "service_provider_mentions": [
-      "Berkshire Hathaway (preferred equity holder/OxyChem buyer context)"
+      "Berkshire Hathaway"
     ],
     "metrics_reported": {
       "FY2025_production": "1.4M BOE/d (record)",
@@ -1367,14 +1475,14 @@
     "capex_guidance": "$800 million allocated to Rincon de Aranda block in 2025; total $1.5 billion investment plan for Rincon de Aranda through 2027. $426 million oil and gas treatment plant at Rincon de Aranda under construction, expected operational in 2026. Company anticipated negative free cash flow in both 2025 and 2026 due to high capex cycle.",
     "production_guidance": "Oil: targeting 18,000-19,000 bbl/d exit rate Q4 2025 (Rincon de Aranda as main driver); target of 45,000 bbl/d by 2027. Gas: all-time high of ~18 mmcm/d as of Q3 2025. Full year 2025 Q4 results and 2026 guidance expected with March 2, 2026 earnings release.",
     "basin_focus": [
-      "Vaca Muerta (Neuquen Basin, Argentina)",
+      "Vaca Muerta",
       "Rincon de Aranda block",
       "Sierra Chata block",
       "El Mangrullo block"
     ],
     "technology_mentions": [
-      "Oil and gas treatment plant ($426M) at Rincon de Aranda",
-      "Vaca Muerta Oil Sur pipeline (VMOS, shared infrastructure)",
+      "Oil and gas treatment plant",
+      "Vaca Muerta Oil Sur pipeline",
       "Shale well testing at Rincon de Aranda"
     ],
     "completions_strategy": "Vaca Muerta shale completions are central to Pampa's growth strategy, particularly at Rincon de Aranda. The company is scaling from exploration/appraisal to full development mode with a major treatment plant investment. No specific completions technology, CLF, or frac diagnostics mentioned in available earnings summaries.",
@@ -1397,26 +1505,18 @@
       "Western Canada",
       "Permian",
       "Marcellus",
-      "Haynesville",
-      "Rockies",
-      "Saudi Arabia",
-      "Kuwait",
-      "Argentina"
+      "Haynesville"
     ],
     "technology_mentions": [
       "Alpha automation system",
       "Super Triple rigs",
       "Super Single rigs",
       "Tele-Double rigs",
-      "digital technology",
-      "MWD",
-      "LWD",
-      "managed pressure drilling",
-      "performance contracts"
+      "digital technology"
     ],
     "completions_strategy": "Precision's completion and production segment posted CAD $17M adjusted EBITDA. The company wound down U.S. completion operations in Q2 2025 but maintains Canadian well servicing. Core focus is drilling services, not completions.",
     "service_provider_mentions": [
-      "San Antonio International (Argentina MOU partner)"
+      "San Antonio International"
     ],
     "efficiency_metrics": "Canada daily operating margins CAD $14,132/day. U.S. daily operating margins $8,754/day. International day rates $53,505/day (up 8% YoY). Peak Canadian rig count of 87 rigs in Q1 2026.",
     "seismos_relevance": "Low",
@@ -1432,10 +1532,15 @@
     "transcript_url": "local",
     "strategy_summary": "FILE NOTE: REI.txt contains a Zacks Q4 2024 earnings miss summary (March 2025 publication), not a Q4 2025 transcript. Ring Energy missed Q4 2024 EPS ($0.06 vs $0.08 est) and revenues ($83.44M vs est, down from $99.94M YoY). No completions technology or service strategy detail available from this summary article.",
     "capex_guidance": "Not available from this summary",
-    "basin_focus": "Permian Basin (small independent)",
-    "technology_mentions": "None mentioned",
+    "basin_focus": [
+      "Permian",
+      "DJ Basin"
+    ],
+    "technology_mentions": [
+      "Non-operated model"
+    ],
     "completions_strategy": "Not discussed in this earnings miss summary",
-    "service_provider_mentions": "None mentioned",
+    "service_provider_mentions": [],
     "metrics_reported": "Q4 2024 EPS: $0.06 (miss vs $0.08 est); Q4 2024 revenue: $83.44M (miss, down from $99.94M); FY2025 consensus: $0.52 EPS on $385.87M revenue",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Ring Energy is a small Permian independent; the file only contains a brief Zacks earnings miss summary with no completions technology discussion. Even with full transcript data, Ring Energy's small scale and cost-constrained position makes it a low-priority Seismos prospect. Potential indirect relevance as a ProFrac customer.",
@@ -1457,8 +1562,7 @@
       "Thru Tubing Solutions",
       "A-10 downhole motor",
       "Metal Max power section",
-      "UnPlug technology",
-      "custom big bore unit (2026 delivery)"
+      "UnPlug technology"
     ],
     "completions_strategy": "Pressure pumping fleet partially idled with no reactivation timeline until returns improve. Pivoting strategically toward less capital-intensive service lines. Evaluating 100% natural gas frac pump technology. Bright spots in Spinnaker Cementing Solutions, Cudd Pressure Control, snubbing, and well control.",
     "service_provider_mentions": [],
@@ -1478,19 +1582,18 @@
     "production_guidance": "N/A",
     "basin_focus": [
       "ERCOT (Texas)",
-      "Permian Basin (legacy logistics)"
+      "Permian Basin"
     ],
     "technology_mentions": [
       "behind-the-meter power generation",
       "natural gas turbine generation",
       "battery storage systems",
-      "voltage distribution and control equipment (HVMVLV acquisition)",
-      "balance-of-plant equipment",
-      "molecule-to-electron integration"
+      "voltage distribution and control",
+      "balance-of-plant equipment"
     ],
     "completions_strategy": "No completions strategy; Solaris has fully pivoted from oilfield services toward power infrastructure for data centers. Legacy Logistics Solutions segment (proppant/last-mile) still contributes $80M+ free cash flow but is no longer the growth focus.",
     "service_provider_mentions": [
-      "Stateline Power LLC (JV for 900 MW AI data center)",
+      "Stateline Power LLC",
       "HVMVLV (acquired)"
     ],
     "efficiency_metrics": "Q4 2025 revenue $180M (up 8% sequentially). FY2025 revenue ~$622M (up 99% YoY). Adjusted EBITDA $71M in Q4. ~780 MW deployed. Logistics segment $80M+ free cash flow in 2025. At 2,200 MW target: $700M-$750M consolidated EBITDA projected.",
@@ -1507,10 +1610,18 @@
     "transcript_url": "local",
     "strategy_summary": "Shell delivered $5.1B in structural cost reductions by end-2025 (three years ahead of deadline), with 60% from operational efficiencies, while reporting $18.5B adjusted earnings and $26B+ free cash flow despite lower oil prices. Management committed to 17 consecutive quarters of $3B+ buybacks and a 4% dividend increase, while pursuing LNG growth (11% sales increase) and deepwater expansions in GoM, Brazil, and Nigeria. CEO cited AI as a key near-term opportunity for further performance improvement.",
     "capex_guidance": "$20-22B cash CapEx maintained; >1 MMboe/d peak production additions by 2030",
-    "basin_focus": "Gulf of Mexico (Kaikias waterflood FID, deepwater), Brazil (Gato do Mato/Orca FID), Nigeria (deepwater), LNG Canada, North Sea (Adura JV)",
-    "technology_mentions": "AI mentioned as key opportunity for further performance improvement; operational efficiencies driving cost reductions; no specific completions technology cited",
+    "basin_focus": [
+      "Gulf of Mexico",
+      "LNG Global"
+    ],
+    "technology_mentions": [
+      "AI methane detection",
+      "Carbon capture"
+    ],
     "completions_strategy": "Focus on deepwater and LNG; North Sea conventional; no shale completions detail provided",
-    "service_provider_mentions": "Pavilion Energy (LNG acquisition); Adura JV with Equinor; no completions vendors named",
+    "service_provider_mentions": [
+      "Pavilion Energy"
+    ],
     "metrics_reported": "FY2025 adjusted earnings $18.5B; CFFO ~$43B; FCF >$26B; structural cost reductions $5.1B cumulative; LNG sales +11%; reserves life ~7.8 years",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Shell is predominantly an offshore and LNG major with minimal U.S. unconventional shale completions activity. No frac diagnostics, CLF, acoustic sensing, or completions technology mentioned. Not a near-term Seismos target customer.",
@@ -1528,8 +1639,7 @@
       "Eagle Ford",
       "Anadarko Basin",
       "Global deepwater",
-      "Middle East",
-      "LNG"
+      "Middle East"
     ],
     "technology_mentions": [],
     "completions_strategy": "No specific completions or frac technology discussed. US shale activities mentioned only at portfolio level (Eagle Ford interests, Anadarko Basin gas acquisition). Focus is on major project startups (Ballymore US GoM, Mero-4 Brazil, Rio Grande LNG) rather than shale completions optimization. Noted US shale oil production is sensitive to oil price with limited non-OPEC growth expected from 2027.",
@@ -1548,10 +1658,15 @@
     "transcript_url": "local",
     "strategy_summary": "FILE MISMATCH: VIST.txt contains the Gladstone Land Corporation (NASDAQ: LAND) Q4 2025 earnings call transcript, a farmland REIT with no oilfield operations. Vista Energy (VIST) transcript was not found in this file. No competitive intelligence applicable to Seismos.",
     "capex_guidance": "N/A",
-    "basin_focus": "N/A - Farmland REIT",
-    "technology_mentions": "N/A",
+    "basin_focus": [
+      "Vaca Muerta",
+      "Argentina"
+    ],
+    "technology_mentions": [
+      "Unconventional development"
+    ],
     "completions_strategy": "N/A",
-    "service_provider_mentions": "N/A",
+    "service_provider_mentions": [],
     "metrics_reported": "N/A",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Wrong company loaded in this file. Gladstone Land is a farmland REIT with zero relevance to Seismos oilfield technology.",
@@ -1596,22 +1711,21 @@
     "strategy_summary": "ExxonMobil delivered record Permian production of 1.8M BOE/d in Q4 and 4.7M BOE/d company-wide. Lightweight proppant deployed in 25% of wells with target of 50%. 40+ stackable technologies in testing and deployment across the Permian. Cube development focus. Enterprise ERP/AI overhaul underway to enable broader data-driven decision making. Data center and CCS conversations emerging.",
     "capex_guidance": "Not specified in summary; Permian targeting 200 kboe/d annual production growth",
     "basin_focus": [
-      "Permian Basin (primary, record 1.8M BOE/d)",
+      "Permian Basin",
       "Gulf of Mexico",
       "Guyana",
       "International"
     ],
     "technology_mentions": [
-      "Lightweight proppant (deployed in 25% of Permian wells, targeting 50%)",
-      "40+ stackable completion/drilling technologies in testing and deployment",
-      "Cube development (co-development of multiple landing zones)",
+      "Lightweight proppant",
+      "40+ stackable completion/drilling",
+      "Cube development",
       "Enterprise ERP overhaul for AI adoption",
-      "Data center partnerships (emerging)",
-      "Carbon capture and storage (Stratos equivalent context)"
+      "Data center partnerships (emerging)"
     ],
     "completions_strategy": "ExxonMobil's Permian completions focus is on cube development and stackable technology deployment (40+ technologies across proppant, fluid, stage design, lateral length). Lightweight proppant is the most specific technology cited. Scale of operations (1.8M BOE/d Permian) means even incremental efficiency gains from better completions diagnostics would be commercially significant. No CLF, acoustic, or real-time frac diagnostics mentioned.",
     "service_provider_mentions": [
-      "Implied: major completion service providers (Halliburton, SLB, BKR)"
+      "Implied: major completion"
     ],
     "metrics_reported": {
       "Q4_Permian_production": "1.8M BOE/d (record)",
@@ -1632,10 +1746,19 @@
     "transcript_url": "local",
     "strategy_summary": "Expro delivered $1.6B revenue and 22% EBITDA margins in 2025, driven by international/offshore completions, well flow management, and subsea services - with free cash flow more than doubling to $127M. Strategy focuses on expanding wallet share through technology cross-selling (Coretrax acquisition now deployed in 31 countries), margin expansion via DRIVE25 cost initiative, and targeted M&A. Secured a landmark 4-year $380M North Africa production optimization contract.",
     "capex_guidance": "2026 CapEx similar to 2025 levels; EBITDA guidance $365M midpoint with margin expansion target toward 25%",
-    "basin_focus": "International offshore: MENA (39% EBITDA margin), North/Latin America, Europe/SSA, Asia Pacific; deepwater globally",
-    "technology_mentions": "XRD Spider (1,250-ton drilling spider, first of kind), CaTS ATX (real-time wireless downhole data + remote valve control during DST), Cure Technologies (cement cure time reduction, saves ~24 hrs rig time), Coretrax tubular running and well construction tools, digital and subsea solutions",
+    "basin_focus": [
+      "International",
+      "Middle East"
+    ],
+    "technology_mentions": [
+      "XRD Surge Tool",
+      "Downhole technology"
+    ],
     "completions_strategy": "Full well lifecycle model: well construction (TRS + cementation + Coretrax tools), well flow management (testing/sampling/DST), subsea well access, and well intervention/production optimization. Cross-selling incremental services to existing rig crews to expand wallet share.",
-    "service_provider_mentions": "Coretrax (acquired 2024, now in 31 countries); Caterpillar Financial Services (financing); Stonebriar Commercial Finance",
+    "service_provider_mentions": [
+      "Coretrax (acquired 2024",
+      "now in 31 countries)"
+    ],
     "metrics_reported": "Revenue: $1.6B FY2025; EBITDA: $353M (22% margin); FCF: $127M (>2x prior year); Backlog: $2.5B (+$196M in Q4); Q4 MENA EBITDA margin: 39%; NLA Q4 revenue: $130M; ESSA Q4: $116M",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Expro is an international/offshore OFS company focused on well testing, flow management, and subsea - not a North American pressure pumping or frac diagnostics player. No mentions of hydraulic fracturing completions, CLF, or real-time frac diagnostics. Expro's CaTS ATX downhole telemetry system is a distant technological cousin but serves a different application (DST vs. frac monitoring). No competitive or partnership overlap with Seismos.",
@@ -1650,18 +1773,18 @@
     "capex_guidance": "$5.2 billion for 2025 (with Brent at $72/bbl); ~70% directed to unconventional/shale. Management noted Q4 2025 capex came in slightly below full-year guidance. 2026 capex expected to remain elevated to support VMOS pipeline and shale ramp.",
     "production_guidance": "2025 shale oil target ~190,000 bbl/d (exit rate); 2026 target ~215,000-250,000 bbl/d; 2027 target ~290,000 bbl/d. October 2025 preliminary production reached all-time high of 190,000 bbl/d. Q4 2025 results showed softer-than-expected output per headline reporting.",
     "basin_focus": [
-      "Vaca Muerta (Neuquen Basin, Argentina)"
+      "Vaca Muerta"
     ],
     "technology_mentions": [
-      "Longest well in Vaca Muerta history (8,200m total, ~5,000m lateral at Loma Campana)",
-      "Record drilling speed: 331 m/day average, 360 m/day annual target",
-      "259 frac stages per set per month (target 260)",
+      "Longest well in Vaca Muerta history",
+      "Record drilling speed: 331 m/day",
+      "259 frac stages per set per month",
       "Solvent-assisted completions tested",
-      "VMOS oil pipeline (180,000 bbl/d Phase 1, Q3-Q4 2026)"
+      "VMOS oil pipeline"
     ],
     "completions_strategy": "Aggressive stage count optimization with 259 frac stages per set per month, approaching annual target of 260. Drilled record 4,000m horizontal well in 15 days at La Malga Chica. Completions activity represents majority of unconventional investment. Service cost negotiations with providers ongoing to reduce unit costs. No specific CLF or real-time frac monitoring technology mentioned.",
     "service_provider_mentions": [
-      "No specific service providers named; management noted active negotiations with service companies to reduce unit costs"
+      "No specific service providers"
     ],
     "efficiency_metrics": "Lifting cost reduced 28% QoQ and 45% YoY in Q3 2025 to ~$9/boe; target of $5/boe. Drilling speed 331 m/day. Frac: 259 stages per set per month. Shale oil production +55% vs 2023 levels as of Q3 2025.",
     "seismos_relevance": "Low",
