@@ -196,6 +196,10 @@ body::before {
 .schedule-note {
   font-size: 13px; color: var(--text-dim); line-height: 1.5;
 }
+.schedule-body h4 { margin: 1.2rem 0 0.6rem; font-size: 14px; color: var(--accent); font-weight: 600; }
+.schedule-table { width: 100%; border-collapse: collapse; font-size: 13px; margin-bottom: 1rem; }
+.schedule-table th { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--border); color: var(--text-dim); font-weight: 500; }
+.schedule-table td { padding: 5px 10px; border-bottom: 1px solid rgba(255,255,255,0.04); }
 
 /* === EXEC SUMMARY === */
 .exec-summary {
@@ -694,16 +698,30 @@ function el(tag, attrs, children) {
   return e;
 }
 
+const WATCHLIST = [
+  'COP','EOG','FANG','OXY','DVN','CTRA','EQT','PR','CHRD','SM','MTDR','CRGY','MGY','AR',
+  'RRC','EXE','CNX','CRK','GPOR','OVV','APA','REPX','GRNT','CPG','HAL','SLB','BKR','LBRT',
+  'ACDC','PTEN','PUMP','WTTR','RES','NINE','NOV','CHX','HP','WFRD','FTI','CLB','NBR','KEI',
+  'XOM','CVX','SHEL','BP','TTE','EQNR','YPF','VIST','CNQ','CVE','TOU.TO','ARX.TO','WCP',
+  'POU.TO','BTE.TO','CFW.TO','TCW','PD','TBN','BPT.AX','2222.SR','601857.SS','600028.SS',
+  'SEI','REI','NOG','PROP','BKV','KLXE','WHD','AESI','FTK','XPRO','NESR','STO.AX','EC',
+  '601808.SS','PAM','KEGX'
+];
+
 /* === 1. NORMALIZE SEGMENTS === */
 function normSeg(segment) {
+  // Prefer pre-computed segment_normalized if available (new schema)
+  if (typeof segment === 'object' && segment.segment_normalized) return segment.segment_normalized;
   const s = (segment || '').toLowerCase();
   if (s.includes('pumper') || s.includes('completion services')) return 'OFS-Pumper';
-  if (s.includes('international') || s.includes('canada') || s === 'international') return 'International';
-  if (s.includes('major') || s.includes('supermajor') || s.includes('diversified major')) return 'Major';
-  if (s.includes('ofs') || s.includes('oilfield service')) return 'OFS-Other';
   if (s.includes('operator') || s.includes('e&p')) return 'Operator';
+  if (s.includes('ofs') || s.includes('oilfield service') || s.includes('chemical') || s.includes('drilling') || s.includes('equipment') || s.includes('water') || s.includes('logistics') || s.includes('power') || s.includes('diagnostic')) return 'OFS-Other';
+  if (s.includes('major') || s.includes('supermajor') || s.includes('diversified major')) return 'Major';
+  if (s.includes('international') || s.includes('canada') || s === 'international') return 'International';
   return 'Other';
 }
+/* Use pre-computed or fallback */
+function getSeg(c) { return c.segment_normalized || normSeg(c.segment_raw || c.segment); }
 
 /* === 2. GEOGRAPHY DIMENSION === */
 function getGeo(company) {
@@ -851,6 +869,43 @@ function buildSchedule() {
   body.appendChild(timeline);
   body.appendChild(el('div', { class: 'schedule-note', text: 'Updated quarterly during earnings season. Most operators report Q4 results in Jan\u2013Feb; OFS companies follow in Feb\u2013Mar. Next full refresh targets Q1 2026 earnings calls (Apr\u2013May 2026).' }));
 
+  // Per-company upcoming dates table
+  const upcoming = DATA.filter(d => d.earnings_calendar && d.earnings_calendar.next_earnings_date)
+    .sort((a, b) => a.earnings_calendar.next_earnings_date.localeCompare(b.earnings_calendar.next_earnings_date));
+  const stillPending = upcoming.filter(d => !d.earnings_calendar.last_reported || d.earnings_calendar.next_earnings_status === 'expected' && d.earnings_calendar.next_earnings_date < '2026-04-01');
+
+  if (stillPending.length > 0) {
+    body.appendChild(el('h4', { text: 'Q4 2025 Reports Still Pending (' + stillPending.length + ')' }));
+    const tbl = el('table', { class: 'schedule-table' });
+    const thead = el('thead'); const hrow = el('tr');
+    ['Ticker', 'Company', 'Expected Date', 'Status'].forEach(h => hrow.appendChild(el('th', {text: h})));
+    thead.appendChild(hrow); tbl.appendChild(thead);
+    const tbody = el('tbody');
+    stillPending.forEach(d => {
+      const ec = d.earnings_calendar;
+      const row = el('tr');
+      row.appendChild(el('td', {class: 'ticker', text: d.ticker}));
+      row.appendChild(el('td', {text: d.company}));
+      const dateStr = ec.next_earnings_date ? new Date(ec.next_earnings_date + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric', year:'numeric'}) : '\u2014';
+      row.appendChild(el('td', {text: dateStr}));
+      const badge = el('span', {class: 'badge ' + (ec.next_earnings_status === 'expected' ? 'badge-high' : 'badge-medium'), text: ec.next_earnings_status || ''});
+      const sc = el('td'); sc.appendChild(badge); row.appendChild(sc);
+      tbody.appendChild(row);
+    });
+    tbl.appendChild(tbody);
+    body.appendChild(tbl);
+  }
+
+  // Next quarter preview
+  const nextQ = upcoming.filter(d => d.earnings_calendar.next_earnings_date >= '2026-04-01');
+  if (nextQ.length > 0) {
+    const earliest = nextQ[0].earnings_calendar.next_earnings_date;
+    const latest = nextQ[nextQ.length - 1].earnings_calendar.next_earnings_date;
+    const eDate = new Date(earliest + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric'});
+    const lDate = new Date(latest + 'T12:00:00').toLocaleDateString('en-US', {month:'short', day:'numeric'});
+    body.appendChild(el('div', { class: 'schedule-note', text: 'Q1 2026 earnings season: ' + nextQ.length + ' companies reporting ' + eDate + ' \u2013 ' + lDate + ', 2026.' }));
+  }
+
   section.appendChild(body);
   container.appendChild(section);
 
@@ -916,7 +971,7 @@ function buildHighCards(high) {
     tn.appendChild(el('span',{class:'card-ticker',text:c.ticker}));
     tn.appendChild(el('span',{class:'card-name',text:c.company}));
     header.appendChild(tn);
-    header.appendChild(el('span',{class:'card-seg',text:normSeg(c.segment)}));
+    header.appendChild(el('span',{class:'card-seg',text:getSeg(c)}));
     card.appendChild(header);
 
     // KPI chips
@@ -932,7 +987,8 @@ function buildHighCards(high) {
       card.appendChild(kpiRow);
     }
 
-    [['Basins',listStr(c.basin_focus)],['2026 Capex',esc(c.capex_guidance)],['Technology',listStr(c.technology_mentions)],['Efficiency',esc(c.efficiency_metrics)]].forEach(([lbl,val]) => {
+    [['Basins',listStr(c.basin_focus)],['2026 Capex',esc(c.capex_guidance)],['Technology',listStr(c.technology_mentions)],['Efficiency',esc(c.efficiency_metrics)],['Service Providers',listStr(c.service_provider_mentions)]].forEach(([lbl,val]) => {
+      if (!val || val === '\u2014') return;
       const row = el('div',{class:'card-row'});
       row.appendChild(el('span',{class:'card-label',text:lbl}));
       row.appendChild(el('span',{text:val}));
@@ -945,6 +1001,15 @@ function buildHighCards(high) {
     const strat = el('p'); strat.appendChild(el('strong',{text:'Strategy: '})); strat.appendChild(document.createTextNode(esc(c.strategy_summary))); details.appendChild(strat);
     const comp = el('p'); comp.appendChild(el('strong',{text:'Completions: '})); comp.appendChild(document.createTextNode(esc(c.completions_strategy))); details.appendChild(comp);
     if (c.notable_quote) details.appendChild(el('div',{class:'card-quote',text:c.notable_quote}));
+    if (c.metrics_reported && typeof c.metrics_reported === 'object') {
+      const mp = el('p'); mp.appendChild(el('strong',{text:'Reported Metrics: '}));
+      mp.appendChild(document.createTextNode(Object.entries(c.metrics_reported).map(([k,v]) => k.replace(/_/g,' ')+': '+v).join(' | ')));
+      details.appendChild(mp);
+    }
+    if (c.transcript_url) {
+      const tp = el('p'); tp.appendChild(el('strong',{text:'Source: '})); tp.appendChild(document.createTextNode(c.transcript_url));
+      details.appendChild(tp);
+    }
     expand.appendChild(details);
     card.appendChild(expand);
     grid.appendChild(card);
@@ -963,7 +1028,7 @@ function buildMedTable(list) {
     const row = el('tr');
     row.appendChild(el('td',{class:'ticker',text:c.ticker}));
     row.appendChild(el('td',{text:c.company}));
-    row.appendChild(el('td',{text:normSeg(c.segment)}));
+    row.appendChild(el('td',{text:getSeg(c)}));
     row.appendChild(el('td',{text:esc(c.capex_guidance)}));
     const km = el('td',{text:extractKeyMetric(c)}); km.style.fontFamily='var(--mono)'; km.style.fontWeight='600'; km.style.color='var(--accent)'; row.appendChild(km);
     row.appendChild(el('td',{class:'completions-col',text:trunc(c.completions_strategy,120)}));
@@ -985,7 +1050,7 @@ function buildLowTable(low) {
     const row = el('tr');
     row.appendChild(el('td',{class:'ticker',text:c.ticker}));
     row.appendChild(el('td',{text:c.company}));
-    row.appendChild(el('td',{text:normSeg(c.segment)}));
+    row.appendChild(el('td',{text:getSeg(c)}));
     const notes = el('td',{text:trunc(c.seismos_relevance_reason,80)}); notes.style.color='var(--text-dim)'; row.appendChild(notes);
     tbody.appendChild(row);
   });
@@ -1116,7 +1181,7 @@ function filterAll() {
   const sort = currentSort;
 
   function matchesFilters(d) {
-    if (seg !== 'all' && normSeg(d.segment) !== seg) return false;
+    if (seg !== 'all' && getSeg(d) !== seg) return false;
     if (geo !== 'all' && getGeo(d) !== geo) return false;
     if (q && !(d.ticker + ' ' + d.company + ' ' + (d.completions_strategy || '') + ' ' + (d.seismos_relevance_reason || '')).toLowerCase().includes(q)) return false;
     return true;
@@ -1144,15 +1209,6 @@ function buildCoverageBySegment() {
   container.className = 'cov-seg-bars';
   container.replaceChildren();
 
-  const WATCHLIST = [
-    'COP','EOG','FANG','OXY','DVN','CTRA','EQT','PR','CHRD','SM','MTDR','CRGY','MGY','AR',
-    'RRC','EXE','CNX','CRK','GPOR','OVV','APA','REPX','GRNT','CPG','HAL','SLB','BKR','LBRT',
-    'ACDC','PTEN','PUMP','WTTR','RES','NINE','NOV','CHX','HP','WFRD','FTI','CLB','NBR','KEI',
-    'XOM','CVX','SHEL','BP','TTE','EQNR','YPF','VIST','CNQ','CVE','TOU.TO','ARX.TO','WCP.TO',
-    'POU.TO','BTE.TO','CFW.TO','TCW.TO','PD.TO','TBN','BPT.AX','2222.SR','601857.SS','600028.SS',
-    'SEI','REI','NOG','PROP','BKV','KLXE','WHD','AESI','FTK','XPRO','NESR','STO.AX','EC',
-    '601808.SS','PAM','KEGX'
-  ];
   const covered = new Set(DATA.map(d => d.ticker));
 
   // Assign segments to watchlist companies (use DATA if available, else guess from ticker)
@@ -1162,7 +1218,7 @@ function buildCoverageBySegment() {
 
   WATCHLIST.forEach(t => {
     const d = DATA.find(x => x.ticker === t);
-    const seg = d ? normSeg(d.segment) : 'Other';
+    const seg = d ? getSeg(d) : 'Other';
     const key = segNames.includes(seg) ? seg : 'OFS-Other';
     segCounts[key].total++;
     if (covered.has(t)) segCounts[key].covered++;
@@ -1188,7 +1244,9 @@ function buildCoverageBySegment() {
 }
 
 async function init() {
+  try {
   const res = await fetch('data/earnings-intel-Q4-2025.json');
+  if (!res.ok) throw new Error('Failed to load data: ' + res.status);
   DATA = await res.json();
   const high = DATA.filter(d => d.seismos_relevance === 'High');
   const med = DATA.filter(d => d.seismos_relevance === 'Medium');
@@ -1246,6 +1304,11 @@ async function init() {
   // Build coverage tab
   buildCoverage();
   buildCoverageBySegment();
+  } catch(e) {
+    const errDiv = el('div',{class:'stat-card'},[el('div',{class:'label',text:'Error Loading Data'}),el('div',{text:e.message})]);
+    errDiv.style.cssText='color:#ff6b6b;grid-column:1/-1;text-align:center';
+    document.getElementById('stats').replaceChildren(errDiv);
+  }
 }
 
 function buildScoreDistribution(high, med, low) {
@@ -1255,9 +1318,9 @@ function buildScoreDistribution(high, med, low) {
   const segNames = ['Operator', 'OFS-Pumper', 'OFS-Other', 'Major', 'International'];
   const segments = segNames.map(seg => ({
     label: seg,
-    h: high.filter(d => normSeg(d.segment) === seg).length,
-    m: med.filter(d => normSeg(d.segment) === seg).length,
-    l: low.filter(d => normSeg(d.segment) === seg).length,
+    h: high.filter(d => getSeg(d) === seg).length,
+    m: med.filter(d => getSeg(d) === seg).length,
+    l: low.filter(d => getSeg(d) === seg).length,
   }));
   const table = el('table');
   const thead = el('thead'); const hrow = el('tr');
@@ -1295,7 +1358,7 @@ function buildAllTable(list) {
     const row = el('tr');
     row.appendChild(el('td',{class:'ticker',text:c.ticker}));
     row.appendChild(el('td',{text:c.company}));
-    row.appendChild(el('td',{text:normSeg(c.segment)}));
+    row.appendChild(el('td',{text:getSeg(c)}));
     const sc = el('td'); const badge = el('span',{class:'badge badge-'+(c.seismos_relevance||'low').toLowerCase(), text:c.seismos_relevance||''}); sc.appendChild(badge); row.appendChild(sc);
     row.appendChild(el('td',{text:trunc(c.seismos_relevance_reason,100)}));
     row.appendChild(el('td',{text:c.data_quality||''}));
@@ -1305,15 +1368,6 @@ function buildAllTable(list) {
 }
 
 function buildCoverage() {
-  const WATCHLIST = [
-    'COP','EOG','FANG','OXY','DVN','CTRA','EQT','PR','CHRD','SM','MTDR','CRGY','MGY','AR',
-    'RRC','EXE','CNX','CRK','GPOR','OVV','APA','REPX','GRNT','CPG','HAL','SLB','BKR','LBRT',
-    'ACDC','PTEN','PUMP','WTTR','RES','NINE','NOV','CHX','HP','WFRD','FTI','CLB','NBR','KEI',
-    'XOM','CVX','SHEL','BP','TTE','EQNR','YPF','VIST','CNQ','CVE','TOU.TO','ARX.TO','WCP.TO',
-    'POU.TO','BTE.TO','CFW.TO','TCW.TO','PD.TO','TBN','BPT.AX','2222.SR','601857.SS','600028.SS',
-    'SEI','REI','NOG','PROP','BKV','KLXE','WHD','AESI','FTK','XPRO','NESR','STO.AX','EC',
-    '601808.SS','PAM','KEGX'
-  ];
   const covered = new Set(DATA.map(d => d.ticker));
   const partial = DATA.filter(d => d.data_quality === 'Limited data').map(d => d.ticker);
   const missing = WATCHLIST.filter(t => !covered.has(t));
@@ -1335,14 +1389,11 @@ function buildCoverage() {
     '601808.SS':'COSL \u2014 Chinese-only earnings, no English transcript available',
     '601857.SS':'PetroChina \u2014 Chinese-only earnings, no English transcript available',
     'BPT.AX':'Beach Energy \u2014 Australian, no US-accessible transcript source',
-    'PD.TO':'Precision Drilling \u2014 covered under PD (US ticker)',
     'POU.TO':'Paramount Resources \u2014 Canadian, Q4 2025 not yet released',
     'PROP':'Prairie Operating \u2014 micro-cap, no earnings call transcript available',
-    'KEI':'Key Energy Services \u2014 covered under KEGX',
-    'TCW.TO':'Trican Well Service \u2014 covered under TCW (US ticker)',
-    'WCP.TO':'Whitecap Resources \u2014 covered under WCP (US ticker)'
+    'KEI':'Key Energy Services \u2014 covered under KEGX ticker'
   };
-  const priorities = {'POU.TO':'Medium','PROP':'Low','BPT.AX':'Low','600028.SS':'Low','601808.SS':'Low','601857.SS':'Low','PD.TO':'Duplicate','TCW.TO':'Duplicate','WCP.TO':'Duplicate','KEI':'Duplicate'};
+  const priorities = {'POU.TO':'Medium','PROP':'Low','BPT.AX':'Low','600028.SS':'Low','601808.SS':'Low','601857.SS':'Low','KEI':'Duplicate'};
   missing.forEach(t => {
     const row = el('tr');
     row.appendChild(el('td',{class:'ticker',text:t}));
