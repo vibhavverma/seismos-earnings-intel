@@ -90,7 +90,7 @@ body::before {
 /* === STATS === */
 .stats {
   display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px;
-  margin-bottom: 40px;
+  margin-bottom: 16px;
 }
 .stat-card {
   background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
@@ -118,6 +118,27 @@ body::before {
 .stat-card .value.low { color: var(--low); }
 .stat-card .value.total { color: var(--accent); }
 
+/* === DOWNLOAD BAR === */
+.download-bar {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 6px; padding: 12px 20px; margin-bottom: 40px;
+  font-family: var(--mono); font-size: 12px; color: var(--text-faint);
+}
+.download-bar a {
+  display: inline-flex; align-items: center; gap: 6px;
+  background: var(--accent-dim); color: var(--accent);
+  border: 1px solid rgba(212,168,83,0.3);
+  padding: 6px 16px; border-radius: 4px;
+  text-decoration: none; font-family: var(--mono);
+  font-size: 11px; font-weight: 600; text-transform: uppercase;
+  letter-spacing: 0.5px; transition: all 0.2s;
+}
+.download-bar a:hover { background: var(--accent-mid); border-color: var(--accent); }
+.download-bar .sep {
+  width: 1px; height: 20px; background: var(--border-light);
+}
+
 /* === TABS === */
 .tabs {
   display: flex; gap: 0; margin-bottom: 36px;
@@ -133,6 +154,48 @@ body::before {
 .tab.active { color: var(--accent); border-bottom-color: var(--accent); }
 .tab-content { display: none; animation: fadeIn 0.3s ease; }
 .tab-content.active { display: block; }
+
+/* === SCHEDULE SECTION === */
+.schedule-section {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 20px 24px; margin-bottom: 28px;
+  cursor: pointer;
+}
+.schedule-header {
+  display: flex; align-items: center; justify-content: space-between;
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+  color: var(--text-dim); text-transform: uppercase; letter-spacing: 0.5px;
+}
+.schedule-header .chevron { transition: transform 0.2s; font-size: 14px; color: var(--text-faint); }
+.schedule-section.open .chevron { transform: rotate(180deg); }
+.schedule-body { display: none; margin-top: 16px; }
+.schedule-section.open .schedule-body { display: block; }
+.schedule-timeline {
+  display: flex; align-items: center; gap: 0; margin: 16px 0 12px;
+}
+.schedule-node {
+  display: flex; flex-direction: column; align-items: center; gap: 6px;
+}
+.schedule-dot {
+  width: 14px; height: 14px; border-radius: 50%;
+  border: 2px solid var(--accent); background: var(--bg);
+}
+.schedule-dot.active { background: var(--accent); }
+.schedule-node-label {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  color: var(--text); white-space: nowrap;
+}
+.schedule-node-sub {
+  font-family: var(--mono); font-size: 10px; color: var(--text-faint);
+}
+.schedule-line {
+  flex: 1; height: 2px; background: var(--border-light); margin: 0 -1px;
+  margin-bottom: 30px;
+}
+.schedule-line.done { background: var(--accent); }
+.schedule-note {
+  font-size: 13px; color: var(--text-dim); line-height: 1.5;
+}
 
 /* === EXEC SUMMARY === */
 .exec-summary {
@@ -245,6 +308,22 @@ tr:hover td { background: rgba(212,168,83,0.03); }
 }
 .completions-col { max-width: 300px; }
 
+/* === KPI CHIPS === */
+.kpi-row {
+  display: flex; gap: 8px; flex-wrap: wrap; margin-top: 10px; margin-bottom: 4px;
+}
+.kpi-chip {
+  display: inline-flex; align-items: center; gap: 4px;
+  background: var(--surface3); border: 1px solid var(--border-light);
+  padding: 4px 10px; border-radius: 4px;
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+}
+.kpi-chip .kpi-label {
+  color: var(--text-faint); font-size: 9px; font-weight: 500;
+  text-transform: uppercase; letter-spacing: 0.3px;
+}
+.kpi-chip .kpi-value { color: var(--accent); }
+
 /* === THEMES === */
 .theme {
   background: var(--surface); border: 1px solid var(--border);
@@ -254,6 +333,66 @@ tr:hover td { background: rgba(212,168,83,0.03); }
 .theme:hover { border-color: var(--border-light); }
 .theme h3 { font-family: var(--serif); font-size: 16px; font-weight: 400; margin-bottom: 8px; }
 .theme p { font-size: 14px; color: var(--text-dim); line-height: 1.55; }
+
+/* === SALES PRIORITIES === */
+.priority-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 14px; }
+.priority-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-left: 3px solid var(--border-light);
+  border-radius: 2px 8px 8px 2px; padding: 18px 20px;
+}
+.priority-card.priority-immediate { border-left-color: var(--high); }
+.priority-card.priority-target { border-left-color: var(--medium); }
+.priority-card.priority-monitor { border-left-color: var(--low); }
+.priority-card-header {
+  display: flex; align-items: center; gap: 10px; margin-bottom: 8px;
+}
+.priority-card-ticker {
+  font-family: var(--mono); font-size: 15px; font-weight: 700; color: var(--accent);
+}
+.priority-card-action {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.priority-immediate .priority-card-action { color: var(--high); }
+.priority-target .priority-card-action { color: var(--medium); }
+.priority-monitor .priority-card-action { color: var(--low); }
+.priority-card-rationale { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+.priority-card-metric {
+  font-family: var(--mono); font-size: 11px; color: var(--text-faint);
+  margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--border);
+}
+
+/* === INTERNATIONAL MARKETS === */
+.intl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(340px, 1fr)); gap: 16px; }
+.intl-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 8px; padding: 22px; position: relative; overflow: hidden;
+}
+.intl-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: var(--accent);
+}
+.intl-card h4 {
+  font-family: var(--serif); font-size: 16px; font-weight: 400; margin-bottom: 6px;
+}
+.intl-card-count {
+  font-family: var(--mono); font-size: 11px; color: var(--text-faint);
+  text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 10px;
+}
+.intl-card-tickers {
+  display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.intl-card-tickers span {
+  font-family: var(--mono); font-size: 11px; font-weight: 600;
+  color: var(--accent); background: var(--accent-dim);
+  padding: 2px 8px; border-radius: 3px;
+}
+.intl-card-theme { font-size: 13px; color: var(--text-dim); line-height: 1.5; }
+.intl-card-opp {
+  font-size: 12px; color: var(--low); margin-top: 8px;
+  font-family: var(--mono); font-weight: 500;
+}
 
 /* === ACTIONS TABLE === */
 .action-num {
@@ -281,6 +420,16 @@ tr:hover td { background: rgba(212,168,83,0.03); }
 }
 .search-box:focus { outline: none; border-color: var(--accent); }
 .search-box::placeholder { color: var(--text-faint); }
+.filter-select {
+  background: var(--surface); border: 1px solid var(--border);
+  color: var(--text-dim); padding: 6px 12px; border-radius: 3px;
+  font-family: var(--mono); font-size: 11px; cursor: pointer;
+  text-transform: uppercase; letter-spacing: 0.5px;
+}
+.filter-select:focus { outline: none; border-color: var(--accent); }
+.filter-sep {
+  width: 1px; height: 24px; background: var(--border-light); margin: 0 4px;
+}
 
 /* === SCORING TAB === */
 .score-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-bottom: 36px; }
@@ -320,14 +469,33 @@ tr:hover td { background: rgba(212,168,83,0.03); }
 .progress-bar { height: 6px; background: var(--surface3); border-radius: 3px; overflow: hidden; margin-top: 10px; }
 .progress-fill { height: 100%; border-radius: 3px; background: linear-gradient(90deg, var(--high), var(--medium), var(--low)); }
 
+/* === COVERAGE BY SEGMENT BARS === */
+.cov-seg-bars { display: grid; gap: 14px; }
+.cov-seg-row { display: flex; align-items: center; gap: 16px; }
+.cov-seg-label {
+  font-family: var(--mono); font-size: 12px; font-weight: 600;
+  color: var(--text-dim); min-width: 120px; text-align: right;
+}
+.cov-seg-bar-wrap {
+  flex: 1; height: 22px; background: var(--surface3);
+  border-radius: 4px; overflow: hidden; position: relative;
+}
+.cov-seg-bar-fill {
+  height: 100%; border-radius: 4px;
+  background: linear-gradient(90deg, var(--accent), var(--low));
+  transition: width 0.5s ease;
+}
+.cov-seg-pct {
+  font-family: var(--mono); font-size: 11px; font-weight: 700;
+  color: var(--text); min-width: 50px;
+}
+
 /* === FOOTER === */
 .footer {
   border-top: 1px solid var(--border); padding-top: 28px; margin-top: 56px;
   color: var(--text-faint); font-size: 12px; text-align: center;
   font-family: var(--mono); letter-spacing: 0.3px;
 }
-.footer a { color: var(--accent); text-decoration: none; }
-.footer a:hover { text-decoration: underline; }
 
 /* === ANIMATIONS === */
 @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -350,9 +518,12 @@ tr:hover td { background: rgba(212,168,83,0.03); }
   .stats { grid-template-columns: repeat(2, 1fr); }
   .score-grid { grid-template-columns: 1fr; }
   .company-grid { grid-template-columns: 1fr; }
+  .priority-grid { grid-template-columns: 1fr; }
+  .intl-grid { grid-template-columns: 1fr; }
   .container { padding: 20px; }
   .header { flex-direction: column; align-items: flex-start; gap: 12px; }
   .header-meta { text-align: left; }
+  .download-bar { flex-direction: column; align-items: flex-start; }
 }
 </style>
 </head>
@@ -363,6 +534,7 @@ tr:hover td { background: rgba(212,168,83,0.03); }
     <div class="header-meta"><div>Q4 2025 Report</div><div>Generated Feb 27, 2026</div></div>
   </div>
   <div class="stats" id="stats"></div>
+  <div id="download-bar"></div>
 
   <div class="tabs">
     <div class="tab active" data-tab="report">Report</div>
@@ -372,23 +544,48 @@ tr:hover td { background: rgba(212,168,83,0.03); }
 
   <!-- TAB: Report -->
   <div class="tab-content active" id="tab-report">
+    <div id="schedule-section"></div>
     <div class="exec-summary"><h2>Executive Summary</h2><div id="findings"></div></div>
     <div class="section"><div class="section-header">Competitive Threat Assessment</div><table id="threat-table"></table></div>
-    <div class="section"><div class="section-header">High Relevance <span class="badge badge-high" id="high-count"></span></div><div class="company-grid" id="high-grid"></div></div>
+    <div class="section">
+      <div class="section-header">High Relevance <span class="badge badge-high" id="high-count"></span></div>
+      <div class="company-grid" id="high-grid"></div>
+    </div>
     <div class="section">
       <div class="section-header">Medium Relevance <span class="badge badge-medium" id="med-count"></span></div>
-      <div class="filters">
-        <input type="text" class="search-box" placeholder="Search companies..." id="search-med">
-        <button class="filter-btn active" data-seg="all">All</button>
-        <button class="filter-btn" data-seg="Operator">Operators</button>
-        <button class="filter-btn" data-seg="OFS">OFS</button>
-        <button class="filter-btn" data-seg="Major">Majors</button>
+      <div class="filters" id="report-filters">
+        <input type="text" class="search-box" placeholder="Search companies..." id="search-report">
+        <div class="filter-sep"></div>
+        <button class="filter-btn seg-btn active" data-seg="all">All</button>
+        <button class="filter-btn seg-btn" data-seg="Operator">Operators</button>
+        <button class="filter-btn seg-btn" data-seg="OFS-Pumper">Pumpers</button>
+        <button class="filter-btn seg-btn" data-seg="OFS-Other">OFS</button>
+        <button class="filter-btn seg-btn" data-seg="Major">Majors</button>
+        <button class="filter-btn seg-btn" data-seg="International">International</button>
+        <div class="filter-sep"></div>
+        <select class="filter-select" id="filter-geo">
+          <option value="all">All Regions</option>
+          <option value="Permian">Permian</option>
+          <option value="Appalachia">Appalachia</option>
+          <option value="Eagle Ford">Eagle Ford</option>
+          <option value="Canada">Canada</option>
+          <option value="Argentina">Argentina</option>
+          <option value="Middle East">Middle East</option>
+          <option value="Other">Other</option>
+        </select>
+        <select class="filter-select" id="filter-sort">
+          <option value="relevance">Relevance</option>
+          <option value="ticker">Ticker A-Z</option>
+          <option value="company">Company A-Z</option>
+          <option value="capex">Capex High-Low</option>
+        </select>
       </div>
       <table id="med-table"></table>
     </div>
     <div class="section"><div class="section-header">Low Relevance <span class="badge badge-low" id="low-count"></span></div><table id="low-table"></table></div>
     <div class="section"><div class="section-header">Market Themes</div><div id="themes"></div></div>
-    <div class="section"><div class="section-header">Recommended Actions</div><table id="actions"></table></div>
+    <div class="section" id="intl-section"><div class="section-header">International Markets</div><div class="intl-grid" id="intl-grid"></div></div>
+    <div class="section" id="priorities-section"><div class="section-header">Sales Priorities</div><div id="priorities-container"></div></div>
   </div>
 
   <!-- TAB: Scoring Model -->
@@ -464,6 +661,10 @@ tr:hover td { background: rgba(212,168,83,0.03); }
       <div class="progress-bar" style="margin-top:18px;width:100%"><div class="progress-fill" id="cov-bar" style="width:0%"></div></div>
     </div>
     <div class="section">
+      <div class="section-header">Coverage by Segment</div>
+      <div id="cov-seg-bars"></div>
+    </div>
+    <div class="section">
       <div class="section-header">Missing Companies</div>
       <table id="missing-table" class="coverage-table"></table>
     </div>
@@ -473,12 +674,14 @@ tr:hover td { background: rgba(212,168,83,0.03); }
     </div>
   </div>
 
-  <div class="footer">Seismos Earnings Intelligence &mdash; Prepared by Vibhav Verma &mdash; Sources: Yahoo Finance, Insider Monkey, Motley Fool, Seeking Alpha<br><a href="data/earnings-intel-Q4-2025.csv">Download CSV</a> &bull; <a href="data/earnings-intel-Q4-2025.json">Download JSON</a></div>
+  <div class="footer">Seismos Earnings Intelligence &mdash; Prepared by Vibhav Verma &mdash; Sources: Yahoo Finance, Insider Monkey, Motley Fool, Seeking Alpha</div>
 </div>
 <script>
 /* All data rendered from our own pre-generated JSON — no untrusted external input */
 let DATA = [];
 let currentSegment = 'all';
+let currentGeo = 'all';
+let currentSort = 'relevance';
 
 function esc(s) { const d = document.createElement('div'); d.textContent = s || '\u2014'; return d.textContent; }
 function listStr(arr) { return Array.isArray(arr) ? arr.map(esc).join(', ') : esc(arr); }
@@ -489,6 +692,93 @@ function el(tag, attrs, children) {
   if (attrs) Object.entries(attrs).forEach(([k,v]) => { if (k === 'class') e.className = v; else if (k === 'text') e.textContent = v; else e.setAttribute(k, v); });
   if (children) children.forEach(c => { if (typeof c === 'string') e.appendChild(document.createTextNode(c)); else if (c) e.appendChild(c); });
   return e;
+}
+
+/* === 1. NORMALIZE SEGMENTS === */
+function normSeg(segment) {
+  const s = (segment || '').toLowerCase();
+  if (s.includes('pumper') || s.includes('completion services')) return 'OFS-Pumper';
+  if (s.includes('international') || s.includes('canada') || s === 'international') return 'International';
+  if (s.includes('major') || s.includes('supermajor') || s.includes('diversified major')) return 'Major';
+  if (s.includes('ofs') || s.includes('oilfield service')) return 'OFS-Other';
+  if (s.includes('operator') || s.includes('e&p')) return 'Operator';
+  return 'Other';
+}
+
+/* === 2. GEOGRAPHY DIMENSION === */
+function getGeo(company) {
+  const basins = (company.basin_focus || []).map(b => b.toLowerCase()).join(' ');
+  if (basins.includes('permian') || basins.includes('delaware') || basins.includes('midland')) return 'Permian';
+  if (basins.includes('appalachia') || basins.includes('marcellus') || basins.includes('utica') || basins.includes('northeast')) return 'Appalachia';
+  if (basins.includes('eagle ford') || basins.includes('giddings')) return 'Eagle Ford';
+  if (basins.includes('canada') || basins.includes('montney') || basins.includes('duvernay') || basins.includes('alberta') || basins.includes('viking') || basins.includes('cardium') || basins.includes('western canada') || basins.includes('oil sands') || basins.includes('athabasca') || basins.includes('lloydminster') || basins.includes('peace river') || basins.includes('pembina') || basins.includes('kakwa') || basins.includes('deep basin') || basins.includes('attachie') || basins.includes('horizon') || basins.includes('kirby') || basins.includes('albian') || basins.includes('saskatchewan')) return 'Canada';
+  if (basins.includes('argentina') || basins.includes('vaca muerta') || basins.includes('neuqu') || basins.includes('rincon') || basins.includes('sierra chata') || basins.includes('mangrullo')) return 'Argentina';
+  if (basins.includes('middle east') || basins.includes('saudi') || basins.includes('abu dhabi') || basins.includes('uae') || basins.includes('iraq') || basins.includes('kuwait') || basins.includes('jafurah')) return 'Middle East';
+  return 'Other';
+}
+
+/* === 3. PARSE CAPEX NUMBER FOR SORTING === */
+function parseCapex(capex) {
+  if (!capex) return 0;
+  const s = capex.replace(/,/g, '');
+  const bMatch = s.match(/\$([\d.]+)\s*[Bb]/);
+  if (bMatch) return parseFloat(bMatch[1]) * 1000;
+  const mMatch = s.match(/\$([\d.]+)\s*[Mm]?/);
+  if (mMatch) {
+    const v = parseFloat(mMatch[1]);
+    return v > 100 ? v : v * 1000;
+  }
+  return 0;
+}
+
+/* === 4. EXTRACT KPI METRICS === */
+function extractKPIs(company) {
+  const chips = [];
+  const eff = company.efficiency_metrics || '';
+  const capex = company.capex_guidance || '';
+  const prod = company.production_guidance || '';
+
+  // Cost per foot
+  const cft = eff.match(/\$[\d,]+\/ft/) || capex.match(/\$[\d,]+\/ft/);
+  if (cft) chips.push({ label: '$/ft', value: cft[0] });
+
+  // Stages per day
+  const spd = eff.match(/([\d.]+)\s*(?:stg|stages?)\/day/i) || eff.match(/([\d.]+)\s*stages?\s*per\s*day/i);
+  if (spd) chips.push({ label: 'stg/day', value: spd[1] });
+
+  // Stage efficiency %
+  const effPct = eff.match(/([\d]+[%\u2013\u2014-]\s*[\d]+%|[\d]+%)\s*(?:stage|improvement|efficiency)/i);
+  if (effPct) chips.push({ label: 'efficiency', value: effPct[1] });
+
+  // Capex $ (always show if no other chips)
+  const capexMatch = capex.match(/\$([\d,.]+)\s*[BbMm]/);
+  if (capexMatch && chips.length < 3) {
+    const raw = capex.match(/\$[\d,.]+\s*[BbMm][^\s,;]*/);
+    chips.push({ label: 'capex', value: raw ? raw[0] : '$' + capexMatch[1] });
+  }
+
+  // BOE/d or production
+  const boe = (prod || capex).match(/([\d,.]+)\s*(?:K\s*)?(?:BOE|boe|Boe)\/d/i);
+  if (boe && chips.length < 4) chips.push({ label: 'prod', value: boe[0] });
+
+  return chips;
+}
+
+/* === EXTRACT SINGLE KEY METRIC FOR TABLE === */
+function extractKeyMetric(company) {
+  const eff = company.efficiency_metrics || '';
+  const capex = company.capex_guidance || '';
+
+  const cft = eff.match(/\$[\d,]+\/ft/);
+  if (cft) return cft[0];
+
+  const spd = eff.match(/([\d.]+)\s*(?:stg|stages?)\/day/i);
+  if (spd) return spd[0];
+
+  const capexMatch = capex.match(/\$[\d,.]+\s*[BbMm][^\s,;]*/);
+  if (capexMatch) return capexMatch[0];
+
+  return '\u2014';
 }
 
 function buildStats(high, med, low) {
@@ -502,6 +792,70 @@ function buildStats(high, med, low) {
     card.appendChild(val);
     container.appendChild(card);
   });
+}
+
+/* === 4. DOWNLOAD BAR === */
+function buildDownloadBar() {
+  const bar = document.getElementById('download-bar');
+  bar.className = 'download-bar';
+  bar.replaceChildren();
+  const csvLink = el('a', { href: 'data/earnings-intel-Q4-2025.csv' }, ['Download CSV']);
+  const jsonLink = el('a', { href: 'data/earnings-intel-Q4-2025.json' }, ['Download JSON']);
+  bar.appendChild(csvLink);
+  bar.appendChild(jsonLink);
+  bar.appendChild(el('div', { class: 'sep' }));
+  bar.appendChild(el('span', { text: 'Last Updated: Feb 27, 2026' }));
+  bar.appendChild(el('div', { class: 'sep' }));
+  bar.appendChild(el('span', { text: 'Next refresh: Q1 2026 earnings (Apr\u2013May 2026)' }));
+}
+
+/* === 5. SCHEDULE SECTION === */
+function buildSchedule() {
+  const container = document.getElementById('schedule-section');
+  container.replaceChildren();
+  const section = el('div', { class: 'schedule-section' });
+
+  const header = el('div', { class: 'schedule-header' });
+  header.appendChild(el('span', { text: 'Upcoming Earnings & Refresh Schedule' }));
+  header.appendChild(el('span', { class: 'chevron', text: '\u25BC' }));
+  section.appendChild(header);
+
+  const body = el('div', { class: 'schedule-body' });
+
+  // Timeline
+  const timeline = el('div', { class: 'schedule-timeline' });
+
+  const node1 = el('div', { class: 'schedule-node' });
+  const dot1 = el('div', { class: 'schedule-dot active' });
+  node1.appendChild(dot1);
+  node1.appendChild(el('div', { class: 'schedule-node-label', text: 'Q4 2025' }));
+  node1.appendChild(el('div', { class: 'schedule-node-sub', text: 'Current' }));
+  timeline.appendChild(node1);
+
+  timeline.appendChild(el('div', { class: 'schedule-line done' }));
+
+  const node2 = el('div', { class: 'schedule-node' });
+  node2.appendChild(el('div', { class: 'schedule-dot' }));
+  node2.appendChild(el('div', { class: 'schedule-node-label', text: 'Q1 2026' }));
+  node2.appendChild(el('div', { class: 'schedule-node-sub', text: 'Apr\u2013May 2026' }));
+  timeline.appendChild(node2);
+
+  timeline.appendChild(el('div', { class: 'schedule-line' }));
+
+  const node3 = el('div', { class: 'schedule-node' });
+  node3.appendChild(el('div', { class: 'schedule-dot' }));
+  node3.appendChild(el('div', { class: 'schedule-node-label', text: 'Q2 2026' }));
+  node3.appendChild(el('div', { class: 'schedule-node-sub', text: 'Jul\u2013Aug 2026' }));
+  timeline.appendChild(node3);
+
+  body.appendChild(timeline);
+  body.appendChild(el('div', { class: 'schedule-note', text: 'Updated quarterly during earnings season. Most operators report Q4 results in Jan\u2013Feb; OFS companies follow in Feb\u2013Mar. Next full refresh targets Q1 2026 earnings calls (Apr\u2013May 2026).' }));
+
+  section.appendChild(body);
+  container.appendChild(section);
+
+  // Toggle behavior
+  header.addEventListener('click', () => section.classList.toggle('open'));
 }
 
 function buildFindings() {
@@ -550,6 +904,7 @@ function buildThreats() {
   table.appendChild(tbody);
 }
 
+/* === 6. HIGH CARDS WITH KPI CHIPS === */
 function buildHighCards(high) {
   document.getElementById('high-count').textContent = high.length + ' companies';
   const grid = document.getElementById('high-grid');
@@ -561,8 +916,22 @@ function buildHighCards(high) {
     tn.appendChild(el('span',{class:'card-ticker',text:c.ticker}));
     tn.appendChild(el('span',{class:'card-name',text:c.company}));
     header.appendChild(tn);
-    header.appendChild(el('span',{class:'card-seg',text:c.segment||''}));
+    header.appendChild(el('span',{class:'card-seg',text:normSeg(c.segment)}));
     card.appendChild(header);
+
+    // KPI chips
+    const kpis = extractKPIs(c);
+    if (kpis.length > 0) {
+      const kpiRow = el('div', { class: 'kpi-row' });
+      kpis.forEach(k => {
+        const chip = el('div', { class: 'kpi-chip' });
+        chip.appendChild(el('span', { class: 'kpi-label', text: k.label }));
+        chip.appendChild(el('span', { class: 'kpi-value', text: k.value }));
+        kpiRow.appendChild(chip);
+      });
+      card.appendChild(kpiRow);
+    }
+
     [['Basins',listStr(c.basin_focus)],['2026 Capex',esc(c.capex_guidance)],['Technology',listStr(c.technology_mentions)],['Efficiency',esc(c.efficiency_metrics)]].forEach(([lbl,val]) => {
       const row = el('div',{class:'card-row'});
       row.appendChild(el('span',{class:'card-label',text:lbl}));
@@ -587,15 +956,16 @@ function buildMedTable(list) {
   const table = document.getElementById('med-table');
   table.replaceChildren();
   const thead = el('thead'); const hrow = el('tr');
-  ['Ticker','Company','Segment','2026 Capex','Completions Signal','Key Tech'].forEach(h => hrow.appendChild(el('th',{text:h})));
+  ['Ticker','Company','Segment','2026 Capex','Key Metric','Completions Signal','Key Tech'].forEach(h => hrow.appendChild(el('th',{text:h})));
   thead.appendChild(hrow); table.appendChild(thead);
   const tbody = el('tbody');
   list.forEach(c => {
     const row = el('tr');
     row.appendChild(el('td',{class:'ticker',text:c.ticker}));
     row.appendChild(el('td',{text:c.company}));
-    row.appendChild(el('td',{text:c.segment||''}));
+    row.appendChild(el('td',{text:normSeg(c.segment)}));
     row.appendChild(el('td',{text:esc(c.capex_guidance)}));
+    const km = el('td',{text:extractKeyMetric(c)}); km.style.fontFamily='var(--mono)'; km.style.fontWeight='600'; km.style.color='var(--accent)'; row.appendChild(km);
     row.appendChild(el('td',{class:'completions-col',text:trunc(c.completions_strategy,120)}));
     row.appendChild(el('td',{text:listStr((c.technology_mentions||[]).slice(0,3))}));
     tbody.appendChild(row);
@@ -615,7 +985,7 @@ function buildLowTable(low) {
     const row = el('tr');
     row.appendChild(el('td',{class:'ticker',text:c.ticker}));
     row.appendChild(el('td',{text:c.company}));
-    row.appendChild(el('td',{text:c.segment||''}));
+    row.appendChild(el('td',{text:normSeg(c.segment)}));
     const notes = el('td',{text:trunc(c.seismos_relevance_reason,80)}); notes.style.color='var(--text-dim)'; row.appendChild(notes);
     tbody.appendChild(row);
   });
@@ -639,35 +1009,182 @@ function buildThemes() {
   });
 }
 
-function buildActions() {
-  const table = document.getElementById('actions');
-  table.replaceChildren();
-  const tbody = el('tbody');
-  [
-    ['HAL','Track Zeus IQ adoption quarterly','8% QoQ growth compounds fast'],
-    ['LBRT','Evaluate Atlas IQ competitive positioning','New platform targeting same value prop as CLF'],
-    ['PR','Engage Permian Resources','Most tech-forward Permian pure-play, actively optimizing completions'],
-    ['OVV','Engage Ovintiv','Running in-house \u201creal-time frac optimization\u201d \u2014 potential CLF conversion'],
-    ['CLB','Explore Core Labs partnership','Complementary tracer diagnostics; combined offering'],
-    ['CRGY','Target Crescent Energy','70% simul-frac = high complexity where CLF adds most value'],
-    ['NINE','Monitor Nine Energy as channel partner','Struggling OFS seeking differentiation'],
-  ].forEach(([target,action,rationale],i) => {
-    const row = el('tr');
-    row.appendChild(el('td',{class:'action-num',text:String(i+1)}));
-    row.appendChild(el('td',{class:'action-target',text:target}));
-    row.appendChild(el('td',{text:action}));
-    const r = el('td',{text:rationale}); r.style.color='var(--text-dim)'; row.appendChild(r);
-    tbody.appendChild(row);
+/* === 7. SALES PRIORITIES === */
+function buildSalesPriorities() {
+  const container = document.getElementById('priorities-container');
+  container.replaceChildren();
+
+  const groups = [
+    {
+      label: 'Immediate Actions',
+      cls: 'priority-immediate',
+      badge: 'badge-high',
+      items: [
+        { ticker: 'HAL', action: 'Track', rationale: 'Zeus IQ adoption at 8% QoQ growth compounds fast \u2014 monitor quarterly for market share trajectory.', metric: '15\u201320% stage efficiency improvement' },
+        { ticker: 'LBRT', action: 'Evaluate', rationale: 'Atlas IQ launched Q4 2025 targeting same value prop as CLF \u2014 assess competitive positioning and differentiation gaps.', metric: 'New completions intelligence platform' },
+      ]
+    },
+    {
+      label: 'Sales Targets',
+      cls: 'priority-target',
+      badge: 'badge-medium',
+      items: [
+        { ticker: 'PR', action: 'Engage', rationale: 'Most tech-forward Permian pure-play. Actively optimizing completions with $700/ft target \u2014 strong CLF fit.', metric: '$700/ft D&C cost target' },
+        { ticker: 'OVV', action: 'Engage', rationale: 'Running in-house real-time frac optimization \u2014 potential CLF conversion or upgrade path.', metric: '<$600/ft Permian, <$500/ft Montney' },
+        { ticker: 'CRGY', action: 'Target', rationale: '70% simul-frac adoption = highest complexity where CLF adds most value for real-time monitoring.', metric: '70% simul-frac adoption' },
+      ]
+    },
+    {
+      label: 'Monitor',
+      cls: 'priority-monitor',
+      badge: 'badge-low',
+      items: [
+        { ticker: 'CLB', action: 'Explore', rationale: 'Complementary tracer diagnostics (SpectraStim). Combined post-job + real-time offering potential.', metric: 'Post-job tracer diagnostics' },
+        { ticker: 'NINE', action: 'Monitor', rationale: 'Struggling OFS company seeking technology differentiation \u2014 potential channel partner or integration target.', metric: 'Revenue pressure, seeking tech edge' },
+      ]
+    },
+  ];
+
+  groups.forEach(g => {
+    const groupHeader = el('div', { style: 'display:flex;align-items:center;gap:10px;margin-bottom:12px;margin-top:20px' });
+    groupHeader.appendChild(el('span', { class: 'badge ' + g.badge, text: g.label }));
+    container.appendChild(groupHeader);
+
+    const grid = el('div', { class: 'priority-grid' });
+    g.items.forEach(item => {
+      const card = el('div', { class: 'priority-card ' + g.cls });
+      const cardHeader = el('div', { class: 'priority-card-header' });
+      cardHeader.appendChild(el('span', { class: 'priority-card-ticker', text: item.ticker }));
+      cardHeader.appendChild(el('span', { class: 'priority-card-action', text: item.action }));
+      card.appendChild(cardHeader);
+      card.appendChild(el('div', { class: 'priority-card-rationale', text: item.rationale }));
+      card.appendChild(el('div', { class: 'priority-card-metric', text: item.metric }));
+      grid.appendChild(card);
+    });
+    container.appendChild(grid);
   });
-  table.appendChild(tbody);
 }
 
-function filterMedium() {
-  const q = document.getElementById('search-med').value.toLowerCase();
-  let med = DATA.filter(d => d.seismos_relevance === 'Medium');
-  if (currentSegment !== 'all') med = med.filter(d => (d.segment || '').includes(currentSegment));
-  if (q) med = med.filter(d => (d.ticker + ' ' + d.company + ' ' + (d.completions_strategy||'')).toLowerCase().includes(q));
+/* === 8. INTERNATIONAL MARKETS === */
+function buildIntlMarkets() {
+  const grid = document.getElementById('intl-grid');
+  grid.replaceChildren();
+
+  const regions = [
+    {
+      name: 'Canada',
+      tickers: ['TOU.TO', 'ARX.TO', 'BTE.TO', 'CFW.TO', 'WCP', 'CPG', 'CNQ', 'CVE', 'TCW'],
+      theme: 'Montney and Duvernay unconventional development ramping. Operators adopting US-style completions technology including simul-frac and e-frac fleets.',
+      opportunity: 'CLF expansion as Canadian operators mature completions practices'
+    },
+    {
+      name: 'Latin America',
+      tickers: ['YPF', 'VIST', 'EC', 'PAM'],
+      theme: 'Vaca Muerta development accelerating with major operators scaling unconventional operations. Argentina emerging as the next high-growth shale play.',
+      opportunity: 'Early-mover advantage in Vaca Muerta completions optimization'
+    },
+    {
+      name: 'Middle East / APAC',
+      tickers: ['2222.SR', 'NESR', 'STO.AX', 'TBN'],
+      theme: 'Saudi Aramco expanding unconventional gas (Jafurah). NESR providing regional OFS capabilities. Santos and Tamboran pursuing APAC shale.',
+      opportunity: 'Jafurah unconventional gas program as CLF entry point'
+    },
+  ];
+
+  regions.forEach(r => {
+    // Filter to companies actually in our data
+    const inData = r.tickers.filter(t => DATA.some(d => d.ticker === t));
+    const card = el('div', { class: 'intl-card' });
+    card.appendChild(el('h4', { text: r.name }));
+    card.appendChild(el('div', { class: 'intl-card-count', text: inData.length + ' of ' + r.tickers.length + ' companies covered' }));
+
+    const tickerRow = el('div', { class: 'intl-card-tickers' });
+    r.tickers.forEach(t => tickerRow.appendChild(el('span', { text: t })));
+    card.appendChild(tickerRow);
+
+    card.appendChild(el('div', { class: 'intl-card-theme', text: r.theme }));
+    card.appendChild(el('div', { class: 'intl-card-opp', text: '\u2192 ' + r.opportunity }));
+    grid.appendChild(card);
+  });
+}
+
+/* === 3. UNIVERSAL FILTER (controls med/low tables and high cards) === */
+function filterAll() {
+  const q = (document.getElementById('search-report').value || '').toLowerCase();
+  const seg = currentSegment;
+  const geo = currentGeo;
+  const sort = currentSort;
+
+  function matchesFilters(d) {
+    if (seg !== 'all' && normSeg(d.segment) !== seg) return false;
+    if (geo !== 'all' && getGeo(d) !== geo) return false;
+    if (q && !(d.ticker + ' ' + d.company + ' ' + (d.completions_strategy || '') + ' ' + (d.seismos_relevance_reason || '')).toLowerCase().includes(q)) return false;
+    return true;
+  }
+
+  function sortList(list) {
+    if (sort === 'ticker') return list.slice().sort((a, b) => a.ticker.localeCompare(b.ticker));
+    if (sort === 'company') return list.slice().sort((a, b) => a.company.localeCompare(b.company));
+    if (sort === 'capex') return list.slice().sort((a, b) => parseCapex(b.capex_guidance) - parseCapex(a.capex_guidance));
+    return list;
+  }
+
+  const high = sortList(DATA.filter(d => d.seismos_relevance === 'High' && matchesFilters(d)));
+  const med = sortList(DATA.filter(d => d.seismos_relevance === 'Medium' && matchesFilters(d)));
+  const low = sortList(DATA.filter(d => d.seismos_relevance === 'Low' && matchesFilters(d)));
+
+  buildHighCards(high);
   buildMedTable(med);
+  buildLowTable(low);
+}
+
+/* === 9. COVERAGE BY SEGMENT BARS === */
+function buildCoverageBySegment() {
+  const container = document.getElementById('cov-seg-bars');
+  container.className = 'cov-seg-bars';
+  container.replaceChildren();
+
+  const WATCHLIST = [
+    'COP','EOG','FANG','OXY','DVN','CTRA','EQT','PR','CHRD','SM','MTDR','CRGY','MGY','AR',
+    'RRC','EXE','CNX','CRK','GPOR','OVV','APA','REPX','GRNT','CPG','HAL','SLB','BKR','LBRT',
+    'ACDC','PTEN','PUMP','WTTR','RES','NINE','NOV','CHX','HP','WFRD','FTI','CLB','NBR','KEI',
+    'XOM','CVX','SHEL','BP','TTE','EQNR','YPF','VIST','CNQ','CVE','TOU.TO','ARX.TO','WCP.TO',
+    'POU.TO','BTE.TO','CFW.TO','TCW.TO','PD.TO','TBN','BPT.AX','2222.SR','601857.SS','600028.SS',
+    'SEI','REI','NOG','PROP','BKV','KLXE','WHD','AESI','FTK','XPRO','NESR','STO.AX','EC',
+    '601808.SS','PAM','KEGX'
+  ];
+  const covered = new Set(DATA.map(d => d.ticker));
+
+  // Assign segments to watchlist companies (use DATA if available, else guess from ticker)
+  const segCounts = {};
+  const segNames = ['Operator', 'OFS-Pumper', 'OFS-Other', 'Major', 'International'];
+  segNames.forEach(s => { segCounts[s] = { total: 0, covered: 0 }; });
+
+  WATCHLIST.forEach(t => {
+    const d = DATA.find(x => x.ticker === t);
+    const seg = d ? normSeg(d.segment) : 'Other';
+    const key = segNames.includes(seg) ? seg : 'OFS-Other';
+    segCounts[key].total++;
+    if (covered.has(t)) segCounts[key].covered++;
+  });
+
+  segNames.forEach(seg => {
+    const s = segCounts[seg];
+    if (s.total === 0) return;
+    const pct = Math.round(s.covered / s.total * 100);
+
+    const row = el('div', { class: 'cov-seg-row' });
+    row.appendChild(el('div', { class: 'cov-seg-label', text: seg }));
+
+    const barWrap = el('div', { class: 'cov-seg-bar-wrap' });
+    const barFill = el('div', { class: 'cov-seg-bar-fill' });
+    barFill.style.width = pct + '%';
+    barWrap.appendChild(barFill);
+    row.appendChild(barWrap);
+
+    row.appendChild(el('div', { class: 'cov-seg-pct', text: s.covered + '/' + s.total + ' (' + pct + '%)' }));
+    container.appendChild(row);
+  });
 }
 
 async function init() {
@@ -677,22 +1194,34 @@ async function init() {
   const med = DATA.filter(d => d.seismos_relevance === 'Medium');
   const low = DATA.filter(d => d.seismos_relevance === 'Low');
   buildStats(high, med, low);
+  buildDownloadBar();
+  buildSchedule();
   buildFindings();
   buildThreats();
   buildHighCards(high);
   buildMedTable(med);
   buildLowTable(low);
   buildThemes();
-  buildActions();
+  buildIntlMarkets();
+  buildSalesPriorities();
 
-  document.getElementById('search-med').addEventListener('input', filterMedium);
-  document.querySelectorAll('.filter-btn').forEach(btn => {
+  // Universal filter listeners
+  document.getElementById('search-report').addEventListener('input', filterAll);
+  document.querySelectorAll('.seg-btn').forEach(btn => {
     btn.addEventListener('click', function() {
       currentSegment = this.dataset.seg;
-      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.seg-btn').forEach(b => b.classList.remove('active'));
       this.classList.add('active');
-      filterMedium();
+      filterAll();
     });
+  });
+  document.getElementById('filter-geo').addEventListener('change', function() {
+    currentGeo = this.value;
+    filterAll();
+  });
+  document.getElementById('filter-sort').addEventListener('change', function() {
+    currentSort = this.value;
+    filterAll();
   });
 
   // Tab switching
@@ -716,18 +1245,20 @@ async function init() {
 
   // Build coverage tab
   buildCoverage();
+  buildCoverageBySegment();
 }
 
 function buildScoreDistribution(high, med, low) {
   const container = document.getElementById('score-distribution');
   container.replaceChildren();
   const total = DATA.length;
-  const segments = [
-    {label:'Operators',h:high.filter(d=>(d.segment||'').includes('Operator')).length,m:med.filter(d=>(d.segment||'').includes('Operator')).length,l:low.filter(d=>(d.segment||'').includes('Operator')).length},
-    {label:'OFS',h:high.filter(d=>(d.segment||'').includes('OFS')||d.segment==='Pumper / Completion Services').length,m:med.filter(d=>(d.segment||'').includes('OFS')||d.segment==='Pumper / Completion Services').length,l:low.filter(d=>(d.segment||'').includes('OFS')||d.segment==='Pumper / Completion Services').length},
-    {label:'Majors',h:high.filter(d=>(d.segment||'').includes('Major')).length,m:med.filter(d=>(d.segment||'').includes('Major')).length,l:low.filter(d=>(d.segment||'').includes('Major')).length},
-    {label:'International',h:high.filter(d=>(d.segment||'').includes('International')).length,m:med.filter(d=>(d.segment||'').includes('International')).length,l:low.filter(d=>(d.segment||'').includes('International')).length},
-  ];
+  const segNames = ['Operator', 'OFS-Pumper', 'OFS-Other', 'Major', 'International'];
+  const segments = segNames.map(seg => ({
+    label: seg,
+    h: high.filter(d => normSeg(d.segment) === seg).length,
+    m: med.filter(d => normSeg(d.segment) === seg).length,
+    l: low.filter(d => normSeg(d.segment) === seg).length,
+  }));
   const table = el('table');
   const thead = el('thead'); const hrow = el('tr');
   ['Segment','High','Medium','Low','Total'].forEach(h => hrow.appendChild(el('th',{text:h})));
@@ -764,7 +1295,7 @@ function buildAllTable(list) {
     const row = el('tr');
     row.appendChild(el('td',{class:'ticker',text:c.ticker}));
     row.appendChild(el('td',{text:c.company}));
-    row.appendChild(el('td',{text:c.segment||''}));
+    row.appendChild(el('td',{text:normSeg(c.segment)}));
     const sc = el('td'); const badge = el('span',{class:'badge badge-'+(c.seismos_relevance||'low').toLowerCase(), text:c.seismos_relevance||''}); sc.appendChild(badge); row.appendChild(sc);
     row.appendChild(el('td',{text:trunc(c.seismos_relevance_reason,100)}));
     row.appendChild(el('td',{text:c.data_quality||''}));
