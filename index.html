@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Seismos Earnings Intelligence</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --surface2: #242836;
+  --border: #2e3346;
+  --text: #e4e6f0;
+  --text-muted: #8b8fa3;
+  --accent: #4f8cff;
+  --high: #ff4d6a;
+  --medium: #ffb84d;
+  --low: #4dff91;
+  --font: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: var(--font); background: var(--bg); color: var(--text); line-height: 1.6; }
+.container { max-width: 1400px; margin: 0 auto; padding: 24px; }
+.header { display: flex; justify-content: space-between; align-items: center; padding: 32px 0 24px; border-bottom: 1px solid var(--border); margin-bottom: 32px; }
+.header h1 { font-size: 28px; font-weight: 700; letter-spacing: -0.5px; }
+.header h1 span { color: var(--accent); }
+.header-meta { text-align: right; color: var(--text-muted); font-size: 14px; }
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 32px; }
+.stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; }
+.stat-card .label { font-size: 12px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-muted); margin-bottom: 4px; }
+.stat-card .value { font-size: 32px; font-weight: 700; }
+.stat-card .value.high { color: var(--high); }
+.stat-card .value.medium { color: var(--medium); }
+.stat-card .value.low { color: var(--low); }
+.stat-card .value.total { color: var(--accent); }
+.section { margin-bottom: 40px; }
+.section-header { font-size: 20px; font-weight: 600; margin-bottom: 16px; display: flex; align-items: center; gap: 10px; }
+.badge { display: inline-block; font-size: 11px; font-weight: 600; padding: 2px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.5px; }
+.badge-high { background: rgba(255,77,106,0.15); color: var(--high); }
+.badge-medium { background: rgba(255,184,77,0.15); color: var(--medium); }
+.badge-low { background: rgba(77,255,145,0.15); color: var(--low); }
+.badge-critical { background: rgba(255,77,106,0.25); color: #ff6b82; border: 1px solid rgba(255,77,106,0.3); }
+.badge-partner { background: rgba(79,140,255,0.15); color: var(--accent); border: 1px solid rgba(79,140,255,0.3); }
+.exec-summary { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 28px; margin-bottom: 32px; }
+.exec-summary h2 { font-size: 18px; margin-bottom: 16px; }
+.finding { display: flex; gap: 12px; margin-bottom: 12px; padding: 10px 14px; background: var(--surface2); border-radius: 8px; }
+.finding-num { font-size: 14px; font-weight: 700; color: var(--accent); min-width: 24px; }
+.finding-text { font-size: 14px; }
+.finding-text strong { color: #fff; }
+table { width: 100%; border-collapse: collapse; }
+th { text-align: left; padding: 12px 16px; font-size: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--text-muted); border-bottom: 2px solid var(--border); background: var(--surface); position: sticky; top: 0; }
+td { padding: 12px 16px; border-bottom: 1px solid var(--border); font-size: 14px; vertical-align: top; }
+tr:hover td { background: var(--surface2); }
+.ticker { font-weight: 700; color: var(--accent); }
+.company-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(420px, 1fr)); gap: 16px; }
+.company-card { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; transition: border-color 0.2s; }
+.company-card:hover { border-color: var(--accent); }
+.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+.ticker-name { display: flex; align-items: baseline; gap: 8px; }
+.card-ticker { font-size: 18px; font-weight: 700; color: var(--accent); }
+.card-name { font-size: 14px; color: var(--text-muted); }
+.card-seg { font-size: 11px; color: var(--text-muted); background: var(--surface2); padding: 2px 8px; border-radius: 4px; }
+.card-row { display: flex; gap: 16px; margin-bottom: 6px; font-size: 13px; }
+.card-label { color: var(--text-muted); min-width: 80px; flex-shrink: 0; }
+.why-box { font-size: 13px; background: rgba(255,77,106,0.08); padding: 8px 12px; border-radius: 6px; margin-top: 10px; color: #ffa0b0; }
+.card-expand { font-size: 13px; color: var(--text-muted); margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+.card-expand summary { cursor: pointer; font-weight: 600; color: var(--text); font-size: 13px; }
+.card-expand p { margin-top: 8px; line-height: 1.5; }
+.card-quote { font-style: italic; color: var(--text-muted); font-size: 13px; margin-top: 8px; padding-left: 12px; border-left: 2px solid var(--border); }
+.completions-col { max-width: 300px; }
+.theme { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 20px; margin-bottom: 12px; }
+.theme h3 { font-size: 15px; margin-bottom: 8px; }
+.theme p { font-size: 14px; color: var(--text-muted); }
+.action-num { font-size: 20px; font-weight: 700; color: var(--accent); width: 40px; text-align: center; }
+.action-target { font-weight: 600; color: var(--accent); white-space: nowrap; }
+.filters { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; }
+.filter-btn { background: var(--surface); border: 1px solid var(--border); color: var(--text-muted); padding: 6px 14px; border-radius: 20px; cursor: pointer; font-size: 13px; transition: all 0.2s; }
+.filter-btn:hover, .filter-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+.search-box { background: var(--surface); border: 1px solid var(--border); color: var(--text); padding: 8px 14px; border-radius: 8px; font-size: 13px; width: 250px; }
+.search-box::placeholder { color: var(--text-muted); }
+.footer { border-top: 1px solid var(--border); padding-top: 24px; margin-top: 48px; color: var(--text-muted); font-size: 13px; text-align: center; }
+.footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div><h1><span>Seismos</span> Earnings Intelligence</h1></div>
+    <div class="header-meta"><div>Q4 2025 Report</div><div>Generated Feb 27, 2026</div></div>
+  </div>
+  <div class="stats" id="stats"></div>
+  <div class="exec-summary"><h2>Executive Summary</h2><div id="findings"></div></div>
+  <div class="section"><div class="section-header">Competitive Threat Assessment</div><table id="threat-table"></table></div>
+  <div class="section"><div class="section-header">High Relevance <span class="badge badge-high" id="high-count"></span></div><div class="company-grid" id="high-grid"></div></div>
+  <div class="section">
+    <div class="section-header">Medium Relevance <span class="badge badge-medium" id="med-count"></span></div>
+    <div class="filters">
+      <input type="text" class="search-box" placeholder="Search companies..." id="search-med">
+      <button class="filter-btn active" data-seg="all">All</button>
+      <button class="filter-btn" data-seg="Operator">Operators</button>
+      <button class="filter-btn" data-seg="OFS">OFS</button>
+      <button class="filter-btn" data-seg="Major">Majors</button>
+    </div>
+    <table id="med-table"></table>
+  </div>
+  <div class="section"><div class="section-header">Low Relevance <span class="badge badge-low" id="low-count"></span></div><table id="low-table"></table></div>
+  <div class="section"><div class="section-header">Market Themes</div><div id="themes"></div></div>
+  <div class="section"><div class="section-header">Recommended Actions</div><table id="actions"></table></div>
+  <div class="footer">Seismos Earnings Intelligence &mdash; Sources: Yahoo Finance, Insider Monkey, Motley Fool, Seeking Alpha<br><a href="data/earnings-intel-Q4-2025.csv">Download CSV</a> &bull; <a href="data/earnings-intel-Q4-2025.json">Download JSON</a></div>
+</div>
+<script>
+/* All data rendered from our own pre-generated JSON — no untrusted external input */
+let DATA = [];
+let currentSegment = 'all';
+
+function esc(s) { const d = document.createElement('div'); d.textContent = s || '\u2014'; return d.textContent; }
+function listStr(arr) { return Array.isArray(arr) ? arr.map(esc).join(', ') : esc(arr); }
+function trunc(s, n) { s = s || '\u2014'; return s.length > n ? s.substring(0, n) + '...' : s; }
+
+function el(tag, attrs, children) {
+  const e = document.createElement(tag);
+  if (attrs) Object.entries(attrs).forEach(([k,v]) => { if (k === 'class') e.className = v; else if (k === 'text') e.textContent = v; else e.setAttribute(k, v); });
+  if (children) children.forEach(c => { if (typeof c === 'string') e.appendChild(document.createTextNode(c)); else if (c) e.appendChild(c); });
+  return e;
+}
+
+function buildStats(high, med, low) {
+  const container = document.getElementById('stats');
+  container.replaceChildren();
+  [{l:'Total Companies',v:DATA.length,c:'total'},{l:'High Relevance',v:high.length,c:'high'},{l:'Medium Relevance',v:med.length,c:'medium'},{l:'Low Relevance',v:low.length,c:'low'},{l:'Period',v:'Q4 2025',c:'',small:true}].forEach(s => {
+    const card = el('div',{class:'stat-card'});
+    card.appendChild(el('div',{class:'label',text:s.l}));
+    const val = el('div',{class:'value'+(s.c?' '+s.c:''),text:String(s.v)});
+    if (s.small) val.style.cssText = 'font-size:18px;margin-top:6px';
+    card.appendChild(val);
+    container.appendChild(card);
+  });
+}
+
+function buildFindings() {
+  const container = document.getElementById('findings');
+  container.replaceChildren();
+  const items = [
+    ['The completions intelligence market is a three-horse race.', 'Halliburton\u2019s Zeus IQ, Liberty\u2019s Atlas IQ, and ProFrac/Seismos CLF are the three main platforms competing for real-time completions optimization.'],
+    ['Zeus IQ is gaining traction fast.', 'Halliburton reported 8% quarter-over-quarter adoption increase with customers seeing 15\u201320% stage efficiency improvement.'],
+    ['Liberty launched Atlas IQ in Q4.', 'A new completions intelligence platform targeting the same value proposition as CLF.'],
+    ['ProFrac explicitly names Seismos as strategic partner.', 'CLF is deployed in both supervised and unsupervised modes.'],
+    ['Simul-frac is now table stakes.', 'CRGY at 70% adoption, COP and PR actively deploying \u2014 creating complexity where real-time monitoring adds the most value.'],
+    ['Operators are signaling readiness for CLF.', 'Multiple companies discuss \u201creal-time optimization\u201d and \u201cdata-driven completions\u201d approaches.'],
+  ];
+  items.forEach((f,i) => {
+    const row = el('div',{class:'finding'});
+    row.appendChild(el('div',{class:'finding-num',text:String(i+1)}));
+    const txt = el('div',{class:'finding-text'});
+    txt.appendChild(el('strong',{text:f[0]}));
+    txt.appendChild(document.createTextNode(' ' + f[1]));
+    row.appendChild(txt);
+    container.appendChild(row);
+  });
+}
+
+function buildThreats() {
+  const table = document.getElementById('threat-table');
+  table.replaceChildren();
+  const thead = el('thead'); const hrow = el('tr');
+  ['Company','Product','Key Signal','Threat Level'].forEach(h => hrow.appendChild(el('th',{text:h})));
+  thead.appendChild(hrow); table.appendChild(thead);
+  const tbody = el('tbody');
+  const threats = [
+    {t:'HAL',n:'Halliburton',p:'Zeus IQ',s:'8% QoQ adoption increase, 15\u201320% stage efficiency',l:'Critical',lc:'badge-critical'},
+    {t:'LBRT',n:'Liberty Energy',p:'Atlas IQ',s:'New completions intelligence platform, Q4 2025 launch',l:'High',lc:'badge-high'},
+    {t:'ACDC',n:'ProFrac',p:'Seismos CLF',s:'Named Seismos as partner; supervised + unsupervised modes',l:'Partner',lc:'badge-partner'},
+    {t:'CLB',n:'Core Laboratories',p:'SpectraStim Tracers',s:'Post-job tracer diagnostics \u2014 complementary to real-time acoustic',l:'Adjacent',lc:'badge-medium'},
+  ];
+  threats.forEach(t => {
+    const row = el('tr');
+    const c1 = el('td'); c1.appendChild(el('span',{class:'ticker',text:t.t})); c1.appendChild(document.createTextNode(' '+t.n)); row.appendChild(c1);
+    row.appendChild(el('td',{text:t.p}));
+    row.appendChild(el('td',{text:t.s}));
+    const c4 = el('td'); c4.appendChild(el('span',{class:'badge '+t.lc,text:t.l})); row.appendChild(c4);
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+}
+
+function buildHighCards(high) {
+  document.getElementById('high-count').textContent = high.length + ' companies';
+  const grid = document.getElementById('high-grid');
+  grid.replaceChildren();
+  high.forEach(c => {
+    const card = el('div',{class:'company-card'});
+    const header = el('div',{class:'card-header'});
+    const tn = el('div',{class:'ticker-name'});
+    tn.appendChild(el('span',{class:'card-ticker',text:c.ticker}));
+    tn.appendChild(el('span',{class:'card-name',text:c.company}));
+    header.appendChild(tn);
+    header.appendChild(el('span',{class:'card-seg',text:c.segment||''}));
+    card.appendChild(header);
+    [['Basins',listStr(c.basin_focus)],['2026 Capex',esc(c.capex_guidance)],['Technology',listStr(c.technology_mentions)],['Efficiency',esc(c.efficiency_metrics)]].forEach(([lbl,val]) => {
+      const row = el('div',{class:'card-row'});
+      row.appendChild(el('span',{class:'card-label',text:lbl}));
+      row.appendChild(el('span',{text:val}));
+      card.appendChild(row);
+    });
+    card.appendChild(el('div',{class:'why-box',text:c.seismos_relevance_reason||''}));
+    const expand = el('div',{class:'card-expand'});
+    const details = el('details');
+    details.appendChild(el('summary',{text:'Full Details'}));
+    const strat = el('p'); strat.appendChild(el('strong',{text:'Strategy: '})); strat.appendChild(document.createTextNode(esc(c.strategy_summary))); details.appendChild(strat);
+    const comp = el('p'); comp.appendChild(el('strong',{text:'Completions: '})); comp.appendChild(document.createTextNode(esc(c.completions_strategy))); details.appendChild(comp);
+    if (c.notable_quote) details.appendChild(el('div',{class:'card-quote',text:c.notable_quote}));
+    expand.appendChild(details);
+    card.appendChild(expand);
+    grid.appendChild(card);
+  });
+}
+
+function buildMedTable(list) {
+  document.getElementById('med-count').textContent = list.length + ' companies';
+  const table = document.getElementById('med-table');
+  table.replaceChildren();
+  const thead = el('thead'); const hrow = el('tr');
+  ['Ticker','Company','Segment','2026 Capex','Completions Signal','Key Tech'].forEach(h => hrow.appendChild(el('th',{text:h})));
+  thead.appendChild(hrow); table.appendChild(thead);
+  const tbody = el('tbody');
+  list.forEach(c => {
+    const row = el('tr');
+    row.appendChild(el('td',{class:'ticker',text:c.ticker}));
+    row.appendChild(el('td',{text:c.company}));
+    row.appendChild(el('td',{text:c.segment||''}));
+    row.appendChild(el('td',{text:esc(c.capex_guidance)}));
+    row.appendChild(el('td',{class:'completions-col',text:trunc(c.completions_strategy,120)}));
+    row.appendChild(el('td',{text:listStr((c.technology_mentions||[]).slice(0,3))}));
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+}
+
+function buildLowTable(low) {
+  document.getElementById('low-count').textContent = low.length + ' companies';
+  const table = document.getElementById('low-table');
+  table.replaceChildren();
+  const thead = el('thead'); const hrow = el('tr');
+  ['Ticker','Company','Segment','Notes'].forEach(h => hrow.appendChild(el('th',{text:h})));
+  thead.appendChild(hrow); table.appendChild(thead);
+  const tbody = el('tbody');
+  low.forEach(c => {
+    const row = el('tr');
+    row.appendChild(el('td',{class:'ticker',text:c.ticker}));
+    row.appendChild(el('td',{text:c.company}));
+    row.appendChild(el('td',{text:c.segment||''}));
+    const notes = el('td',{text:trunc(c.seismos_relevance_reason,80)}); notes.style.color='var(--text-muted)'; row.appendChild(notes);
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+}
+
+function buildThemes() {
+  const container = document.getElementById('themes');
+  container.replaceChildren();
+  [
+    ['Completions Intelligence Is a Three-Horse Race','Halliburton (Zeus IQ), Liberty (Atlas IQ), and ProFrac/Seismos (CLF) are the main platforms. Zeus IQ has the installed base; Atlas IQ is newest; CLF differentiates through acoustic sensing.'],
+    ['Simul-Frac Is Table Stakes','Multiple operators (CRGY 70%, COP, PR, EOG) run simul-frac as standard. More complexity per stage means more demand for real-time monitoring.'],
+    ['Efficiency Gains Are Plateauing','Several operators report slowing gains after years of optimization. This opens the door for technology-driven step-changes like CLF.'],
+    ['E-Frac Creates Digital Completions Infrastructure','Electric frac fleets (now standard for Tier 1) bring better data acquisition \u2014 the sensors and connectivity needed for real-time platforms.'],
+    ['International Markets Emerging','Canada (WCP, TCW), Argentina (YPF, VIST), and Colombia (EC) are ramping unconventional development \u2014 future CLF markets as operations mature.'],
+  ].forEach(([title,text]) => {
+    const t = el('div',{class:'theme'});
+    t.appendChild(el('h3',{text:title}));
+    t.appendChild(el('p',{text:text}));
+    container.appendChild(t);
+  });
+}
+
+function buildActions() {
+  const table = document.getElementById('actions');
+  table.replaceChildren();
+  const tbody = el('tbody');
+  [
+    ['HAL','Track Zeus IQ adoption quarterly','8% QoQ growth compounds fast'],
+    ['LBRT','Evaluate Atlas IQ competitive positioning','New platform targeting same value prop as CLF'],
+    ['PR','Engage Permian Resources','Most tech-forward Permian pure-play, actively optimizing completions'],
+    ['OVV','Engage Ovintiv','Running in-house \u201creal-time frac optimization\u201d \u2014 potential CLF conversion'],
+    ['CLB','Explore Core Labs partnership','Complementary tracer diagnostics; combined offering'],
+    ['CRGY','Target Crescent Energy','70% simul-frac = high complexity where CLF adds most value'],
+    ['NINE','Monitor Nine Energy as channel partner','Struggling OFS seeking differentiation'],
+  ].forEach(([target,action,rationale],i) => {
+    const row = el('tr');
+    row.appendChild(el('td',{class:'action-num',text:String(i+1)}));
+    row.appendChild(el('td',{class:'action-target',text:target}));
+    row.appendChild(el('td',{text:action}));
+    const r = el('td',{text:rationale}); r.style.color='var(--text-muted)'; row.appendChild(r);
+    tbody.appendChild(row);
+  });
+  table.appendChild(tbody);
+}
+
+function filterMedium() {
+  const q = document.getElementById('search-med').value.toLowerCase();
+  let med = DATA.filter(d => d.seismos_relevance === 'Medium');
+  if (currentSegment !== 'all') med = med.filter(d => (d.segment || '').includes(currentSegment));
+  if (q) med = med.filter(d => (d.ticker + ' ' + d.company + ' ' + (d.completions_strategy||'')).toLowerCase().includes(q));
+  buildMedTable(med);
+}
+
+async function init() {
+  const res = await fetch('data/earnings-intel-Q4-2025.json');
+  DATA = await res.json();
+  const high = DATA.filter(d => d.seismos_relevance === 'High');
+  const med = DATA.filter(d => d.seismos_relevance === 'Medium');
+  const low = DATA.filter(d => d.seismos_relevance === 'Low');
+  buildStats(high, med, low);
+  buildFindings();
+  buildThreats();
+  buildHighCards(high);
+  buildMedTable(med);
+  buildLowTable(low);
+  buildThemes();
+  buildActions();
+
+  document.getElementById('search-med').addEventListener('input', filterMedium);
+  document.querySelectorAll('.filter-btn').forEach(btn => {
+    btn.addEventListener('click', function() {
+      currentSegment = this.dataset.seg;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      filterMedium();
+    });
+  });
+}
+
+init();
+</script>
+</body>
+</html>
