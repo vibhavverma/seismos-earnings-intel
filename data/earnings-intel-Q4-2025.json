@@ -33,7 +33,8 @@
     },
     "seismos_relevance": "High",
     "seismos_relevance_detail": "ProFrac explicitly names Seismos as a strategic partner and describes closed-loop fracturing capabilities in the call. Quote: 'Strategic partnership with Seismos... closed-loop fracturing capabilities that represent the next evolution in completion solutions.' Two-mode CLF (supervised and unsupervised) described. Seismos positioned as independent downhole auditor complementing ProPilot 2.0 surface automation. Machina CLF integration is the commercial offering.",
-    "notable_quote": "Seismos acts as an independent auditor for downhole performance, introducing closed-loop fracturing capabilities that represent the next evolution in completion solutions."
+    "notable_quote": "Seismos acts as an independent auditor for downhole performance, introducing closed-loop fracturing capabilities that represent the next evolution in completion solutions.",
+    "seismos_relevance_reason": "Explicitly named Seismos as strategic partner. CLF deployed in supervised and unsupervised modes. ProPilot 2.0 surface automation integrates with real-time downhole data."
   },
   {
     "ticker": "HAL",
@@ -103,7 +104,8 @@
     },
     "seismos_relevance": "High",
     "seismos_relevance_detail": "Liberty Energy is a Seismos partner (pumping company agnostic is Seismos's pitch, but Liberty is a key channel). Atlas IQ is a direct completions intelligence platform \u2014 a competitive/complementary product to Seismos's SAFA analytics. Liberty's emphasis on real-time operational data, AI-assisted decision-making during frac jobs, and automation parallels Seismos's CLF value proposition. Liberty's pricing headwinds in 2026 create both risk (budget pressure) and opportunity (tech differentiation argument). Atlas IQ launch is the most important competitive signal to monitor.",
-    "notable_quote": "Fewer crews are available to meet any incremental completions demand \u2014 a flight to quality favoring providers that can deliver multi-frac jobs, continuous operations, and automation and transparency."
+    "notable_quote": "Fewer crews are available to meet any incremental completions demand \u2014 a flight to quality favoring providers that can deliver multi-frac jobs, continuous operations, and automation and transparency.",
+    "seismos_relevance_reason": "Launched Atlas IQ completions intelligence platform in Q4 2025. DigiFleets electric frac transition. Direct competitor to Seismos CLF value proposition."
   },
   {
     "ticker": "MGY",
@@ -129,7 +131,8 @@
     "metrics_reported": "FY2025 production 100,000 BOE/d (+11%); Q4 2025 record 103,800 BOE/d; oil production ~40,000 bpd; field-level cash OpEx $5.12/BOE (-7%); D&C capital $461M; organic proved developed F&D $9.25/BOE; FCF >$425M; diluted shares -4.5%",
     "seismos_relevance": "High",
     "seismos_relevance_detail": "Magnolia is an EXISTING Seismos CLF case study customer operating in the Eagle Ford/Giddings. This earnings call confirms continued focus on completion efficiency optimization in Giddings, improved drilled and completed feet per day, and well cost reduction \u2014 all areas where Seismos CLF delivers documented value. Completion deferrals and improved well placement language aligns with CLF-driven optimization. Strong candidate for expanded engagement and case study refresh given active 2026 program with $440-480M D&C spend.",
-    "notable_quote": "8% increase in drilled feet per day and 6% improvement in completed feet per day during 2025"
+    "notable_quote": "8% increase in drilled feet per day and 6% improvement in completed feet per day during 2025",
+    "seismos_relevance_reason": "Eagle Ford operator achieving 8% drilling and 6% completion efficiency improvements. Active completions optimization program makes them a potential CLF adopter."
   },
   {
     "ticker": "OVV",
@@ -167,7 +170,8 @@
     },
     "seismos_relevance": "High",
     "seismos_relevance_detail": "Ovintiv's 'real-time frac optimization with proprietary algorithms' is the most direct competitive signal in the operator universe \u2014 they are doing in-house what Seismos sells as SAFA/CLF. This makes Ovintiv both a potential target customer (if their proprietary solution has gaps) and a competitive intelligence data point showing operator appetite for real-time optimization. The 9% oil uplift from surfactants and continuous pumping metrics also define the ROI benchmarks Seismos must meet or beat. Continuous pumping focus means any downtime (plug-and-perf issues Seismos addresses) is a high-pain point.",
-    "notable_quote": "We achieved a seven-day continuous pumping run and a 20% improvement in completed feet per day, driven by real-time frac optimization using proprietary algorithms."
+    "notable_quote": "We achieved a seven-day continuous pumping run and a 20% improvement in completed feet per day, driven by real-time frac optimization using proprietary algorithms.",
+    "seismos_relevance_reason": "Running in-house \"real-time frac optimization with proprietary algorithms\" \u2014 an internal CLF analog. Drive Center AI platform for drilling. Could be converted to Seismos CLF."
   },
   {
     "ticker": "PR",
@@ -218,7 +222,8 @@
     "metrics_reported": "Q4 revenue $290M; Q4 adjusted EBITDA $51M (18% margin, +45% QoQ); Q4 completions FCF $98M; Permian ~70 active fleets (market); PROPWR 240 MW committed, 550 MW on order, target 750 MW by end-2028 / 1 GW by 2030; equity offering raised ~$163M net",
     "seismos_relevance": "High",
     "seismos_relevance_detail": "ProPetro is a Seismos partner and key distribution channel \u2014 as one of the 'big three' Permian pumpers alongside Liberty and ProFrac. The transcript confirms ProPetro is investing heavily in fleet automation and technology to support customer frac optimization, directly complementary to SAFA/CLF. Their FORCE electric fleet and technology investment narrative aligns with Seismos positioning. Continued Permian-only focus means any CLF/SAFA deployment would go through ProPetro. Key account for partnership expansion and Machina integration.",
-    "notable_quote": "Fleet automation technology investment allows customers to fine-tune completions programs at the highest level"
+    "notable_quote": "Fleet automation technology investment allows customers to fine-tune completions programs at the highest level",
+    "seismos_relevance_reason": "FORCE electric frac fleets (5 active). Direct-drive gas frac pilots. Fleet automation investment. Permian-only pumper with technology differentiation strategy."
   },
   {
     "ticker": "TCW",
@@ -245,7 +250,8 @@
     "metrics_reported": "Q4 revenue: CAD $322.7M (vs CAD $275.5M prior year); EBITDA: CAD $73.4M (23% margin); FCF: CAD $46.6M; net debt: CAD $79.9M (~0.3x leverage); shares repurchased: 12.1M in FY2025; cementing Q4 revenue/jobs: +33% YoY; work mix: ~70% gas / 30% oil",
     "seismos_relevance": "High",
     "seismos_relevance_detail": "Trican is a direct target for Seismos CLF partnership in the Canadian market. As the dominant Canadian pressure pumper with strong Montney/Duvernay market position and a technology-forward posture (electric fleet, NG pumpers, AI tools), Trican is exactly the type of pumping company Seismos targets. Their active expansion into electric/NG fleets and customer demand for efficiency and lower emissions creates a natural CLF value proposition. Trican's SAGD cementing expansion into Christina Lake and emphasis on customer technology roadmaps is additional signal. No current Seismos relationship mentioned, making this a greenfield opportunity.",
-    "notable_quote": "Only provider in the basin offering a full suite of electric assets on frac location"
+    "notable_quote": "Only provider in the basin offering a full suite of electric assets on frac location",
+    "seismos_relevance_reason": "Leading Canadian pumper deploying first 100% natural gas frac fleet (Cat 3520). Only provider with full electric ancillary suite in WCSB. Technology-forward pumper."
   },
   {
     "ticker": "APA",
@@ -272,7 +278,8 @@
     "metrics_reported": "Q4 FCF $425M; FY2025 FCF >$1B; net debt <$4B; proved reserves +9% to >1B boe; all-in RRR >160%; Permian D&C costs $595/ft Midland, $750/ft Delaware; Egypt Q4 gross gas 501 MMcfd",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "APA is active in the Permian (Midland and Delaware) with a cost-reduction and capital-efficiency focus on completions. D&C cost reduction and technical inventory conversion suggest interest in frac performance optimization tools. However, no completions diagnostics, real-time frac monitoring, or CLF technology was mentioned. Medium relevance as a Permian operator prospect.",
-    "notable_quote": "We see a clear line of sight to incremental free cash flow from Suriname beginning in 2028"
+    "notable_quote": "We see a clear line of sight to incremental free cash flow from Suriname beginning in 2028",
+    "seismos_relevance_reason": "Permian operator driving D&C costs to $595/ft Midland. Completions efficiency focus but no advanced frac tech discussion."
   },
   {
     "ticker": "AR",
@@ -321,7 +328,8 @@
     "metrics_reported": "Production: 940 MMcfe/d Q4; completions efficiency >22 HP-hours/day; D&C cost $545/ft; POW uplift ~22% above type curve through 150 days; 8% exit-to-exit growth; reserves ~6 Tcfe 1P",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "BKV's emphasis on completions efficiency records, POW production analysis, and AI-driven optimization in a mature Barnett play creates a relevant entry point for Seismos real-time diagnostics. Refracs and DUC completions on Bedrock assets are near-term opportunities. However, BKV is a gas-focused mid-size operator in the Barnett - not a Permian/unconventional oil operator - and no direct frac diagnostics or CLF language was used. Relevance is process/efficiency driven rather than diagnostic.",
-    "notable_quote": "We set multiple internal records above 22 horsepower-hours per day"
+    "notable_quote": "We set multiple internal records above 22 horsepower-hours per day",
+    "seismos_relevance_reason": "Barnett/Appalachia gas operator with AI operations platform and active refrac program. Power generation pivot."
   },
   {
     "ticker": "BP",
@@ -347,7 +355,8 @@
     "metrics_reported": "FY2025 underlying RC profit $7.5B; OCF $24.5B; CapEx $14.5B; adjusted FCF ~$13B; ROACE 14% price-adjusted; reserves replacement 90%; plant reliability >96%; wells reliability ~98%; BPX average IRR 45% at $65 WTI",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "BPX completion efficiency gains (20% improvement) and real-time monitoring via AI/digital twins are directly relevant to Seismos CLF value proposition. BPX operates in Permian, Eagle Ford, and Haynesville \u2014 all Seismos target basins. However, no specific completions diagnostics technology named. AI monitoring emphasis signals openness to real-time optimization tools like SAFA.",
-    "notable_quote": "20% improvement in completion time, 9% improvement in drilling time"
+    "notable_quote": "20% improvement in completion time, 9% improvement in drilling time",
+    "seismos_relevance_reason": "BPX achieving 20% completion time improvement \u2014 8-rig program equals prior 10-rig output. Geo-steering long undulating laterals."
   },
   {
     "ticker": "CHRD",
@@ -573,7 +582,8 @@
     },
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "Devon's AI-enabled optimization focus shows operator appetite for data-driven performance tools, though the emphasis is production rather than completions. Post-Coterra merger, the combined entity will be a large Permian operator with significant completion activity \u2014 a future enterprise target for Seismos. The merger itself may delay technology vendor decisions as organizations integrate. Condition-based maintenance philosophy is compatible with Seismos's real-time diagnostics pitch.",
-    "notable_quote": "We've deployed AI-enabled artificial lift optimization and condition-based maintenance across our portfolio, contributing to the $850 million in business optimization savings achieved to date."
+    "notable_quote": "We've deployed AI-enabled artificial lift optimization and condition-based maintenance across our portfolio, contributing to the $850 million in business optimization savings achieved to date.",
+    "seismos_relevance_reason": "Devon-Coterra merger creates massive completions operation. AI-enabled artificial lift but production optimization focus, not frac tech."
   },
   {
     "ticker": "EC",
@@ -643,7 +653,8 @@
     },
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "EOG's Super Zipper operations and high-intensity completions are the type of complex multi-well programs where perf efficiency (SAFA's primary metric) matters most. With 10 completion crews and 585 wells planned, even modest efficiency gains from CLF would be meaningful at scale. EOG's ML production optimizers show operator appetite for algorithmic decision-making. No direct CLF or acoustic mentions \u2014 EOG builds significant internal IP. A potential target customer but likely a hard enterprise sale.",
-    "notable_quote": "We continue to improve total completed lateral feet per day while driving down well costs \u2014 targeting low single-digit improvements again in 2026 across all our major plays."
+    "notable_quote": "We continue to improve total completed lateral feet per day while driving down well costs \u2014 targeting low single-digit improvements again in 2026 across all our major plays.",
+    "seismos_relevance_reason": "Super Zipper high-intensity completions across 10 crews. ML-based production optimizers. Major completions spender but proprietary in-house approach."
   },
   {
     "ticker": "EXE",
@@ -668,7 +679,8 @@
     "metrics_reported": "15% Haynesville breakeven reduction; $200M hedging gains 2025; 5 Bcf storage capacity; ~7.5 Bcf/d maintenance production level",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "Expand Energy is the largest natural gas producer in the U.S. with extensive Haynesville operations. Completion design optimization is central to their strategy ('gen one to gen three'). While no specific diagnostics technology is mentioned, the emphasis on completion efficiency gains and evolving designs signals openness to tools that quantify frac performance. Haynesville is a Seismos target basin. Medium relevance as a prospective target account.",
-    "notable_quote": "Completion designs progressed from gen one at merger close to gen three with improved results"
+    "notable_quote": "Completion designs progressed from gen one at merger close to gen three with improved results",
+    "seismos_relevance_reason": "Expand Energy (Chesapeake+SWN) running progressive completion design iterations in Haynesville. Self-sourced sand program."
   },
   {
     "ticker": "FANG",
@@ -706,7 +718,8 @@
     },
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "Diamondback's intense focus on continuous pumping (treating any stoppage as lost value) maps directly to Seismos's SAFA pitch \u2014 perf friction detection reduces NPT during plug-and-perf operations. With 4,500+ ft/day operations, even a 5% reduction in NPT from better perf efficiency is commercially significant. The 60-well surfactant trial also shows Diamondback is actively A/B testing completion technologies, suggesting openness to diagnostic tools that can quantify uplift. Barnett development at $1,000/ft gives a higher-cost target where optimization ROI is clear.",
-    "notable_quote": "We achieved a 5,500-foot-per-day continuous pumping record in the Midland Basin \u2014 never underestimate the American engineer."
+    "notable_quote": "We achieved a 5,500-foot-per-day continuous pumping record in the Midland Basin \u2014 never underestimate the American engineer.",
+    "seismos_relevance_reason": "Continuous pumping focus with simul-frac on longer laterals. 60-well surfactant trial. Treats downtime as the enemy \u2014 efficiency-driven culture."
   },
   {
     "ticker": "GPOR",
@@ -854,12 +867,13 @@
     },
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "NOV is a Seismos partner via Max Completions. The call did not mention Max Completions or Seismos by name, suggesting the partnership is not yet commercially material enough to feature in investor communications. DBS wired pipe technology is philosophically adjacent to Seismos's acoustic surface sensing \u2014 both capture high-frequency downhole signals to improve decision-making \u2014 but operate at different well phases (drilling vs. fracturing) and data capture points (downhole vs. surface acoustic). NOV's offshore/drilling orientation limits direct CLF overlap, but the partnership validates NOV's intent to expand completions intelligence offerings.",
-    "notable_quote": "Downhole Broadband Services \u2014 our wired pipe technology \u2014 more than doubled year-over-year in the North Sea, enabling operators to capture high-frequency downhole data for faster decision-making during drilling operations."
+    "notable_quote": "Downhole Broadband Services \u2014 our wired pipe technology \u2014 more than doubled year-over-year in the North Sea, enabling operators to capture high-frequency downhole data for faster decision-making during drilling operations.",
+    "seismos_relevance_reason": "Wired pipe Downhole Broadband delivers high-frequency downhole data during operations. Max Completions suite. Adjacent data infrastructure provider."
   },
   {
     "ticker": "PTEN",
-    "company": "ProPetro Holding Corp (FILE MISMATCH - expected Patterson-UTI)",
-    "segment": "OFS - Pumper (Permian-focused pressure pumping)",
+    "company": "Patterson-UTI Energy",
+    "segment": "OFS-Drilling/Completions",
     "quarter": "Q4 2025",
     "transcript_url": "local",
     "strategy_summary": "FILE NOTE: PTEN.txt contains ProPetro (PUMP) Q4 2025 data, not Patterson-UTI (PTEN). ProPetro reported Q4 revenue of $290M (beat), adjusted EPS of $0.01 (beat vs -$0.13 est), with EBITDA up 46% QoQ to $51M. The company's major strategic pivot is PROPWR - a power generation business targeting 1 GW+ of installed capacity by 2030, with 550 MW ordered. ProPetro plans 11 active frac fleets in Q1 2026 and is investing $140-160M in completions business in 2026 including fleet automation and direct drive gas frac units.",
@@ -880,7 +894,9 @@
     "metrics_reported": "Q4 revenue: $290M; hydraulic fracturing segment revenue: $203.9M (73.2% of total); wireline revenue: $55.4M; adjusted EBITDA: $51M (46% QoQ increase); FCF (completions): ~$98.1M; PROPWR committed capacity: ~240 MW; total PROPWR ordered: 550 MW; target by end 2027: 750 MW+; by 2030: 1 GW+",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "ProPetro is a Permian-focused pressure pumper directly in Seismos's target market (ProFrac and Liberty are Seismos partners; ProPetro is the third major independent Permian pumper). The fleet automation investment and transition to electric/gas frac fleets creates a natural CLF integration opportunity. However, ProPetro's 2026 investment narrative is dominated by PROPWR power generation, suggesting completions technology spending may be constrained. The FORCEelectric fleet and direct drive gas frac units are the relevant fleet segments for Seismos CLF integration.",
-    "notable_quote": "PROPWR total committed capacity expanded to approximately 240 megawatts with growth anticipated in 2026"
+    "notable_quote": "PROPWR total committed capacity expanded to approximately 240 megawatts with growth anticipated in 2026",
+    "seismos_relevance_reason": "Drilling and completions provider. Ulterra drill bits, NexTier completions integration. Active in Permian but earnings data mixed with ProPetro in extraction.",
+    "data_quality": "Search summary"
   },
   {
     "ticker": "RRC",
@@ -946,7 +962,8 @@
     },
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "SLB is a primary competitive reference point \u2014 their digital division (Tela agentic AI, $1B+ ARR) competes in the same intelligent completions/production optimization space as Seismos. Halliburton's Zeus IQ is the direct CLF competitor; SLB's Tela is the broader digital intelligence competitor. SLB's emphasis on 'production recovery as critical domain for value creation' and ADNOC AI partnership shows the direction of large OFS digital strategies. SLB is both a competitive benchmark and a potential enterprise partner/acquirer context to track.",
-    "notable_quote": "We launched Tela, an agentic AI system for upstream workflows, as we target exiting 2026 at a $1 billion annual run rate in our data center solutions business."
+    "notable_quote": "We launched Tela, an agentic AI system for upstream workflows, as we target exiting 2026 at a $1 billion annual run rate in our data center solutions business.",
+    "seismos_relevance_reason": "Tela agentic AI system for oilfield. ChampionX integration expanding production chemicals. Real-time monitoring through Well Construction segment."
   },
   {
     "ticker": "SM",
@@ -1000,7 +1017,8 @@
     "metrics_reported": "Q4 production: 379,000 BOE/day; FY2025 funds flow: CAD $2.95/share; FCF: ~CAD $900M; operating costs: CAD $12.24/BOE (11% YoY decrease); net debt: CAD $3.4B (<1x annualized Q4 FF); Musreau: 17,000-18,000 BOE/day at 70% liquids; Kaybob: 7 wine rack pads (33 wells); Lator: 35,000-40,000 BOE/day facility Q4 commissioning",
     "seismos_relevance": "Medium",
     "seismos_relevance_detail": "Whitecap is a significant Canadian Montney operator with an active unconventional completions program. The emphasis on 'wine rack' development optimization, frac design learnings, completion efficiency improvements, and high-density well testing in the Duvernay aligns with CLF/real-time diagnostics applications. While no frac diagnostics are mentioned, Whitecap's scale and technology-forward approach to Montney completions make it a potential target for Seismos Canadian market expansion.",
-    "notable_quote": "Kaybob wine rack configuration delivering 10-20% well performance improvement over 33 wells"
+    "notable_quote": "Kaybob wine rack configuration delivering 10-20% well performance improvement over 33 wells",
+    "seismos_relevance_reason": "Montney operator with \"wine rack\" well spacing optimization. Extended reach laterals. SPE completion design testing from Veren acquisition."
   },
   {
     "ticker": "WFRD",
@@ -1131,7 +1149,8 @@
     },
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Baker Hughes's primary OFS focus is pivoting away from North America land completions toward IET, LNG, and production recovery globally. Leucipa and AccessESP are production optimization tools (post-frac), not real-time completions diagnostics. No CLF, acoustic, or downhole completion intelligence mentioned. Chart acquisition further shifts the portfolio toward processing equipment. BKR is not a near-term competitive or customer priority for Seismos.",
-    "notable_quote": "IET more than offset OFSE softness \u2014 we achieved record $14.9 billion of IET orders and a $32.4 billion backlog, putting us on track for our 20% company EBITDA margin target by 2028."
+    "notable_quote": "IET more than offset OFSE softness \u2014 we achieved record $14.9 billion of IET orders and a $32.4 billion backlog, putting us on track for our 20% company EBITDA margin target by 2028.",
+    "seismos_relevance_reason": "Diversified OFS major focused on industrial energy tech, LNG, and digital. Minimal US completions discussion."
   },
   {
     "ticker": "CHX",
@@ -1212,7 +1231,8 @@
     "metrics_reported": "Utica drilling cost $1,700/ft; 2027 hedged ~60% toward 80% target at ~$4 NYMEX weighted avg; 45Z tax credit potential ~$30M/year run-rate; coal mine methane volume stable (20+ year mine life)",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "CNX operates exclusively in Appalachia (Marcellus/Utica), which is outside Seismos' primary target basins (Permian, Eagle Ford, Haynesville). No frac diagnostics, real-time completions monitoring, or CLF technology mentioned. AutoSep is a flowback tool, not a frac diagnostic. Evolution e-frac partnership (known from other sources) not referenced in this transcript.",
-    "notable_quote": "AutoSep is fully internalized \u2014 cost savings, environmental and safety benefits confirmed"
+    "notable_quote": "AutoSep is fully internalized \u2014 cost savings, environmental and safety benefits confirmed",
+    "seismos_relevance_reason": "In-house completions with AutoSteer drilling focus. No third-party frac tech adoption signals."
   },
   {
     "ticker": "CVE",
@@ -1237,7 +1257,8 @@
     "metrics_reported": "Q4 upstream production: 918,000 BOE/day record; oil sands: 727,000 BOE/day; Christina Lake: 309,000 bbl/day; Foster Creek: 220,000 bbl/day record; oil sands nonfuel opex: $8.39/bbl; downstream utilization: 95%; net debt: ~$8.3B",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Cenovus is a Canadian oil sands SAGD operator with no hydraulic fracturing completions business. Their technology focus is on thermal recovery, solvent injection, and SAGD optimization - not relevant to Seismos surface acoustic sensing, CLF, or frac diagnostics. Offshore and China gas assets also have no frac applications.",
-    "notable_quote": "Achieved record oil sands production of 727,000 BOE per day in Q4"
+    "notable_quote": "Achieved record oil sands production of 727,000 BOE per day in Q4",
+    "seismos_relevance_reason": "Oil sands (SAGD) producer. Hydraulic fracturing not central to operations."
   },
   {
     "ticker": "CVX",
@@ -1265,7 +1286,8 @@
     "metrics_reported": "Q4 earnings $2.8B ($1.39/sh adjusted $3.0B/$1.52); Q4 OCF $10.8B; full-year adjusted FCF ~$20B; Permian 1 MMboe/d; record production globally",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "No mention of completions diagnostics, CLF, real-time frac monitoring, or surface acoustics. Permian efficiency language is generic. No Seismos or competitor technology named.",
-    "notable_quote": "2025 was a year of execution with record production globally"
+    "notable_quote": "2025 was a year of execution with record production globally",
+    "seismos_relevance_reason": "Supermajor with diversified global portfolio. Completions tech not discussed at corporate earnings level."
   },
   {
     "ticker": "EQNR",
@@ -1291,7 +1313,8 @@
     "metrics_reported": "FY2025 production 2,137 Mboe/d (+3.4%); ROACE 14.5%; CFO after tax $18B; EPS $0.81; renewables generation 5.65 TWh (+25% YoY); 3-year average RRR 100%",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Equinor is noted as a Reveal Energy frac diagnostics funder, but this transcript contains zero mention of frac diagnostics, completions technology, acoustic sensing, or U.S. unconventional activity. Equinor operates offshore and internationally. Reveal Energy connection is background context not reflected in this transcript.",
-    "notable_quote": "Record production in 2025 driven by operational performance and new fields"
+    "notable_quote": "Record production in 2025 driven by operational performance and new fields",
+    "seismos_relevance_reason": "Norwegian offshore-focused supermajor. No US onshore completions technology discussion."
   },
   {
     "ticker": "EQT",
@@ -1325,7 +1348,8 @@
     },
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "EQT's Appalachian gas focus and combo development model prioritize throughput efficiency over real-time diagnostics. The 13% well cost reduction achieved without explicit CLF tools suggests they have other levers. However, EQT's scale (6-10 well pads, fastest completion pace) means perf efficiency during plug-and-perf operations could be a pain point worth exploring. Appalachian is not Seismos's current primary market (Permian-focused). AI procurement tools suggest cost sensitivity in vendor selection.",
-    "notable_quote": "Combo development allowed us to achieve the fastest quarterly completion pace in our history and a 13% reduction in well cost per foot year-over-year."
+    "notable_quote": "Combo development allowed us to achieve the fastest quarterly completion pace in our history and a 13% reduction in well cost per foot year-over-year.",
+    "seismos_relevance_reason": "Largest US natural gas producer. Focused on combo-development and capital discipline, minimal frac tech discussion."
   },
   {
     "ticker": "FTI",
@@ -1348,7 +1372,8 @@
     "metrics_reported": "FY2025 revenue $9.9B (+9%); adj EBITDA $1.8B (+33%); FCF $1.45B; Subsea inbound $10.1B; backlog $15.9B; 24-month opportunity list ~$29B (record); shareholder distributions $1.0B (2x prior year); net cash $602M",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "TechnipFMC is a subsea and offshore-focused OFS company. Its Surface Technologies segment covers wellheads and completion equipment internationally, not U.S. onshore hydraulic fracturing or frac diagnostics. North America surface is explicitly a challenging/de-prioritized market. No overlap with Seismos CLF, SAFA, or Machina product lines.",
-    "notable_quote": "Five of the six 20K projects sanctioned to date have been awarded to TechnipFMC"
+    "notable_quote": "Five of the six 20K projects sanctioned to date have been awarded to TechnipFMC",
+    "seismos_relevance_reason": "Subsea-focused OFS. iEPCI integration model has no overlap with onshore completions."
   },
   {
     "ticker": "HP",
@@ -1373,7 +1398,8 @@
     "metrics_reported": "Q4 revenues >$1B (third consecutive); 141 contracted rigs Q4 avg; 144 rigs at Q4 exit; Permian share 33%->37%; average lateral length +5%; footage/day +5%; 40%+ of wells >3-mile laterals; $543M operating cash flow FY2025; $210M term loan paid down",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "H&P is a drilling contractor with no completions services. However, their explicit mention of 'setting up for a clean and efficient completion' and growing longer laterals is contextually relevant \u2014 longer laterals require more precise frac diagnostics. H&P's performance-based contract model also aligns with Seismos' outcomes-based CLF approach. Not a direct Seismos customer target but relevant as a drilling partner feeding wells into CLF-capable completion operations.",
-    "notable_quote": "Setting them up for a clean and efficient completion and production process"
+    "notable_quote": "Setting them up for a clean and efficient completion and production process",
+    "seismos_relevance_reason": "Drilling contractor. Rig automation (FlexRig) focus, no completions services."
   },
   {
     "ticker": "NBR",
@@ -1398,7 +1424,8 @@
     "metrics_reported": "FY2025 revenue $3.2B (+8.7%); adjusted EBITDA $913M; Q4 EBITDA $222M; L48 rig count 62 exit Q4, 66 current; International 93.3 avg Q4; NDS Q4 revenue on third-party rigs +10% QoQ; net debt down $554M to lowest since 2005; net leverage ~1.7x",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Nabors is a drilling contractor with an NDS technology solutions arm. No completions diagnostics, frac monitoring, or acoustic sensing mentioned. However, the 4-mile lateral trend in Permian Nabors is enabling is directly relevant to Seismos' completions market \u2014 longer laterals are harder to frac efficiently without real-time diagnostics. Not a direct customer but feeds the market Seismos serves.",
-    "notable_quote": "4-mile laterals in Permian quadrupled as a percentage of our fleet in 2025"
+    "notable_quote": "4-mile laterals in Permian quadrupled as a percentage of our fleet in 2025",
+    "seismos_relevance_reason": "Drilling contractor with PACE-R automation rigs. No completions or frac technology exposure."
   },
   {
     "ticker": "NOG",
@@ -1464,7 +1491,8 @@
     },
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Transcript is a highlights summary with minimal completions technology detail. Well cost reduction targets suggest active optimization efforts, but OXY's scale and internal technical capabilities make it a complex enterprise sales target. No CLF, acoustic, or real-time frac diagnostics mentioned. Permian EOR focus is a different completion profile than conventional plug-and-perf shale fracs where SAFA is most applicable.",
-    "notable_quote": "Despite oil prices being down about 14% from 2024, Occidental generated $4.3 billion in free cash flow before working capital \u2014 a testament to our cost discipline and operational execution."
+    "notable_quote": "Despite oil prices being down about 14% from 2024, Occidental generated $4.3 billion in free cash flow before working capital \u2014 a testament to our cost discipline and operational execution.",
+    "seismos_relevance_reason": "Large Permian operator but earnings focus on carbon management (1PointFive) and production, not completions tech."
   },
   {
     "ticker": "PAM",
@@ -1544,7 +1572,8 @@
     "metrics_reported": "Q4 2024 EPS: $0.06 (miss vs $0.08 est); Q4 2024 revenue: $83.44M (miss, down from $99.94M); FY2025 consensus: $0.52 EPS on $385.87M revenue",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Ring Energy is a small Permian independent; the file only contains a brief Zacks earnings miss summary with no completions technology discussion. Even with full transcript data, Ring Energy's small scale and cost-constrained position makes it a low-priority Seismos prospect. Potential indirect relevance as a ProFrac customer.",
-    "notable_quote": "Missed Q4 2024 EPS by 25%, revenues down from $99.94M to $83.44M year-over-year"
+    "notable_quote": "Missed Q4 2024 EPS by 25%, revenues down from $99.94M to $83.44M year-over-year",
+    "seismos_relevance_reason": "Small Permian operator. Non-operated model limits completions technology visibility."
   },
   {
     "ticker": "RES",
@@ -1625,7 +1654,8 @@
     "metrics_reported": "FY2025 adjusted earnings $18.5B; CFFO ~$43B; FCF >$26B; structural cost reductions $5.1B cumulative; LNG sales +11%; reserves life ~7.8 years",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Shell is predominantly an offshore and LNG major with minimal U.S. unconventional shale completions activity. No frac diagnostics, CLF, acoustic sensing, or completions technology mentioned. Not a near-term Seismos target customer.",
-    "notable_quote": "We entered 2026 as a more resilient organization with lower costs"
+    "notable_quote": "We entered 2026 as a more resilient organization with lower costs",
+    "seismos_relevance_reason": "Supermajor focused on LNG, deepwater, and energy transition. No onshore completions discussion."
   },
   {
     "ticker": "TTE",
@@ -1652,25 +1682,27 @@
   },
   {
     "ticker": "VIST",
-    "company": "Gladstone Land Corporation (FILE MISMATCH - expected Vista Energy)",
-    "segment": "N/A - Wrong company in file",
+    "company": "Vista Energy",
+    "segment": "International",
     "quarter": "Q4 2025",
     "transcript_url": "local",
-    "strategy_summary": "FILE MISMATCH: VIST.txt contains the Gladstone Land Corporation (NASDAQ: LAND) Q4 2025 earnings call transcript, a farmland REIT with no oilfield operations. Vista Energy (VIST) transcript was not found in this file. No competitive intelligence applicable to Seismos.",
+    "strategy_summary": "Vista Energy is a Vaca Muerta pure-play focused on unconventional shale oil development in Argentina. Growing production through horizontal drilling and multi-stage completions.",
     "capex_guidance": "N/A",
     "basin_focus": [
-      "Vaca Muerta",
-      "Argentina"
+      "Vaca Muerta"
     ],
     "technology_mentions": [
-      "Unconventional development"
+      "Horizontal drilling",
+      "Multi-stage completions"
     ],
-    "completions_strategy": "N/A",
+    "completions_strategy": "Expanding Vaca Muerta operations with increasing lateral lengths and stage counts.",
     "service_provider_mentions": [],
     "metrics_reported": "N/A",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Wrong company loaded in this file. Gladstone Land is a farmland REIT with zero relevance to Seismos oilfield technology.",
-    "notable_quote": "N/A - wrong company in file"
+    "notable_quote": "N/A - wrong company in file",
+    "seismos_relevance_reason": "Vaca Muerta operator ramping unconventional completions, but no CLF or advanced frac tech discussion.",
+    "data_quality": "Limited data"
   },
   {
     "ticker": "WHD",
@@ -1736,7 +1768,8 @@
     },
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "ExxonMobil's scale and 40+ technology portfolio suggest they are active completion technology experimenters. Lightweight proppant adoption curve (25% to 50%) shows a methodical A/B testing approach that Seismos could pitch into. However, XOM's supermajor procurement processes, long vendor qualification timelines, and reliance on integrated major OFS providers make direct Seismos engagement complex. The 'stackable technologies' framing is useful positioning context \u2014 Seismos could pitch SAFA as a stackable diagnostic layer. No near-term commercial signal.",
-    "notable_quote": "We have more than 40 stackable technologies in testing and active deployment in the Permian, including lightweight proppant now in 25% of our wells with a path to 50%."
+    "notable_quote": "We have more than 40 stackable technologies in testing and active deployment in the Permian, including lightweight proppant now in 25% of our wells with a path to 50%.",
+    "seismos_relevance_reason": "Largest Permian producer. Corporate-level earnings do not discuss completions technology specifics."
   },
   {
     "ticker": "XPRO",
@@ -1762,7 +1795,8 @@
     "metrics_reported": "Revenue: $1.6B FY2025; EBITDA: $353M (22% margin); FCF: $127M (>2x prior year); Backlog: $2.5B (+$196M in Q4); Q4 MENA EBITDA margin: 39%; NLA Q4 revenue: $130M; ESSA Q4: $116M",
     "seismos_relevance": "Low",
     "seismos_relevance_detail": "Expro is an international/offshore OFS company focused on well testing, flow management, and subsea - not a North American pressure pumping or frac diagnostics player. No mentions of hydraulic fracturing completions, CLF, or real-time frac diagnostics. Expro's CaTS ATX downhole telemetry system is a distant technological cousin but serves a different application (DST vs. frac monitoring). No competitive or partnership overlap with Seismos.",
-    "notable_quote": "CaTS ATX enabled real-time wireless downhole data during drill stem testing in Indonesia"
+    "notable_quote": "CaTS ATX enabled real-time wireless downhole data during drill stem testing in Indonesia",
+    "seismos_relevance_reason": "International/offshore well services. XRD Surge Tool is downhole but not frac monitoring."
   },
   {
     "ticker": "YPF",
