@@ -272,7 +272,8 @@ tr:hover td { background: rgba(212,168,83,0.03); }
   animation: fadeUp 0.5s ease both;
 }
 .company-card:hover { border-left-color: var(--accent); box-shadow: 0 4px 24px rgba(0,0,0,0.3); transform: translateY(-1px); }
-.card-header { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 14px; }
+.card-header { display: flex; align-items: center; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+.card-header .ticker-name { flex: 1; }
 .ticker-name { display: flex; align-items: baseline; gap: 10px; }
 .card-ticker { font-family: var(--mono); font-size: 18px; font-weight: 700; color: var(--accent); }
 .card-name { font-size: 14px; color: var(--text-dim); }
@@ -280,6 +281,11 @@ tr:hover td { background: rgba(212,168,83,0.03); }
   font-family: var(--mono); font-size: 10px; font-weight: 500; color: var(--text-faint);
   background: var(--surface2); padding: 3px 10px; border-radius: 3px;
   text-transform: uppercase; letter-spacing: 0.5px;
+}
+.earnings-badge {
+  font-family: var(--mono); font-size: 10px; font-weight: 600; color: var(--accent);
+  background: rgba(218,165,32,0.12); padding: 3px 10px; border-radius: 3px;
+  letter-spacing: 0.3px; margin-left: auto;
 }
 .card-row { display: flex; gap: 16px; margin-bottom: 5px; font-size: 13px; }
 .card-label {
@@ -406,7 +412,7 @@ tr:hover td { background: rgba(212,168,83,0.03); }
 .action-target { font-family: var(--mono); font-weight: 700; color: var(--accent); white-space: nowrap; }
 
 /* === FILTERS === */
-.filters { display: flex; gap: 8px; margin-bottom: 16px; flex-wrap: wrap; align-items: center; }
+.filters { display: flex; gap: 8px; margin-bottom: 20px; flex-wrap: wrap; align-items: center; position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 12px 0; border-bottom: 1px solid var(--border); }
 .filter-btn {
   background: var(--surface); border: 1px solid var(--border);
   color: var(--text-faint); padding: 6px 16px; border-radius: 3px;
@@ -551,42 +557,45 @@ tr:hover td { background: rgba(212,168,83,0.03); }
     <div id="schedule-section"></div>
     <div class="exec-summary"><h2>Executive Summary</h2><div id="findings"></div></div>
     <div class="section"><div class="section-header">Competitive Threat Assessment</div><table id="threat-table"></table></div>
+    <div class="filters" id="report-filters">
+      <input type="text" class="search-box" placeholder="Search companies..." id="search-report">
+      <div class="filter-sep"></div>
+      <button class="filter-btn seg-btn active" data-seg="all">All</button>
+      <button class="filter-btn seg-btn" data-seg="Operator">Operators</button>
+      <button class="filter-btn seg-btn" data-seg="OFS-Pumper">Pumpers</button>
+      <button class="filter-btn seg-btn" data-seg="OFS-Other">OFS</button>
+      <button class="filter-btn seg-btn" data-seg="Major">Majors</button>
+      <button class="filter-btn seg-btn" data-seg="International">International</button>
+      <div class="filter-sep"></div>
+      <select class="filter-select" id="filter-geo">
+        <option value="all">All Regions</option>
+        <option value="Permian">Permian</option>
+        <option value="Appalachia">Appalachia</option>
+        <option value="Eagle Ford">Eagle Ford</option>
+        <option value="Canada">Canada</option>
+        <option value="Argentina">Argentina</option>
+        <option value="Middle East">Middle East</option>
+        <option value="Other">Other</option>
+      </select>
+      <select class="filter-select" id="filter-sort">
+        <option value="relevance">Relevance</option>
+        <option value="ticker">Ticker A-Z</option>
+        <option value="company">Company A-Z</option>
+        <option value="capex">Capex High-Low</option>
+      </select>
+    </div>
     <div class="section">
       <div class="section-header">High Relevance <span class="badge badge-high" id="high-count"></span></div>
       <div class="company-grid" id="high-grid"></div>
     </div>
     <div class="section">
       <div class="section-header">Medium Relevance <span class="badge badge-medium" id="med-count"></span></div>
-      <div class="filters" id="report-filters">
-        <input type="text" class="search-box" placeholder="Search companies..." id="search-report">
-        <div class="filter-sep"></div>
-        <button class="filter-btn seg-btn active" data-seg="all">All</button>
-        <button class="filter-btn seg-btn" data-seg="Operator">Operators</button>
-        <button class="filter-btn seg-btn" data-seg="OFS-Pumper">Pumpers</button>
-        <button class="filter-btn seg-btn" data-seg="OFS-Other">OFS</button>
-        <button class="filter-btn seg-btn" data-seg="Major">Majors</button>
-        <button class="filter-btn seg-btn" data-seg="International">International</button>
-        <div class="filter-sep"></div>
-        <select class="filter-select" id="filter-geo">
-          <option value="all">All Regions</option>
-          <option value="Permian">Permian</option>
-          <option value="Appalachia">Appalachia</option>
-          <option value="Eagle Ford">Eagle Ford</option>
-          <option value="Canada">Canada</option>
-          <option value="Argentina">Argentina</option>
-          <option value="Middle East">Middle East</option>
-          <option value="Other">Other</option>
-        </select>
-        <select class="filter-select" id="filter-sort">
-          <option value="relevance">Relevance</option>
-          <option value="ticker">Ticker A-Z</option>
-          <option value="company">Company A-Z</option>
-          <option value="capex">Capex High-Low</option>
-        </select>
-      </div>
       <table id="med-table"></table>
     </div>
-    <div class="section"><div class="section-header">Low Relevance <span class="badge badge-low" id="low-count"></span></div><table id="low-table"></table></div>
+    <div class="section">
+      <div class="section-header">Low Relevance <span class="badge badge-low" id="low-count"></span></div>
+      <table id="low-table"></table>
+    </div>
     <div class="section"><div class="section-header">Market Themes</div><div id="themes"></div></div>
     <div class="section" id="intl-section"><div class="section-header">International Markets</div><div class="intl-grid" id="intl-grid"></div></div>
     <div class="section" id="priorities-section"><div class="section-header">Sales Priorities</div><div id="priorities-container"></div></div>
@@ -959,6 +968,13 @@ function buildThreats() {
   table.appendChild(tbody);
 }
 
+function fmtEarningsDate(c) {
+  const ec = c.earnings_calendar;
+  if (!ec || !ec.next_earnings_date) return '';
+  const d = new Date(ec.next_earnings_date + 'T12:00:00');
+  return d.toLocaleDateString('en-US', {month:'short', day:'numeric'});
+}
+
 /* === 6. HIGH CARDS WITH KPI CHIPS === */
 function buildHighCards(high) {
   document.getElementById('high-count').textContent = high.length + ' companies';
@@ -972,6 +988,11 @@ function buildHighCards(high) {
     tn.appendChild(el('span',{class:'card-name',text:c.company}));
     header.appendChild(tn);
     header.appendChild(el('span',{class:'card-seg',text:getSeg(c)}));
+    const nxt = fmtEarningsDate(c);
+    if (nxt) {
+      const eb = el('span',{class:'earnings-badge',text:'Next: '+nxt});
+      header.appendChild(eb);
+    }
     card.appendChild(header);
 
     // KPI chips
@@ -1021,7 +1042,7 @@ function buildMedTable(list) {
   const table = document.getElementById('med-table');
   table.replaceChildren();
   const thead = el('thead'); const hrow = el('tr');
-  ['Ticker','Company','Segment','2026 Capex','Key Metric','Completions Signal','Key Tech'].forEach(h => hrow.appendChild(el('th',{text:h})));
+  ['Ticker','Company','Segment','Next Earnings','2026 Capex','Key Metric','Completions Signal','Key Tech'].forEach(h => hrow.appendChild(el('th',{text:h})));
   thead.appendChild(hrow); table.appendChild(thead);
   const tbody = el('tbody');
   list.forEach(c => {
@@ -1029,6 +1050,7 @@ function buildMedTable(list) {
     row.appendChild(el('td',{class:'ticker',text:c.ticker}));
     row.appendChild(el('td',{text:c.company}));
     row.appendChild(el('td',{text:getSeg(c)}));
+    const ned = el('td',{text:fmtEarningsDate(c)||'\u2014'}); ned.style.fontFamily='var(--mono)'; ned.style.fontSize='12px'; row.appendChild(ned);
     row.appendChild(el('td',{text:esc(c.capex_guidance)}));
     const km = el('td',{text:extractKeyMetric(c)}); km.style.fontFamily='var(--mono)'; km.style.fontWeight='600'; km.style.color='var(--accent)'; row.appendChild(km);
     row.appendChild(el('td',{class:'completions-col',text:trunc(c.completions_strategy,120)}));
@@ -1043,7 +1065,7 @@ function buildLowTable(low) {
   const table = document.getElementById('low-table');
   table.replaceChildren();
   const thead = el('thead'); const hrow = el('tr');
-  ['Ticker','Company','Segment','Notes'].forEach(h => hrow.appendChild(el('th',{text:h})));
+  ['Ticker','Company','Segment','Next Earnings','Notes'].forEach(h => hrow.appendChild(el('th',{text:h})));
   thead.appendChild(hrow); table.appendChild(thead);
   const tbody = el('tbody');
   low.forEach(c => {
@@ -1051,6 +1073,7 @@ function buildLowTable(low) {
     row.appendChild(el('td',{class:'ticker',text:c.ticker}));
     row.appendChild(el('td',{text:c.company}));
     row.appendChild(el('td',{text:getSeg(c)}));
+    const ned = el('td',{text:fmtEarningsDate(c)||'\u2014'}); ned.style.fontFamily='var(--mono)'; ned.style.fontSize='12px'; row.appendChild(ned);
     const notes = el('td',{text:trunc(c.seismos_relevance_reason,80)}); notes.style.color='var(--text-dim)'; row.appendChild(notes);
     tbody.appendChild(row);
   });
